@@ -5,7 +5,7 @@ permalink:      /:year-:month-:day/:title
 title:          Dervean's blog
 paginate:       7
 baseurl:        ""
-url:            "https://chesterhow.github.io/tale"
+url:            "https://dervean.github.io"
 
 # Assets
 sass:
@@ -17,14 +17,14 @@ markdown:       kramdown
 
 # About
 author:
-  name:         Chester How
-  url:          http://chester.how
-  email:        chesterhow@gmail.com
+  name:         Dervean
+  url:          https://github.com/Dervean
+  email:        derveanme@gmail.com
 
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/chesterhow/tale
+  repo:         https://github.com/Dervean/dervean.github.io
 
 # Gems
 gems:
