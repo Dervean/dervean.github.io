@@ -2,7 +2,7 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Tale
+title:          Dervean's blog
 paginate:       7
 baseurl:        ""
 url:            "https://chesterhow.github.io/tale"
