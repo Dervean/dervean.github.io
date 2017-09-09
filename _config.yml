@@ -3,7 +3,7 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          Tale
-paginate:       5
+paginate:       7
 baseurl:        ""
 url:            "https://chesterhow.github.io/tale"
 
