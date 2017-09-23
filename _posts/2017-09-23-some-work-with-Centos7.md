@@ -182,15 +182,15 @@ vi gnome-classic.css
     background-color: #e9e9e9;
     background-gradient-direction: vertical;
     background-gradient-end: #d0d0d0;
-    border-top-color: #666; /* we don't supportnon-uniform border-colors and
+    border-top-color: #666; /\* we don't supportnon-uniform border-colors and
                                use the top bordercolor for any border, so we
                                need to set iteven if all we want is a bottom
-                               border */
+                               border \*/
     border-bottom: 1px solid #666;
     app-icon-bottom-clip: 0px;
     **color: transparent;**
-    /* hrm, still no multipoint gradients
-    background-image: linear-gradient(left,rgba(255, 255, 255, 0),rgba(255, 255, 255, 1) 50%，rgba(255, 255, 255, 0)) !important;*/
+    /\* hrm, still no multipoint gradients
+    background-image: linear-gradient(left,rgba(255, 255, 255, 0),rgba(255, 255, 255, 1) 50%，rgba(255, 255, 255, 0)) !important;\*/
    }
 {% endhighlight %}
 
