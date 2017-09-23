@@ -88,7 +88,13 @@ webstorm
 ##vega demo
 [Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里，
 {% highlight js %}
-vega.embed('#vis', spec)
+<div id="vis"></div>
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+  vega.embed('#vis', spec).then(function(result) {
+    // access view as result.view
+  }).catch(console.error);
+</script>
 {% endhighlight %}
 需要**npm install**一下，可是我这里报了许多错误，从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，可能有种东西就叫做“玄学”。
 
@@ -100,12 +106,12 @@ vega.embed('#vis', spec)
 <ins>错误的做法(ノ｀Д)ノ：</ins>
 
 1. 先查一下GNOME版本：
-{% highlight js %}
+{% highlight markdown %}
 gnome-about --gnome-version
 {% endhighlight %}
 显示没有**gnome-about**这个命令，再试试...
 
-{% highlight js %}
+{% highlight markdown %}
 gnome-session --version
 {% endhighlight %}
 可以。是GNOME3
@@ -113,7 +119,7 @@ gnome-session --version
 2. 去[GNOME主题网站](https://www.opendesktop.org/s/Gnome/browse/)上下载一个主题，我选择了T4G_3.0_theme。
 
 3. 下载主题后解压，把整个解压后的文件夹放入**/usr/share/themes**，然后使用**gnome-tweak-tool**加载主题
-{% highlight js %}
+{% highlight markdown %}
 mv T4G_3.0_theme /usr/share/themes
 gnome-tweak-tool
 {% endhighlight %}
@@ -121,7 +127,7 @@ gnome-tweak-tool
 4. 加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了。
 
 * 删除Centos底部任务栏：
-{% highlight js %}
+{% highlight markdown %}
 cd /usr/share/gnome-shell/
 备份
 cp -r /usr/share/gnome-shell/extensions/  /usr/share/gnome-shell/extensions.backup/
@@ -135,14 +141,14 @@ reboot
 * 隐藏顶栏：
 
 备份
-{% highlight js %}
+{% highlight markdown %}
 cd /usr/share/gnome-shell
 cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
 cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 {% endhighlight %}
 
 修改**classic.json**
-{% highlight js %}
+{% highlight markdown %}
 cd modes/
 vi classic.json
 修改如下
@@ -153,7 +159,7 @@ vi classic.json
 {% endhighlight %}
 
 修改**gnome-classic.css**
-{% highlight js %}
+{% highlight markdown %}
 cd ../theme/
 vi gnome-classic.css
 修改如下
@@ -177,7 +183,7 @@ vi gnome-classic.css
 {% endhighlight %}
 
 修改**gnome-shell.css**
-{% highlight js %}
+{% highlight markdown %}
 修改如下
 第一处
 \#panel {
@@ -193,7 +199,7 @@ vi gnome-classic.css
 {% endhighlight %}
 
 5. 界面还是不完整，把**T4G_3.0_theme**里面的**gnome-theme**单独放在**/usr/share/gnome-shell/**中试试
-{% highlight js %}
+{% highlight markdown %}
 rm -r /usr/share/gnome-shell/theme
 mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 {% endhighlight %}
@@ -202,7 +208,7 @@ mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 <ins>挽救：</ins>
 
 6. 在登陆用户界面，直接**ctrl+alt+F2**调出**startx**，也就是直接在shell中敲命令，通过之前备份的**/usr/share/gnome-shell/theme.backup**重新恢复
-{% highlight js %}
+{% highlight markdown %}
 mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 {% endhighlight %}
 重新启动，即可恢复GNOME
@@ -210,7 +216,7 @@ mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 <ins>换一种姿势：</ins>
 
 7. 既然从主题上面安装吃了亏，另辟蹊径就好了，我还可以用软件(**cairo-dock**)改造（￣︶￣）↗，不过有好多工具都找不到，顺便改一下yum源吧
-{% endhighlight %}
+{% highlight markdown %}
 cd /etc/yum.repos.d 
 备份旧的配置文件
 mv CentOS-Base.repo CentOS-Base.repo.bak 
@@ -222,11 +228,11 @@ sudo wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-7.repo
 yum clean all 
 重新生成缓存
 yum makecache
-{% highlight js %}
+{% endhighlight %}
 
 8. 装**cairo-dock**，这让我体会到了Ubuntu的好处╯︿╰，能一键apt-get的好处真不是盖的，我想上[官网](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然。。果断选择其他方法（￣︶￣）↗　。
 **Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）。目前，Nux Dextop对CentOS/RHEL 6|7可用。
-{% endhighlight %}
+{% highlight markdown %}
 下载
 wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 安装依赖库
@@ -234,17 +240,18 @@ sudo yum -y install epel-release
 安装
 rpm -ivh nux-dextop-release-0-5.el7.nux.noarch.rpm
 sudo yum install cairo-dock
-{% highlight js %}
+{% endhighlight %}
+
 
 由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）。
 所以，建议默认情况下不启用**Nux Dextop**仓库。(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))
 (这个我倒没在意，就不改了~)
-{% endhighlight %}
+{% highlight markdown %}
 打开/etc/yum.repos.d/nux-dextop.repo，将"enabled=1" 修改为 "enabled=0"。
 $ sudo vi /etc/yum.repos.d/nux-dextop.repo
 当需要使用Nux Dextop仓库时，显式启用仓库。
 $ sudo yum --enablerepo=nux-dextop install <package-name>
-{% highlight js %}
+{% endhighlight %}
 
 9. 界面上还会有底部任务栏和顶部横条，参照**第4步**改造一下就好了
 
