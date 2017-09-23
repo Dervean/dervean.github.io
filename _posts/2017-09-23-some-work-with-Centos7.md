@@ -15,7 +15,7 @@ author: "Dervean"
 
 # 契机
 
-这两天老板要求助教要在可视化课上做展示，给大伙介绍可视化工具如何使用，我负责介绍[Vega](https://vega.github.io/vega/)这个virtualization grammar，展示需要使用电脑操作IDE一步步演示项目如何建立使用，我这还装着Linux呢> <，没办法了，赶鸭子上架，得赶快把Linux熟悉了才好。
+这两天老板要求助教要在可视化课上做展示，给大伙介绍可视化工具如何使用，我负责介绍[Vega](https://vega.github.io/vega/)这个virtualization grammar，展示需要使用电脑操作IDE一步步演示项目如何建立使用，但我这边还装着Linux。没办法了，赶鸭子上架，得赶快把Linux熟悉了才好。
 
 # 一下午的折腾
 
@@ -24,14 +24,14 @@ author: "Dervean"
 ## 装chrome浏览器
 
 因为谷歌停止了对CentOS的支持，所以得自己找网上的资源。(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
-{% highlight js %}
+{% highlight markdown %}
 yum update google-chrome-stable
 {% endhighlight %}
 
 ### Step 1 Enable Google YUM repository
 
 Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
-{% highlight js %}
+{% highlight markdown %}
 [google-chrome]
 name=google-chrome
 baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
@@ -43,16 +43,17 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 ### Step 2 Installing Chrome Web Browser
 
 check whether the latest version available
-{% highlight js %}
+{% highlight markdown %}
 yum info google-chrome-stable
 {% endhighlight %}
 install
-{% highlight js %}
+{% highlight markdown %}
 yum install google-chrome-stable
 {% endhighlight %}
+
 ### Step 3: Starting Chrome Web Browser
 
-{% highlight js %}
+{% highlight markdown %}
 google-chrome &
 {% endhighlight %}
 
@@ -61,7 +62,7 @@ google-chrome &
 ## 装webstorm
 
 这里主要研究了一下Linux目录结构，因为一开始我不知道程序该装到哪个文件夹里去，不过我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗。
-{% highlight js %}
+{% highlight markdown %}
 /usr：系统级的目录，可以理解为C:/Windows/
 /usr/lib，理解为C:/Windows/System32
 /usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
@@ -72,30 +73,32 @@ google-chrome &
 
 1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
 2. 解压
-{% highlight js %}
-tar xvzf ~/Downloads/WebStorm\*.tar.gz -C /tmp/
+{% highlight markdown %}
+tar xvzf ~/Downloads/WebStorm*.tar.gz -C /tmp/
 {% endhighlight %}
 3. 移动
-{% highlight js %}
-sudo mv /tmp/WebStorm\* /opt/Webstorm
+{% highlight markdown %}
+sudo mv /tmp/WebStorm* /opt/Webstorm
 {% endhighlight %}
 4. 加软连接
-{% highlight js %}
+{% highlight markdown %}
 sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
 {% endhighlight %}
 5. 启动
-{% highlight js %}
+{% highlight markdown %}
 webstorm
 {% endhighlight %}
 
-##装nodejs
+## 装nodejs
+
 从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压塞到**/opt/node**里，然后需要修改环境变量(NODE_HOME)，我在这里栽了个跟头，我把环境变量写进**/etc/profile**文件里，可是每次关闭shell再重打开就怎么也用不了**node**和**npm**。原来修改环境变量也有三种方式。
 1. 修改**/etc/profile**：每次打开shell需要执行**source /etc/profile**环境变量才生效，关闭shell即作废。
 2. 修改**/etc/environment**:设置整个系统的环境，与登录用户无关，即不需要每次**source /etc/environment**。
 3. 修改**/etc/bashrc**：为每一个运行bash shell的用户执行此文件.当bash shell被打开时,该文件被读取。
 最后我还是选择了**1**，多练习敲这个命令，以后再改。
 
-##vega demo
+## vega demo
+
 [Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里，
 {% highlight js %}
 <div id="vis"></div>
@@ -108,14 +111,16 @@ webstorm
 {% endhighlight %}
 需要**npm install**一下，可是我这里报了许多错误，从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，可能有种东西就叫做“玄学”。
 
-![placeholder](https://github.com/Dervean/dervean.github.io/tree/master/images/vega.png "unemployment in U.S.A.")
+![placeholder](https://github.com/Dervean/dervean.github.io/tree/master/images/vega.png/800x400 "unemployment in U.S.A.")
 
-##换GNOME主题
+## 换GNOME主题
+
 不得不说，CentOS的桌面太丑太丑太丑了(虽然占用资源少)，促使我要换了桌面♪(´▽｀)。本来是打算在主题网站上下载一个主题然后安装，但貌似GNOME主题是分成几部分安装的，我只是安装了一个theme，然后界面不完全，最后安装了gnome-theme，直接进入不了GNOME界面，不过这里还是把错误的做法记录下来以后再看吧。
 
 <ins>错误的做法(ノ｀Д)ノ：</ins>
 
 1. 先查一下GNOME版本：
+
 {% highlight markdown %}
 gnome-about --gnome-version
 {% endhighlight %}
@@ -173,12 +178,9 @@ vi classic.json
 cd ../theme/
 vi gnome-classic.css
 修改如下
-\#panel {
-
+#panel {
     background-color: #e9e9e9;
-
     background-gradient-direction: vertical;
-
     background-gradient-end: #d0d0d0;
     border-top-color: #666; /* we don't supportnon-uniform border-colors and
                                use the top bordercolor for any border, so we
@@ -196,7 +198,7 @@ vi gnome-classic.css
 {% highlight markdown %}
 修改如下
 第一处
-\#panel {
+#panel {
     background-color:transparent;
     font-weight: bold;
     height: 0px;
@@ -218,6 +220,7 @@ mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 <ins>挽救：</ins>
 
 6. 在登陆用户界面，直接**ctrl+alt+F2**调出**startx**，也就是直接在shell中敲命令，通过之前备份的**/usr/share/gnome-shell/theme.backup**重新恢复
+
 {% highlight markdown %}
 mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 {% endhighlight %}
@@ -226,6 +229,7 @@ mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 <ins>换一种姿势：</ins>
 
 7. 既然从主题上面安装吃了亏，另辟蹊径就好了，我还可以用软件(**cairo-dock**)改造（￣︶￣）↗，不过有好多工具都找不到，顺便改一下yum源吧
+
 {% highlight markdown %}
 cd /etc/yum.repos.d 
 备份旧的配置文件
@@ -241,7 +245,9 @@ yum makecache
 {% endhighlight %}
 
 8. 装**cairo-dock**，这让我体会到了Ubuntu的好处╯︿╰，能一键apt-get的好处真不是盖的，我想上[官网](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然。。果断选择其他方法（￣︶￣）↗　。
+
 **Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）。目前，Nux Dextop对CentOS/RHEL 6|7可用。
+
 {% highlight markdown %}
 下载
 wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
@@ -251,7 +257,6 @@ sudo yum -y install epel-release
 rpm -ivh nux-dextop-release-0-5.el7.nux.noarch.rpm
 sudo yum install cairo-dock
 {% endhighlight %}
-
 
 由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）。
 所以，建议默认情况下不启用**Nux Dextop**仓库。(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))
@@ -267,4 +272,4 @@ $ sudo yum --enablerepo=nux-dextop install <package-name>
 
 10. 点击cairo-dock图标即可
 
-![placeholder](https://github.com/Dervean/dervean.github.io/tree/master/images/Screenshot_from_2017-09-24_02-30-38.png.png "Screenshot")
+![placeholder](https://github.com/Dervean/dervean.github.io/tree/master/images/Screenshot_from_2017-09-24_02-30-38.png/800x400 "Screenshot")
