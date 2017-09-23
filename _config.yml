@@ -3,7 +3,7 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          Dervean's blog
-paginate:       7
+paginate:       6
 baseurl:        ""
 url:            "https://dervean.github.io"
 
