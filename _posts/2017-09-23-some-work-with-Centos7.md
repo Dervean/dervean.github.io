@@ -88,13 +88,7 @@ webstorm
 ##vega demo
 [Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里，
 {% highlight js %}
-<div id="vis"></div>
-<script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
-  vega.embed('#vis', spec).then(function(result) {
-    // access view as result.view
-  }).catch(console.error);
-</script>
+vega.embed('#vis', spec)
 {% endhighlight %}
 需要**npm install**一下，可是我这里报了许多错误，从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，可能有种东西就叫做“玄学”。
 
