@@ -50,16 +50,13 @@ author: "Dervean"
   {% endhighlight %}
 - **Step 2**  Installing Chrome Web Browser.
 
-  check whether the latest version available.
+{% highlight markdown %}
+//check whether the latest version available.
+yum info google-chrome-stable
+//install.
+yum install google-chrome-stable
+{% endhighlight %}
 
-  {% highlight markdown %}
-  yum info google-chrome-stable
-  {% endhighlight %}
-  install.
-
-  {% highlight markdown %}
-  yum install google-chrome-stable
-  {% endhighlight %}
 - **Step 3**  Starting Chrome Web Browser.
 
   {% highlight markdown %}
@@ -71,14 +68,14 @@ author: "Dervean"
 
   这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗。
 
-  {% highlight markdown %}
-  /usr：系统级的目录，可以理解为C:/Windows/
-  /usr/lib，理解为C:/Windows/System32
-  /usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
-  /opt：用户级的程序目录，可以理解为D:/Software
-  /usr/src：系统级的源码目录
-  /usr/local/src：用户级的源码目录
-  {% endhighlight %}
+{% highlight markdown %}
+/usr：系统级的目录，可以理解为C:/Windows/
+/usr/lib，理解为C:/Windows/System32
+/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
+/opt：用户级的程序目录，可以理解为D:/Software
+/usr/src：系统级的源码目录
+/usr/local/src：用户级的源码目录
+{% endhighlight %}
 
 1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
 
@@ -88,19 +85,19 @@ tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
 {% endhighlight %}
 
 3. 移动
-  {% highlight markdown %}
-  sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
-  {% endhighlight %}
+{% highlight markdown %}
+sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
+{% endhighlight %}
 
 4. 加软连接
-  {% highlight markdown %}
-  sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
-  {% endhighlight %}
+{% highlight markdown %}
+sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
+{% endhighlight %}
 
 5. 启动
-  {% highlight markdown %}
-  webstorm
-  {% endhighlight %}
+{% highlight markdown %}
+webstorm
+{% endhighlight %}
 
 ### nodejs
 从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压塞到**/opt/node**里，然后需要修改环境变量(NODE_HOME)，我在这里栽了个跟头，我把环境变量写进**/etc/profile**文件里，可是每次关闭shell再重打开就怎么也用不了**node**和**npm**。原来修改环境变量也有三种方式。
