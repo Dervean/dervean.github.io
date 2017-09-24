@@ -150,7 +150,7 @@ gnome-tweak-tool
   
 - **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
-&nbsp;&nbsp; &nbsp;**删除Centos底部任务栏.**
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;**删除Centos底部任务栏.**
 {% highlight markdown %}
 cd /usr/share/gnome-shell/
 //备份
@@ -161,7 +161,7 @@ rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcam
 rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 {% endhighlight %}
 
-&nbsp;&nbsp; &nbsp;**隐藏顶栏.**
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;**隐藏顶栏.**
 
 {% highlight text %}
 //备份
@@ -223,7 +223,7 @@ vi gnome-classic.css
 rm -r /usr/share/gnome-shell/theme
 mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 {% endhighlight %}
-&nbsp;&nbsp;按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
+按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
 
 ### 挽救
 
@@ -254,7 +254,7 @@ yum makecache
 
 - **Step 8**&nbsp; &nbsp;装**cairo-dock**，这让我深切体会到了Ubuntu的好处，很希望能一键apt-get啊，我想着去[cairo-dock](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然.果断选择其他方法（￣︶￣）↗.
 
-&nbsp;&nbsp;**Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）.
+**Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）.
 
 {% highlight markdown %}
 //下载
@@ -266,9 +266,9 @@ rpm -ivh nux-dextop-release-0-5.el7.nux.noarch.rpm
 sudo yum install cairo-dock
 {% endhighlight %}
 
-&nbsp;&nbsp;由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）.
+由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）.
 
-&nbsp;&nbsp;所以，建议默认情况下不启用**Nux Dextop**仓库(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))，这个我倒没在意，就没改.
+所以，建议默认情况下不启用**Nux Dextop**仓库(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))，这个我倒没在意，就没改.
 
 {% highlight markdown %}
 //打开/etc/yum.repos.d/nux-dextop.repo，将"enabled=1" 修改为 "enabled=0".
