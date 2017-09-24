@@ -37,7 +37,7 @@ author: "Dervean"
   yum update google-chrome-stable
   {% endhighlight %}
 
-#### Step 1 Enable Google YUM repository
+- Step 1 Enable Google YUM repository
   Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
   {% highlight markdown %}
   [google-chrome]
@@ -48,7 +48,7 @@ author: "Dervean"
   gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
   {% endhighlight %}
 
-#### Step 2 Installing Chrome Web Browser
+- Step 2 Installing Chrome Web Browser
 
   check whether the latest version available
   {% highlight markdown %}
@@ -59,7 +59,7 @@ author: "Dervean"
   yum install google-chrome-stable
   {% endhighlight %}
 
-#### Step 3: Starting Chrome Web Browser
+- Step 3: Starting Chrome Web Browser
 
   {% highlight markdown %}
   google-chrome &
