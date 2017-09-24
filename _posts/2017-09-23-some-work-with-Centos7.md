@@ -118,17 +118,7 @@ webstorm
 ## Vega demo
 [Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里.
 
-{% highlight js %}
-<div id="vis"></div>
-<script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
-  vega.embed('#vis', spec).then(function(result) {
-    // access view as result.view
-  }).catch(console.error);
-</script>
-{% endhighlight %}
-
-需要**npm install**一下，可是我这里报了许多错误，从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，可能有种东西就叫做“玄学”.
+需要**npm install**，可是却报了许多错误，我从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，(￣▽￣)"，可能有种东西就叫做“玄学”.
 
 ![placeholder](/images/vega_employment_USA.png "unemployment in U.S.A.")
 
@@ -160,7 +150,7 @@ gnome-tweak-tool
   
 - **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
-&nbsp; &nbsp;**删除Centos底部任务栏.**
+&nbsp;&nbsp; &nbsp;**删除Centos底部任务栏.**
 {% highlight markdown %}
 cd /usr/share/gnome-shell/
 //备份
@@ -171,7 +161,7 @@ rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcam
 rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 {% endhighlight %}
 
-&nbsp; &nbsp;**隐藏顶栏.**
+&nbsp;&nbsp; &nbsp;**隐藏顶栏.**
 
 {% highlight text %}
 //备份
@@ -233,7 +223,7 @@ vi gnome-classic.css
 rm -r /usr/share/gnome-shell/theme
 mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 {% endhighlight %}
-按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
+&nbsp;&nbsp;按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
 
 ### 挽救
 
@@ -264,7 +254,7 @@ yum makecache
 
 - **Step 8**&nbsp; &nbsp;装**cairo-dock**，这让我深切体会到了Ubuntu的好处，很希望能一键apt-get啊，我想着去[cairo-dock](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然.果断选择其他方法（￣︶￣）↗.
 
-**Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）.
+&nbsp;&nbsp;**Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）.
 
 {% highlight markdown %}
 //下载
@@ -276,8 +266,9 @@ rpm -ivh nux-dextop-release-0-5.el7.nux.noarch.rpm
 sudo yum install cairo-dock
 {% endhighlight %}
 
-由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）.
-所以，建议默认情况下不启用**Nux Dextop**仓库(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))，这个我倒没在意，就没改.
+&nbsp;&nbsp;由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）.
+
+&nbsp;&nbsp;所以，建议默认情况下不启用**Nux Dextop**仓库(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))，这个我倒没在意，就没改.
 
 {% highlight markdown %}
 //打开/etc/yum.repos.d/nux-dextop.repo，将"enabled=1" 修改为 "enabled=0".
