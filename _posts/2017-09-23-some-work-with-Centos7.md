@@ -37,8 +37,9 @@ author: "Dervean"
   yum update google-chrome-stable
   {% endhighlight %}
 
-- _Step 1_  Enable Google YUM repository
+- **Step 1**  Enable Google YUM repository.
   Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
+
   {% highlight markdown %}
   [google-chrome]
   name=google-chrome
@@ -47,27 +48,23 @@ author: "Dervean"
   gpgcheck=1
   gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
   {% endhighlight %}
+- **Step 2**  Installing Chrome Web Browser.
 
-- _Step 2_  Installing Chrome Web Browser
-
-  check whether the latest version available
+  check whether the latest version available.
 
   {% highlight markdown %}
   yum info google-chrome-stable
   {% endhighlight %}
-
-  install
+  install.
 
   {% highlight markdown %}
   yum install google-chrome-stable
   {% endhighlight %}
-
-- _Step 3_  Starting Chrome Web Browser
+- **Step 3**  Starting Chrome Web Browser.
 
   {% highlight markdown %}
   google-chrome &
   {% endhighlight %}
-
   作为新时代的四有新人也需要[科学上网](https://laod.cn/hosts/2017-google-hosts.html)，下载完最新的host文件，直接copy到**/etc/hosts**，然后**log out log in**即可(为了刷新DNS缓存费了我不少功夫，但怎么折腾都不行，最后发现还是直接注销最方便)。
 
 ### webstorm
@@ -111,10 +108,12 @@ author: "Dervean"
 
 ### nodejs
 从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压塞到**/opt/node**里，然后需要修改环境变量(NODE_HOME)，我在这里栽了个跟头，我把环境变量写进**/etc/profile**文件里，可是每次关闭shell再重打开就怎么也用不了**node**和**npm**。原来修改环境变量也有三种方式。
+
 1. 修改**/etc/profile**：每次打开shell需要执行**source /etc/profile**环境变量才生效，关闭shell即作废。
 2. 修改**/etc/environment**:设置整个系统的环境，与登录用户无关，即不需要每次**source /etc/environment**。
 3. 修改**/etc/bashrc**：为每一个运行bash shell的用户执行此文件.当bash shell被打开时,该文件被读取。
-最后我还是选择了**1**，多练习敲这个命令，以后再改。
+
+最后我还是选择了**方法1**，多练习敲这个命令，以后再改。
 
 ### vega demo
 [Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里，
