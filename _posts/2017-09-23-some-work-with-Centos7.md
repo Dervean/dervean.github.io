@@ -180,7 +180,7 @@ cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
 cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 {% endhighlight %}
 
-{% highlight js %}
+{% highlight json %}
 //修改classic.json
 cd modes/
 vi classic.json
@@ -191,7 +191,7 @@ vi classic.json
    }
 {% endhighlight %}
 
-{% highlight js %}
+{% highlight json %}
 //修改gnome-classic.css
 cd ../theme/
 vi gnome-classic.css
