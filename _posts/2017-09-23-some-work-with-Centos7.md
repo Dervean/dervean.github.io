@@ -201,7 +201,7 @@ vi gnome-classic.css
                                border */
     border-bottom: 1px solid #666;
     app-icon-bottom-clip: 0px;
-    **color: transparent;**
+    color: transparent;
     /* hrm, still no multipoint gradients
     background-image: linear-gradient(left,rgba(255, 255, 255, 0),rgba(255, 255, 255, 1) 50%，rgba(255, 255, 255, 0)) !important;*/
    }
@@ -286,4 +286,4 @@ $ sudo yum --enablerepo=nux-dextop install <package-name>
 
 - **Step 10**&nbsp; &nbsp;点击cairo-dock图标即可.
 
-![smiley](/images/Screenshot_from_2017-09-24_02-30-38.png)
+![smiley](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
