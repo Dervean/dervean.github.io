@@ -78,16 +78,22 @@ google-chrome &
 
 1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
 
-2. 解压
+2. 解压<br>
+{% highlight markdown %}
+tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
+{% endhighlight %}
 
-3. 移动
+3. 移动<br>
+{% highlight markdown %}
+sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
+{% endhighlight %}
 
-4. 加软连接
+4. 加软连接<br>
 {% highlight markdown %}
 sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
 {% endhighlight %}
 
-5. 启动
+5. 启动<br>
 {% highlight markdown %}
 webstorm
 {% endhighlight %}
