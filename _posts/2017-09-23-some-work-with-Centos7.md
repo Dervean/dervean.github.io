@@ -173,15 +173,15 @@ rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gca
 
 &nbsp; &nbsp;**隐藏顶栏.**
 
-{% highlight markdown %}
+{% highlight %}
 //备份
 cd /usr/share/gnome-shell
 cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
 cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 {% endhighlight %}
 
-{% highlight json %}
-//修改classic.json
+{% highlight %}
+//修改 classic.json
 cd modes/
 vi classic.json
 //修改如下
@@ -191,8 +191,8 @@ vi classic.json
    }
 {% endhighlight %}
 
-{% highlight json %}
-//修改gnome-classic.css
+{% highlight %}
+//修改 gnome-classic.css
 cd ../theme/
 vi gnome-classic.css
 //修改如下
@@ -213,7 +213,7 @@ vi gnome-classic.css
 {% endhighlight %}
 
 {% highlight markdown %}
-//修改**gnome-shell.css**
+//修改 gnome-shell.css
 //修改如下
 第一处
 #panel {
