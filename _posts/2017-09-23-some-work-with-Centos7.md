@@ -5,85 +5,105 @@ author: "Dervean"
 ---
 
 
-很久很久之前就想认认真真地玩一玩Linux系统，但一直以来都有些杂七杂八的事情阻碍我(￢︿̫̿￢☆)，折腾了一下午Linux系统，有种一见如故的感觉！
+一直以来都想认认真真地玩一玩Linux系统，但总都有杂七杂八的事情阻碍我，今天折腾了一下午Linux系统，竟然有种一见如故的感觉！
+
+<hr>
 
 ## 第一次接触Linux
-在大学的时候就折腾过Linux系统，当时还是因为要学Hadoop才想学这玩意，第一次是用的VMware装的ubuntu12.04版本的Linux，因为电脑配置渣，4G内存，加上VMware吃内存吃的紧，在虚拟机上完全跑不动啊，而且当时校园网又渣，那体验简直糟糕突破天际。后来又折腾双系统，倒也装成功了，最后不小心改了主引导块，两个系统一起报废，当时倒是把我吓得不轻，唯一好的体验就是又装了一次WIN7系统（当时觉得装一个系统是个很有成就感的事情）。这让我对Linux系统产生了心理阴影，好长时间不想接触这玩意。
+  在大学的时候就折腾过Linux系统，当时想要学Hadoop，便用VMware装的ubuntu12.04版本的Linux。
+
+  因为电脑配置不好，4G内存，在虚拟机上完全跑不动，而且校园网网速感人，那糟糕体验简直酸爽。
+
+  后来又折腾双系统，倒也装成功了，最后不小心改了主引导块，两个系统一起报废，当时把我吓得不轻，唯一好的体验就是又装了一次WIN7系统（当时觉得装一个系统是个很有成就感的事情）。
+
+不过这让我对Linux系统产生了心理阴影，好长时间不想接触这玩意。
 
 ## 重新拾起学习的兴趣
-今年6月份想自己DIY一台台式机，研究各种硬件配置和比较性价比，最后在7月份组了一台式，装了WIN10系统，想着不能两个都搞WIN系统，便考虑在笔记本上装个Linux学着玩玩，网上对比了一下各种Linux系统，Ubuntu发行速度太快，UI界面吃内存吃的紧，而且搞开发的貌似都更倾向于选Red Hat，于是最后我选择使用CentOS 7，不过装了Linux快一个多月了都没怎么碰这玩意。
+  今年7月份自己DIY了一台式机，装了WIN10。想着不能两个都搞WINDOWS，便考虑在笔记本上装个Linux学着玩玩。
+
+  网上对比了一下各种Linux系统，说是Ubuntu发行速度太快，UI界面吃内存吃的紧，而且搞开发的貌似都更倾向于选Red Hat，加上我之前的心理阴影，于是最后选择使用CentOS 7，但是装了Linux快一个多月了都没怎么碰。
 
 ## 契机
-这两天老板要求助教要在可视化课上做展示，给大伙介绍可视化工具如何使用，我负责介绍[Vega](https://vega.github.io/vega/)这个virtualization grammar，展示需要使用电脑操作IDE一步步演示项目如何建立使用，但我这边还装着Linux。没办法了，赶鸭子上架，得赶快把Linux熟悉了才好。
+  这两天老板要求助教要在可视化课上做展示，给大伙介绍可视化工具如何使用，我负责介绍[Vega](https://vega.github.io/vega/)这个virtualization grammar，展示需要使用电脑操作IDE一步步演示项目如何建立使用。
+
+正好借这个机会好好折腾一下Linux系统。
 
 ## 一下午的折腾
-早上十点左右开始，我与OS的相爱相杀便正式开始（￣︶￣）↗。
+  早上十点左右开始，我与OS的相爱相杀便正式开始（￣︶￣）↗。
 
 ### chrome浏览器
-因为谷歌停止了对CentOS的支持，所以得自己找网上的资源。(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
-{% highlight markdown %}
-yum update google-chrome-stable
-{% endhighlight %}
+  因为谷歌停止了对CentOS的支持，所以得找网上的资源。(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
+  {% highlight markdown %}
+  yum update google-chrome-stable
+  {% endhighlight %}
 
 #### Step 1 Enable Google YUM repository
-Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
-{% highlight markdown %}
-[google-chrome]
-name=google-chrome
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
-enabled=1
-gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-{% endhighlight %}
+  Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
+  {% highlight markdown %}
+  [google-chrome]
+  name=google-chrome
+  baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+  enabled=1
+  gpgcheck=1
+  gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+  {% endhighlight %}
 
 #### Step 2 Installing Chrome Web Browser
 
-check whether the latest version available
-{% highlight markdown %}
-yum info google-chrome-stable
-{% endhighlight %}
-install
-{% highlight markdown %}
-yum install google-chrome-stable
-{% endhighlight %}
+  check whether the latest version available
+  {% highlight markdown %}
+  yum info google-chrome-stable
+  {% endhighlight %}
+  install
+  {% highlight markdown %}
+  yum install google-chrome-stable
+  {% endhighlight %}
 
 #### Step 3: Starting Chrome Web Browser
 
-{% highlight markdown %}
-google-chrome &
-{% endhighlight %}
+  {% highlight markdown %}
+  google-chrome &
+  {% endhighlight %}
 
-最后，作为新时代的四有新人也需要科学[上网](https://laod.cn/hosts/2017-google-hosts.html)，下载完最新的host文件，直接copy到**/etc/hosts**，然后**log out log in**即可(为了刷新DNS缓存我费了不少功夫，但最后怎么折腾都不行，发现还是直接注销最方便)。
+  作为新时代的四有新人也需要[科学上网](https://laod.cn/hosts/2017-google-hosts.html)，下载完最新的host文件，直接copy到**/etc/hosts**，然后**log out log in**即可(为了刷新DNS缓存费了我不少功夫，但怎么折腾都不行，最后发现还是直接注销最方便)。
 
 ### webstorm
 
-这里主要研究了一下Linux目录结构，因为一开始我不知道程序该装到哪个文件夹里去，不过我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗。
-{% highlight markdown %}
-/usr：系统级的目录，可以理解为C:/Windows/
-/usr/lib，理解为C:/Windows/System32
-/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
-/opt：用户级的程序目录，可以理解为D:/Software
-/usr/src：系统级的源码目录
-/usr/local/src：用户级的源码目录
-{% endhighlight %}
+  这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗。
+  {% highlight markdown %}
+  /usr：系统级的目录，可以理解为C:/Windows/
+  /usr/lib，理解为C:/Windows/System32
+  /usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
+  /opt：用户级的程序目录，可以理解为D:/Software
+  /usr/src：系统级的源码目录
+  /usr/local/src：用户级的源码目录
+  {% endhighlight %}
 
-1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
-2. 解压
-{% highlight markdown %}
-tar xvzf ~/Downloads/WebStorm*.tar.gz -C /tmp/
-{% endhighlight %}
-3. 移动
-{% highlight markdown %}
-sudo mv /tmp/WebStorm* /opt/Webstorm
-{% endhighlight %}
-4. 加软连接
-{% highlight markdown %}
-sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
-{% endhighlight %}
-5. 启动
-{% highlight markdown %}
-webstorm
-{% endhighlight %}
+  1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
+
+  2. 解压
+
+  {% highlight markdown %}
+  tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
+  {% endhighlight %}
+
+  3. 移动
+
+  {% highlight markdown %}
+  sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
+  {% endhighlight %}
+
+  4. 加软连接
+
+  {% highlight markdown %}
+  sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
+  {% endhighlight %}
+
+  5. 启动
+
+  {% highlight markdown %}
+  webstorm
+  {% endhighlight %}
 
 ### nodejs
 从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压塞到**/opt/node**里，然后需要修改环境变量(NODE_HOME)，我在这里栽了个跟头，我把环境变量写进**/etc/profile**文件里，可是每次关闭shell再重打开就怎么也用不了**node**和**npm**。原来修改环境变量也有三种方式。
