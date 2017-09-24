@@ -143,7 +143,7 @@ webstorm
 - **Step 1**&nbsp; &nbsp;先查一下GNOME版本.
 
 {% highlight markdown %}
-//显示没有**gnome-about**这个命令
+//显示没有gnome-about这个命令
 gnome-about --gnome-version
 //可以使用，GNOME3
 gnome-session --version
@@ -180,8 +180,8 @@ cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
 cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 {% endhighlight %}
 
-{% highlight markdown %}
-//修改**classic.json**
+{% highlight js %}
+//修改classic.json
 cd modes/
 vi classic.json
 //修改如下
@@ -191,8 +191,8 @@ vi classic.json
    }
 {% endhighlight %}
 
-{% highlight markdown %}
-//修改**gnome-classic.css**
+{% highlight js %}
+//修改gnome-classic.css
 cd ../theme/
 vi gnome-classic.css
 //修改如下
