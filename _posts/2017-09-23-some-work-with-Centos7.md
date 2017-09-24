@@ -105,7 +105,7 @@ webstorm
 {% endhighlight %}
 需要**npm install**一下，可是我这里报了许多错误，从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，可能有种东西就叫做“玄学”。
 
-![placeholder](https://github.com/Dervean/dervean.github.io/tree/master/images/vega.png "unemployment in U.S.A.")
+![placeholder](/images/vega_employment_USA.png "unemployment in U.S.A.")
 
 ### GNOME主题
 
