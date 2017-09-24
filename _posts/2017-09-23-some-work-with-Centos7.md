@@ -80,24 +80,24 @@ google-chrome &
 /usr/local/src：用户级的源码目录
 {% endhighlight %}
 
-- **Step 1**  Download package from [webstorm](http://www.jetbrains.com/webstorm/download/#section=linux).
+- **Step 1**&nbsp; &nbsp; Download package from [webstorm](http://www.jetbrains.com/webstorm/download/#section=linux).
 
-- **Step 2**  Unzip the package.
+- **Step 2**&nbsp; &nbsp; Unzip the package.
 {% highlight markdown %}
 tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
 {% endhighlight %}
 
-- **Step 3**  Move the package.
+- **Step 3**&nbsp; &nbsp; Move the package.
 {% highlight markdown %}
 sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
 {% endhighlight %}
 
-- **Step 4**  Add soft link.
+- **Step 4**&nbsp; &nbsp; Add soft link.
 {% highlight markdown %}
 sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
 {% endhighlight %}
 
-- **Step 5**  Start webstorm.
+- **Step 5**&nbsp; &nbsp; Start webstorm.
 {% highlight markdown %}
 webstorm
 {% endhighlight %}
