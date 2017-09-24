@@ -37,7 +37,7 @@ author: "Dervean"
   yum update google-chrome-stable
   {% endhighlight %}
 
-- Step 1 Enable Google YUM repository
+- _Step 1_  Enable Google YUM repository
   Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
   {% highlight markdown %}
   [google-chrome]
@@ -48,18 +48,21 @@ author: "Dervean"
   gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
   {% endhighlight %}
 
-- Step 2 Installing Chrome Web Browser
+- _Step 2_  Installing Chrome Web Browser
 
   check whether the latest version available
+
   {% highlight markdown %}
   yum info google-chrome-stable
   {% endhighlight %}
+
   install
+
   {% highlight markdown %}
   yum install google-chrome-stable
   {% endhighlight %}
 
-- Step 3: Starting Chrome Web Browser
+- _Step 3_  Starting Chrome Web Browser
 
   {% highlight markdown %}
   google-chrome &
@@ -70,6 +73,7 @@ author: "Dervean"
 ### webstorm
 
   这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗。
+
   {% highlight markdown %}
   /usr：系统级的目录，可以理解为C:/Windows/
   /usr/lib，理解为C:/Windows/System32
@@ -79,27 +83,27 @@ author: "Dervean"
   /usr/local/src：用户级的源码目录
   {% endhighlight %}
 
-  1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
+1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
 
-  2. 解压
+2. 解压
 
   {% highlight markdown %}
   tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
   {% endhighlight %}
 
-  3. 移动
+3. 移动
 
   {% highlight markdown %}
   sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
   {% endhighlight %}
 
-  4. 加软连接
+4. 加软连接
 
   {% highlight markdown %}
   sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
   {% endhighlight %}
 
-  5. 启动
+5. 启动
 
   {% highlight markdown %}
   webstorm
