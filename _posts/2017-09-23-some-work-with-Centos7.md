@@ -32,22 +32,23 @@ author: "Dervean"
   
 
 ### chrome浏览器
-  因为谷歌停止了对CentOS的支持，所以得找网上的资源。(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
-  {% highlight markdown %}
-  yum update google-chrome-stable
-  {% endhighlight %}
+因为谷歌停止了对CentOS的支持，所以得找网上的资源。(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
 
-- **Step 1**  Enable Google YUM repository.
-  Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
+{% highlight markdown %}
+yum update google-chrome-stable
+{% endhighlight %}
 
-  {% highlight markdown %}
-  [google-chrome]
-  name=google-chrome
-  baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
-  enabled=1
-  gpgcheck=1
-  gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-  {% endhighlight %}
+- **Step 1**  Enable Google YUM repository.Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
+
+{% highlight markdown %}
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+{% endhighlight %}
+
 - **Step 2**  Installing Chrome Web Browser.
 
 {% highlight markdown %}
@@ -59,14 +60,15 @@ yum install google-chrome-stable
 
 - **Step 3**  Starting Chrome Web Browser.
 
-  {% highlight markdown %}
-  google-chrome &
-  {% endhighlight %}
-  作为新时代的四有新人也需要[科学上网](https://laod.cn/hosts/2017-google-hosts.html)，下载完最新的host文件，直接copy到**/etc/hosts**，然后**log out log in**即可(为了刷新DNS缓存费了我不少功夫，但怎么折腾都不行，最后发现还是直接注销最方便)。
+{% highlight markdown %}
+google-chrome &
+{% endhighlight %}
+
+作为新时代的四有新人也需要[科学上网](https://laod.cn/hosts/2017-google-hosts.html)，下载完最新的host文件，直接copy到**/etc/hosts**，然后**log out log in**即可(为了刷新DNS缓存费了我不少功夫，但怎么折腾都不行，最后发现还是直接注销最方便)。
 
 ### webstorm
 
-  这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗。
+这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗。
 
 {% highlight markdown %}
 /usr：系统级的目录，可以理解为C:/Windows/
