@@ -105,7 +105,7 @@ webstorm
 {% endhighlight %}
 需要**npm install**一下，可是我这里报了许多错误，从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，可能有种东西就叫做“玄学”。
 
-![placeholder](https://github.com/Dervean/dervean.github.io/tree/master/images/vega.png/800x400 "unemployment in U.S.A.")
+![placeholder](https://github.com/Dervean/dervean.github.io/tree/master/images/vega.png "unemployment in U.S.A.")
 
 ### GNOME主题
 
@@ -266,4 +266,4 @@ $ sudo yum --enablerepo=nux-dextop install <package-name>
 
 10. 点击cairo-dock图标即可
 
-![placeholder]("/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
+![placeholder](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
