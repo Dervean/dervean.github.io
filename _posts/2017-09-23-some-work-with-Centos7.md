@@ -1,13 +1,17 @@
 ---
 layout: post
 title: "Hi, CentOS."
-author: "Dervean"
+description: "First come up with Linux."
+categories: [linux]
+tags: [linux, configuration]
+redirect_from:
+  - /2017/09/23/
 ---
 
 
 一直以来都想认认真真地玩一玩Linux系统，但总都有杂七杂八的事情阻碍我，今天折腾了一下午Linux系统，竟然有种一见如故的感觉！
 
-<hr>
+---
 
 ## 初识Linux
   在大学的时候就折腾过Linux系统，当时想要学Hadoop，便用VMware装的ubuntu12.04版本的Linux.
@@ -120,7 +124,7 @@ webstorm
 
 需要**npm install**，可是却报了许多错误，我从网上找解决方案，找了许久也没什么头绪，便也不管了，最后**npm run build**竟然也成功了，(￣▽￣)"，可能有种东西就叫做“玄学”.
 
-![placeholder](/images/vega_employment_USA.png "unemployment in U.S.A.")
+![smiley](/images/vega_employment_USA.png "unemployment in U.S.A.")
 
 ## GNOME主题
 
@@ -281,4 +285,4 @@ $ sudo yum --enablerepo=nux-dextop install <package-name>
 
 - **Step 10**&nbsp; &nbsp;点击cairo-dock图标即可.
 
-![placeholder](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
+![smiley](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
