@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Hi, CentOS."
+author: Dervean
 description: "First come up with Linux."
 categories: [linux]
-tags: [linux, configuration]
+tags: [linux]
 redirect_from:
   - /2017/09/23/
 ---
@@ -285,4 +286,4 @@ $ sudo yum --enablerepo=nux-dextop install <package-name>
 
 - **Step 10**&nbsp; &nbsp;点击cairo-dock图标即可.
 
-![smiley](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
+![smiley](/images/Screenshot_from_2017-09-24_02-30-38.png)
