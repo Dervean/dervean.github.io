@@ -22,7 +22,7 @@ sass:
 
 # Site Data
 url: https://dervean.github.io/
-baseurl: /blog
+baseurl: #
 title: Dervean's Blog
 description: "A gem-based responsive simple texture styled Jekyll theme."
 keywords: 'jekyll,theme,gem-based,blog'
