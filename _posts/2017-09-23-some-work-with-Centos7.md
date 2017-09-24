@@ -83,25 +83,22 @@ author: "Dervean"
 1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
 
 2. 解压
-
-  {% highlight markdown %}
-  tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
-  {% endhighlight %}
+{% highlight markdown %}
+tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/ 
+![placeholder](https://placehold.it/800x400 "Large example image")
+{% endhighlight %}
 
 3. 移动
-
   {% highlight markdown %}
   sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
   {% endhighlight %}
 
 4. 加软连接
-
   {% highlight markdown %}
   sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
   {% endhighlight %}
 
 5. 启动
-
   {% highlight markdown %}
   webstorm
   {% endhighlight %}
