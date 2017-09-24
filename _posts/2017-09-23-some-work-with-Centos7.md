@@ -150,7 +150,7 @@ gnome-tweak-tool
   
 - **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
-&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;**删除Centos底部任务栏.**
+**删除Centos底部任务栏.**
 {% highlight markdown %}
 cd /usr/share/gnome-shell/
 //备份
@@ -161,7 +161,7 @@ rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcam
 rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 {% endhighlight %}
 
-&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;**隐藏顶栏.**
+**隐藏顶栏.**
 
 {% highlight text %}
 //备份
