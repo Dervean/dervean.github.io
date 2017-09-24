@@ -79,14 +79,8 @@ google-chrome &
 1. 从[官网](http://www.jetbrains.com/webstorm/download/#section=linux)上下载包。
 
 2. 解压
-{% highlight markdown %}
-tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
-{% endhighlight %}
 
 3. 移动
-{% highlight markdown %}
-sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
-{% endhighlight %}
 
 4. 加软连接
 {% highlight markdown %}
@@ -134,7 +128,7 @@ webstorm
 
 本打算在网站上下载一个主题再装，但貌似GNOME主题需要分成几部分安装，我只安装了一个theme，然后界面不全，接着安装了gnome-theme，结果直接进了GNOME界面，不过这里还是把错误的做法记录下来，等以后再回来瞅瞅吧。
 
-###**错误的做法...**
+### 错误的做法
 
 1. 先查一下GNOME版本：
 
@@ -230,7 +224,7 @@ mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 {% endhighlight %}
 按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
 
-###**挽救**
+### 挽救
 
 6. 在登陆用户界面，直接**ctrl+alt+F2**调出**startx**，也就是直接在shell中敲命令，通过之前备份的**/usr/share/gnome-shell/theme.backup**重新恢复
 
@@ -239,7 +233,7 @@ mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 {% endhighlight %}
 重新启动，即可恢复GNOME
 
-###**换一种姿势**
+### 换一种姿势*
 
 7. 既然从主题上面安装吃了亏，另辟蹊径就好了，我还可以用软件(**cairo-dock**)改造（￣︶￣）↗，不过有好多工具都找不到，顺便改一下yum源。
 
@@ -257,32 +251,32 @@ yum clean all
 yum makecache
 {% endhighlight %}
 
-8. 装**cairo-dock**，这让我深切体会到了Ubuntu的好处，很希望能一键apt-get啊，我想着去[cairo-dock](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然。。果断选择其他方法（￣︶￣）↗　。
+8. 装**cairo-dock**，这让我深切体会到了Ubuntu的好处，很希望能一键apt-get啊，我想着去[cairo-dock](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然。果断选择其他方法（￣︶￣）↗　。
 
 **Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）。目前，Nux Dextop对CentOS/RHEL 6|7可用。
 
 {% highlight markdown %}
-下载
+//下载
 wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-安装依赖库
+//安装依赖库
 sudo yum -y install epel-release
-安装
+//安装
 rpm -ivh nux-dextop-release-0-5.el7.nux.noarch.rpm
 sudo yum install cairo-dock
 {% endhighlight %}
 
 由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）。
-所以，建议默认情况下不启用**Nux Dextop**仓库。(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))
-(这个我倒没在意，就不改了~)
+所以，建议默认情况下不启用**Nux Dextop**仓库。(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))。
+(这个我倒没在意，就不改了~)。
 {% highlight markdown %}
-打开/etc/yum.repos.d/nux-dextop.repo，将"enabled=1" 修改为 "enabled=0"。
+//打开/etc/yum.repos.d/nux-dextop.repo，将"enabled=1" 修改为 "enabled=0"。
 $ sudo vi /etc/yum.repos.d/nux-dextop.repo
-当需要使用Nux Dextop仓库时，显式启用仓库。
+//当需要使用Nux Dextop仓库时，显式启用仓库。
 $ sudo yum --enablerepo=nux-dextop install <package-name>
 {% endhighlight %}
 
-9. 界面上还会有底部任务栏和顶部横条，参照**第4步**改造一下就好了
+9. 界面上还会有底部任务栏和顶部横条，参照**第4步**改造一下就好了。
 
-10. 点击cairo-dock图标即可
+10. 点击cairo-dock图标即可。
 
 ![placeholder](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
