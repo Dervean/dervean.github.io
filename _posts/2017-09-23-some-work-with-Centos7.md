@@ -26,10 +26,10 @@ author: "Dervean"
 ## 契机
   这两天老板要求助教要在可视化课上做展示，给大伙介绍可视化工具如何使用，我负责介绍[Vega](https://vega.github.io/vega/)这个virtualization grammar，展示需要使用电脑操作IDE一步步演示项目如何建立使用。
 
-正好借这个机会好好折腾一下Linux系统。
+  正好借这个机会好好折腾一下Linux系统。早上十点左右开始，我与OS的相爱相杀便正式开始（￣︶￣）↗。
 
 ## 一下午的折腾
-  早上十点左右开始，我与OS的相爱相杀便正式开始（￣︶￣）↗。
+  
 
 ### chrome浏览器
   因为谷歌停止了对CentOS的支持，所以得找网上的资源。(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
@@ -84,7 +84,6 @@ author: "Dervean"
 
 2. 解压
 {% highlight markdown %}
-tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/ 
 ![placeholder](https://placehold.it/800x400 "Large example image")
 {% endhighlight %}
 
