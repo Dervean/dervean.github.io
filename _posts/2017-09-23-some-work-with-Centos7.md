@@ -39,7 +39,7 @@ author: "Dervean"
 yum update google-chrome-stable
 {% endhighlight %}
 
-- **Step 1**  Enable Google YUM repository.Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
+- **Step 1**&nbsp; &nbsp;Enable Google YUM repository.Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
 
 {% highlight markdown %}
 [google-chrome]
@@ -50,7 +50,7 @@ gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 {% endhighlight %}
 
-- **Step 2**  Installing Chrome Web Browser.
+- **Step 2**&nbsp; &nbsp;Installing Chrome Web Browser.
 
 {% highlight markdown %}
 //check whether the latest version available.
@@ -59,7 +59,7 @@ yum info google-chrome-stable
 yum install google-chrome-stable
 {% endhighlight %}
 
-- **Step 3**  Starting Chrome Web Browser.
+- **Step 3**&nbsp; &nbsp;Starting Chrome Web Browser.
 
 {% highlight markdown %}
 google-chrome &
@@ -80,24 +80,24 @@ google-chrome &
 /usr/local/src：用户级的源码目录
 {% endhighlight %}
 
-- **Step 1**&nbsp; &nbsp; Download package from [webstorm](http://www.jetbrains.com/webstorm/download/#section=linux).
+- **Step 1**&nbsp; &nbsp;Download package from [webstorm](http://www.jetbrains.com/webstorm/download/#section=linux).
 
-- **Step 2**&nbsp; &nbsp; Unzip the package.
+- **Step 2**&nbsp; &nbsp;Unzip the package.
 {% highlight markdown %}
 tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
 {% endhighlight %}
 
-- **Step 3**&nbsp; &nbsp; Move the package.
+- **Step 3**&nbsp; &nbsp;Move the package.
 {% highlight markdown %}
 sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
 {% endhighlight %}
 
-- **Step 4**&nbsp; &nbsp; Add soft link.
+- **Step 4**&nbsp; &nbsp;Add soft link.
 {% highlight markdown %}
 sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
 {% endhighlight %}
 
-- **Step 5**&nbsp; &nbsp; Start webstorm.
+- **Step 5**&nbsp; &nbsp;Start webstorm.
 {% highlight markdown %}
 webstorm
 {% endhighlight %}
@@ -116,7 +116,7 @@ webstorm
 最后我还是选择了**方法1**，多练习敲这个命令，以后再改.
 
 ## vega demo
-[Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里，
+[Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里.
 
 {% highlight js %}
 <div id="vis"></div>
@@ -285,8 +285,8 @@ $ sudo vi /etc/yum.repos.d/nux-dextop.repo
 $ sudo yum --enablerepo=nux-dextop install <package-name>
 {% endhighlight %}
 
-9. 界面上还会有底部任务栏和顶部横条，参照**第4步**改造一下就好了.
+9.界面上还会有底部任务栏和顶部横条，参照**第4步**改造一下就好了.
 
-10. 点击cairo-dock图标即可.
+10.点击cairo-dock图标即可.
 
 ![placeholder](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
