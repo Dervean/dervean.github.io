@@ -39,9 +39,7 @@ redirect_from:
 ## Chrome浏览器
 因为谷歌停止了对CentOS的支持，所以得找网上的资源.(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
 
-
     yum update google-chrome-stable
-
 
 - **Step 1**&nbsp; &nbsp;Enable Google YUM repository.Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
 
