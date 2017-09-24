@@ -9,7 +9,7 @@ author: "Dervean"
 
 <hr>
 
-## 第一次接触Linux
+## 初识Linux
   在大学的时候就折腾过Linux系统，当时想要学Hadoop，便用VMware装的ubuntu12.04版本的Linux.
 
   因为电脑配置不好，4G内存，在虚拟机上完全跑不动，而且校园网网速感人，那糟糕体验简直酸爽.
@@ -18,7 +18,7 @@ author: "Dervean"
 
 不过这让我对Linux系统产生了心理阴影，好长时间不想接触这玩意.
 
-## 重新拾起学习的兴趣
+## 重新连接
   今年7月份自己DIY了一台式机，装了WIN10.
 
   想着不能两个都搞WINDOWS，便考虑在笔记本上装个Linux学着玩玩.
@@ -32,7 +32,7 @@ author: "Dervean"
 
   早上十点左右开始，我与OS的相爱相杀便正式开始（￣︶￣）↗.
 
-## chrome浏览器
+## Chrome浏览器
 因为谷歌停止了对CentOS的支持，所以得找网上的资源.(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
 
 {% highlight markdown %}
@@ -67,7 +67,7 @@ google-chrome &
 
 作为新时代的四有新人也需要[科学上网](https://laod.cn/hosts/2017-google-hosts.html)，下载完最新的host文件，直接copy到**/etc/hosts**，然后**log out log in**即可(为了刷新DNS缓存费了我不少功夫，但怎么折腾都不行，最后发现还是直接注销最方便).
 
-## webstorm
+## Webstorm
 
 这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗.
 
@@ -102,7 +102,7 @@ sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
 webstorm
 {% endhighlight %}
 
-## nodejs
+## Nodejs
 从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压到**/opt/node**里，修改环境变量(NODE_HOME).
 
 我在这里栽了个跟头，我把环境变量写进**/etc/profile**文件里，可是每次关闭shell再重打开就怎么也用不了**node**和**npm**.
@@ -115,7 +115,7 @@ webstorm
 
 最后我还是选择了**方法1**，多练习敲这个命令，以后再改.
 
-## vega demo
+## Vega demo
 [Vega](https://vega.github.io/vega/)里有个模块[vega-embed](https://github.com/vega/vega-embed),使用这个模块可以把Vega嵌入到网页里.
 
 {% highlight js %}
