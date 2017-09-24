@@ -87,7 +87,7 @@ google-chrome &
 tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
 {% endhighlight %}
 
-- **Step 3**&nbsp; &nbsp;Move the package.
+- **Step 3**&nbsp; &nbsp;Move the directory to /opt/.
 {% highlight markdown %}
 sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
 {% endhighlight %}
@@ -140,7 +140,7 @@ webstorm
 
 ### 错误的做法
 
-1.先查一下GNOME版本.
+- **Step 1**&nbsp; &nbsp;先查一下GNOME版本.
 
 {% highlight markdown %}
 //显示没有**gnome-about**这个命令
@@ -149,15 +149,16 @@ gnome-about --gnome-version
 gnome-session --version
 {% endhighlight %}
 
-2.去[GNOME主题网站](https://www.opendesktop.org/s/Gnome/browse/)上下载一个主题，我选择了T4G_3.0_theme.
+- **Step 2**&nbsp; &nbsp;去[GNOME主题网站](https://www.opendesktop.org/s/Gnome/browse/)上下载一个主题，我选择了T4G_3.0_theme.
 
-3.下载主题后解压，把整个解压后的文件夹放入**/usr/share/themes**，使用**gnome-tweak-tool**加载主题.
+- **Step 3**&nbsp; &nbsp;下载主题后解压，把整个解压后的文件夹放入**/usr/share/themes**，使用**gnome-tweak-tool**加载主题.
+
 {% highlight markdown %}
 mv T4G_3.0_theme /usr/share/themes
 gnome-tweak-tool
 {% endhighlight %}
-
-4.加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
+  
+- **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
 * 删除Centos底部任务栏：
 {% highlight markdown %}
@@ -227,7 +228,7 @@ vi gnome-classic.css
   }
 {% endhighlight %}
 
-5.界面还是不全，把**T4G_3.0_theme**里面的**gnome-theme**单独放在**/usr/share/gnome-shell/**中.
+- **Step 5**&nbsp; &nbsp;界面还是不全，把**T4G_3.0_theme**里面的**gnome-theme**单独放在**/usr/share/gnome-shell/**中.
 {% highlight markdown %}
 rm -r /usr/share/gnome-shell/theme
 mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
@@ -236,16 +237,16 @@ mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 
 ### 挽救
 
-6.在登陆用户界面，直接**ctrl+alt+F2**调出**startx**，也就是直接在shell中敲命令，通过之前备份的**/usr/share/gnome-shell/theme.backup**重新恢复.
+- **Step 6**&nbsp; &nbsp;在登陆用户界面，直接**ctrl+alt+F2**调出**startx**，也就是直接在shell中敲命令，通过之前备份的**/usr/share/gnome-shell/theme.backup**重新恢复.
 
 {% highlight markdown %}
 mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 {% endhighlight %}
 重新启动，即可恢复GNOME
 
-### 换一种姿势*
+### 换一种姿势
 
-7.既然从主题上面安装吃了亏，另辟蹊径就好了，我还可以用软件(**cairo-dock**)改造（￣︶￣）↗，不过有好多工具都找不到，顺便改一下yum源.
+- **Step 7**&nbsp; &nbsp;既然从主题上面安装吃了亏，另辟蹊径就好了，我还可以用软件(**cairo-dock**)改造（￣︶￣）↗，不过有好多工具都找不到，顺便改一下yum源.
 
 {% highlight markdown %}
 cd /etc/yum.repos.d 
@@ -261,7 +262,7 @@ yum clean all
 yum makecache
 {% endhighlight %}
 
-8.装**cairo-dock**，这让我深切体会到了Ubuntu的好处，很希望能一键apt-get啊，我想着去[cairo-dock](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然.果断选择其他方法（￣︶￣）↗.
+- **Step 8**&nbsp; &nbsp;装**cairo-dock**，这让我深切体会到了Ubuntu的好处，很希望能一键apt-get啊，我想着去[cairo-dock](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然.果断选择其他方法（￣︶￣）↗.
 
 **Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）.
 
@@ -285,8 +286,8 @@ $ sudo vi /etc/yum.repos.d/nux-dextop.repo
 $ sudo yum --enablerepo=nux-dextop install <package-name>
 {% endhighlight %}
 
-9.界面上还会有底部任务栏和顶部横条，参照**第4步**改造一下就好了.
+- **Step 9**&nbsp; &nbsp;界面上还会有底部任务栏和顶部横条，参照**Step 4**改造一下就好了.
 
-10.点击cairo-dock图标即可.
+- **Step 10**&nbsp; &nbsp;点击cairo-dock图标即可.
 
 ![placeholder](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
