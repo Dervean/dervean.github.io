@@ -84,7 +84,7 @@ author: "Dervean"
 
 2. 解压
 {% highlight markdown %}
-![placeholder](https://placehold.it/800x400 "Large example image")
+tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
 {% endhighlight %}
 
 3. 移动
