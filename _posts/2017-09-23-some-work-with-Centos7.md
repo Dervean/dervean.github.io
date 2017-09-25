@@ -138,25 +138,25 @@ redirect_from:
 - **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
     * **删除Centos底部任务栏.**
+{% highlight text %}
+cd /usr/share/gnome-shell/
+//备份
+cp -r /usr/share/gnome-shell/extensions/  /usr/share/gnome-shell/extensions.backup/
+//删除任务栏
+rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com
+//删除位置栏
+rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
+{% endhighlight %}
 
-    cd /usr/share/gnome-shell/
-    //备份
-    cp -r /usr/share/gnome-shell/extensions/  /usr/share/gnome-shell/extensions.backup/
-    //删除任务栏
-    rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com
-    //删除位置栏
-    rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
-
-
-    *  **隐藏顶栏.**<br>
-      * 备份
+    * **隐藏顶栏.**<br>
+       * 备份
 {% highlight text %}
 cd /usr/share/gnome-shell
 cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
 cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 {% endhighlight %}
 
-      * 修改 /usr/share/gnome-shell/modes/classic.json
+       * 修改 /usr/share/gnome-shell/modes/classic.json
 {% highlight text %}
  "panel":{ "left": [],
     "center": [],
