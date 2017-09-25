@@ -139,27 +139,38 @@ gnome-session --version
   * Delete the bottom bar.
 
 >cd /usr/share/gnome-shell/
+>
 >//备份
+>
 >cp -r /usr/share/gnome-shell/extensions/  /usr/share/gnome-shell/extensions.backup/
+>
 >//删除任务栏
+>
 >rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com
+>
 >//删除位置栏
+>
 >rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 
   * Hide the top bar.<br>
+    
+>//备份
+>
+>cd /usr/share/gnome-shell
+>
+>cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
+>
+>cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 
-备份
-
-    cd /usr/share/gnome-shell
-    cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
-    cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
-
-修改 /usr/share/gnome-shell/modes/classic.json
-
-     "panel":{ "left": [],
-        "center": [],
-         "right": []
-       }
+>//修改 /usr/share/gnome-shell/modes/classic.json
+>
+>"panel":{ "left": [],
+>
+>  "center": [],
+>
+>   "right": []
+>
+> }
 
 修改 /usr/share/gnome-shell/theme/gnome-classic.css
 
