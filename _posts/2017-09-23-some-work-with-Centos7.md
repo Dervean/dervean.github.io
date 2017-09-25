@@ -78,7 +78,7 @@ redirect_from:
 
 >/usr：系统级的目录，可以理解为C:/Windows/
 >
->/usr/lib，理解为C:/Windows/System32
+>/usr/lib：理解为C:/Windows/System32
 >
 >/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
 >
@@ -132,7 +132,7 @@ redirect_from:
 
 本打算在网站上下载一个主题再装，但貌似GNOME主题需要分成几部分安装，我只安装了一个theme，然后界面不全，接着安装了gnome-theme，结果直接进了GNOME界面，不过这里还是把错误的做法记录下来，等以后再回来瞅瞅吧.
 
-### 错误的做法
+#### 错误的做法
 
 - **Step 1**&nbsp; &nbsp;先查一下GNOME版本.
 
@@ -243,7 +243,7 @@ redirect_from:
 
 按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
 
-### 挽救
+#### 挽救
 
 - **Step 6**&nbsp; &nbsp;在登陆用户界面，直接**ctrl+alt+F2**调出**startx**，也就是直接在shell中敲命令，通过之前备份的**/usr/share/gnome-shell/theme.backup**重新恢复.
 
@@ -251,7 +251,7 @@ redirect_from:
 
 重新启动，即可恢复GNOME
 
-### 换一种姿势
+#### 换一种姿势
 
 - **Step 7**&nbsp; &nbsp;既然从主题上面安装吃了亏，另辟蹊径就好了，我还可以用软件(**cairo-dock**)改造（￣︶￣）↗，不过有好多工具都找不到，顺便改一下yum源.
 
