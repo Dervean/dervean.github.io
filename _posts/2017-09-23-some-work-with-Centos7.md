@@ -152,7 +152,7 @@ gnome-session --version
 >
 >rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 
-  * Hide the top bar.<br>
+  * Hide the top bar.
     
 >//备份
 >
@@ -172,36 +172,49 @@ gnome-session --version
 >
 > }
 
-修改 /usr/share/gnome-shell/theme/gnome-classic.css
+>//修改 /usr/share/gnome-shell/theme/gnome-classic.css
+>
+>#panel {
+>
+>   background-color: #e9e9e9;
+>
+>   background-gradient-direction: vertical;
+>
+>   background-gradient-end: #d0d0d0;
+>
+>   border-top-color: #666; 
+> 
+>   border-bottom: 1px solid #666;
+>
+>   app-icon-bottom-clip: 0px;
+>
+>   color: transparent;
+>
+>  }
 
-    #panel {
-        background-color: #e9e9e9;
-        background-gradient-direction: vertical;
-        background-gradient-end: #d0d0d0;
-        border-top-color: #666; /* we don't supportnon-uniform border-colors and
-                                   use the top bordercolor for any border, so we
-                                   need to set iteven if all we want is a bottom
-                                   border */
-        border-bottom: 1px solid #666;
-        app-icon-bottom-clip: 0px;
-        color: transparent;
-        /* hrm, still no multipoint gradients
-        background-image: linear-gradient(left,rgba(255, 255, 255, 0),rgba(255, 255, 255, 1) 50%，rgba(255, 255, 255, 0)) !important;*/
-       }
-
-修改 /usr/share/gnome-shell/theme/gnome-shell.css
-
-    //第一处
-    #panel {
-        background-color:transparent;
-        font-weight: bold;
-        height: 0px;
-       }
-    //第二处
-     .panel-logo-icon {
-      padding-right: .4em;
-      icon-size: 1px;
-      }
+>//修改 /usr/share/gnome-shell/theme/gnome-shell.css
+>
+>//第一处
+>
+>#panel {
+>
+>    background-color:transparent;
+>
+>    font-weight: bold;
+>
+>    height: 0px;
+>
+>   }
+>
+>//第二处
+>
+> .panel-logo-icon {
+>
+>  padding-right: .4em;
+>
+>  icon-size: 1px;
+>
+>  }
 
 
 - **Step 5**&nbsp; &nbsp;界面还是不全，把**T4G_3.0_theme**里面的**gnome-theme**单独放在**/usr/share/gnome-shell/**中.
