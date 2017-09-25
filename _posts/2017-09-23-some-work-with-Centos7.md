@@ -241,7 +241,7 @@ redirect_from:
 >
 >mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 
-  按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
+按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
 
 #### 挽救
 
@@ -249,7 +249,7 @@ redirect_from:
 
 >mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 
-  重新启动，即可恢复GNOME
+重新启动，即可恢复GNOME
 
 #### 换一种姿势
 
