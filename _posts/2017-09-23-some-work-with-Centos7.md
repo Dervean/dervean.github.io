@@ -122,11 +122,12 @@ redirect_from:
 ### 错误的做法
 
 - **Step 1**&nbsp; &nbsp;先查一下GNOME版本.
-
-    //显示没有gnome-about这个命令
-    gnome-about --gnome-version
-    //可以使用，GNOME3
-    gnome-session --version
+{% highlight text %}
+//显示没有gnome-about这个命令
+gnome-about --gnome-version
+//可以使用，GNOME3
+gnome-session --version
+{% endhighlight %}
 
 - **Step 2**&nbsp; &nbsp;去[GNOME主题网站](https://www.opendesktop.org/s/Gnome/browse/)上下载一个主题，我选择了T4G_3.0_theme.
 
@@ -149,14 +150,14 @@ rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gca
 {% endhighlight %}
 
     * **隐藏顶栏.**<br>
-       * 备份
+备份
 {% highlight text %}
 cd /usr/share/gnome-shell
 cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
 cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 {% endhighlight %}
 
-       * 修改 /usr/share/gnome-shell/modes/classic.json
+修改 /usr/share/gnome-shell/modes/classic.json
 {% highlight text %}
  "panel":{ "left": [],
     "center": [],
@@ -164,7 +165,7 @@ cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
    }
 {% endhighlight %}
 
-      * 修改 /usr/share/gnome-shell/theme/gnome-classic.css
+修改 /usr/share/gnome-shell/theme/gnome-classic.css
 {% highlight text %}
 #panel {
     background-color: #e9e9e9;
@@ -182,7 +183,7 @@ cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
    }
 {% endhighlight %}
 
-      * 修改 /usr/share/gnome-shell/theme/gnome-shell.css
+修改 /usr/share/gnome-shell/theme/gnome-shell.css
 {% highlight text %}
 //第一处
 #panel {
