@@ -122,12 +122,10 @@ redirect_from:
 ### 错误的做法
 
 - **Step 1**&nbsp; &nbsp;先查一下GNOME版本.
-{% highlight text %}
 //显示没有gnome-about这个命令
 gnome-about --gnome-version
 //可以使用，GNOME3
 gnome-session --version
-{% endhighlight %}
 
 - **Step 2**&nbsp; &nbsp;去[GNOME主题网站](https://www.opendesktop.org/s/Gnome/browse/)上下载一个主题，我选择了T4G_3.0_theme.
 
@@ -138,7 +136,7 @@ gnome-session --version
   
 - **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
-  * **Delete the bottom bar**
+  * **Delete the bottom bar**.
 {% highlight text %}
 cd /usr/share/gnome-shell/
 //备份
@@ -149,7 +147,7 @@ rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcam
 rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 {% endhighlight %}
 
-  * **Hide the top bar**<br>
+  * **Hide the top bar**<br>.
 备份
 {% highlight text %}
 cd /usr/share/gnome-shell
