@@ -39,28 +39,36 @@ redirect_from:
 ## Chrome浏览器
 因为谷歌停止了对CentOS的支持，所以得找网上的资源.(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
 
-    yum update google-chrome-stable
+>yum update google-chrome-stable
 
 - **Step 1**&nbsp; &nbsp;Enable Google YUM repository.Create a file called **/etc/yum.repos.d/google-chrome.repo** and add the following lines of code to it.
 
-    [google-chrome]
-    name=google-chrome
-    baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
-    enabled=1
-    gpgcheck=1
-    gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+>[google-chrome]
+>
+>name=google-chrome
+>
+>baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+>
+>enabled=1
+>
+>gpgcheck=1
+>
+>gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 
 - **Step 2**&nbsp; &nbsp;Installing Chrome Web Browser.
 
-    //check whether the latest version available.
-    yum info google-chrome-stable
-    //install.
-    yum install google-chrome-stable
+>//check whether the latest version available.
+>
+>yum info google-chrome-stable
+>
+>//install.
+>
+>yum install google-chrome-stable
 
 - **Step 3**&nbsp; &nbsp;Starting Chrome Web Browser.
 
-    google-chrome &
+>google-chrome &
 
 作为新时代的四有新人也需要[科学上网](https://laod.cn/hosts/2017-google-hosts.html)，下载完最新的host文件，直接copy到**/etc/hosts**，然后**log out log in**即可(为了刷新DNS缓存费了我不少功夫，但怎么折腾都不行，最后发现还是直接注销最方便).
 
@@ -68,30 +76,30 @@ redirect_from:
 
 这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗.
 
-    /usr：系统级的目录，可以理解为C:/Windows/
-    /usr/lib，理解为C:/Windows/System32
-    /usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
-    /opt：用户级的程序目录，可以理解为D:/Software
-    /usr/src：系统级的源码目录
-    /usr/local/src：用户级的源码目录
+>/usr：系统级的目录，可以理解为C:/Windows/
+>/usr/lib，理解为C:/Windows/System32
+>/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
+>/opt：用户级的程序目录，可以理解为D:/Software
+>/usr/src：系统级的源码目录
+>/usr/local/src：用户级的源码目录
 
 - **Step 1**&nbsp; &nbsp;Download package from [webstorm](http://www.jetbrains.com/webstorm/download/#section=linux).
 
 - **Step 2**&nbsp; &nbsp;Unzip the package.
 
-    tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
+>tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
 
 - **Step 3**&nbsp; &nbsp;Move the directory to /opt/.
 
-    sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
+>sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
 
 - **Step 4**&nbsp; &nbsp;Add soft link.
 
-    sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
+>sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
 
 - **Step 5**&nbsp; &nbsp;Start webstorm.
 
-    webstorm
+>webstorm
 
 ## Nodejs
 从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压到**/opt/node**里，修改环境变量(NODE_HOME).
@@ -122,19 +130,25 @@ redirect_from:
 ### 错误的做法
 
 - **Step 1**&nbsp; &nbsp;先查一下GNOME版本.
-//显示没有gnome-about这个命令
-gnome-about --gnome-version
-//可以使用，GNOME3
-gnome-session --version
+
+>//显示没有gnome-about这个命令
+>
+>gnome-about --gnome-version
+>
+>//可以使用，GNOME3
+>
+>gnome-session --version
 
 - **Step 2**&nbsp; &nbsp;去[GNOME主题网站](https://www.opendesktop.org/s/Gnome/browse/)上下载一个主题，我选择了T4G_3.0_theme.
 
 - **Step 3**&nbsp; &nbsp;下载主题后解压，把整个解压后的文件夹放入**/usr/share/themes**，使用**gnome-tweak-tool**加载主题.
 
-    mv T4G_3.0_theme /usr/share/themes
-    gnome-tweak-tool
+>mv T4G_3.0_theme /usr/share/themes
+>
+>gnome-tweak-tool
   
 * **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
+
 1. Delete the bottom bar.
 
 >cd /usr/share/gnome-shell/
@@ -162,7 +176,7 @@ gnome-session --version
 >
 >cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 
->//修改 /usr/share/gnome-shell/modes/classic.json
+>//修改 **/usr/share/gnome-shell/modes/classic.json**
 >
 >"panel":{ "left": [],
 >
@@ -192,7 +206,7 @@ gnome-session --version
 >
 >  }
 
->//修改 /usr/share/gnome-shell/theme/gnome-shell.css
+>//修改 **/usr/share/gnome-shell/theme/gnome-shell.css**
 >
 >//第一处
 >
@@ -263,22 +277,31 @@ gnome-session --version
 
 **Nux Dextop**是类似CentOS、RHEL、ScientificLinux的第三方RPM仓库（比如：Ardour，Shutter等等）.
 
-    //下载
-    wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-    //安装依赖库
-    sudo yum -y install epel-release
-    //安装
-    rpm -ivh nux-dextop-release-0-5.el7.nux.noarch.rpm
-    sudo yum install cairo-dock
+>//下载
+>
+>wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+>
+>//安装依赖库
+>
+>sudo yum -y install epel-release
+>
+>//安装
+>
+>rpm -ivh nux-dextop-release-0-5.el7.nux.noarch.rpm
+>
+>sudo yum install cairo-dock
 
 由于**Nux Dextop**仓库可能会与其他第三方库有冲突，比如（Repoforge和ATrpms）.
 
 所以，建议默认情况下不启用**Nux Dextop**仓库(参考[在CentOS或RHEL上安装Nux Dextop仓库](http://www.jianshu.com/p/86d16189832e))，这个我倒没在意，就没改.
 
-    //打开/etc/yum.repos.d/nux-dextop.repo，将"enabled=1" 修改为 "enabled=0".
-    $ sudo vi /etc/yum.repos.d/nux-dextop.repo
-    //当需要使用Nux Dextop仓库时，显式启用仓库.
-    $ sudo yum --enablerepo=nux-dextop install <package-name>
+>//打开/etc/yum.repos.d/nux-dextop.repo，将"enabled=1" 修改为 "enabled=0".
+>
+>sudo vi /etc/yum.repos.d/nux-dextop.repo
+>
+>//当需要使用Nux Dextop仓库时，显式启用仓库.
+>
+>sudo yum --enablerepo=nux-dextop install <package-name>
 
 - **Step 9**&nbsp; &nbsp;界面上还会有底部任务栏和顶部横条，参照**Step 4**改造一下就好了.
 
