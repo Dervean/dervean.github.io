@@ -134,9 +134,10 @@ gnome-session --version
     mv T4G_3.0_theme /usr/share/themes
     gnome-tweak-tool
   
-- **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
+* Step 4&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
-  * **Delete the bottom bar**.
+  * Delete the bottom bar.
+
 {% highlight text %}
 cd /usr/share/gnome-shell/
 //备份
@@ -147,7 +148,8 @@ rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcam
 rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 {% endhighlight %}
 
-  * **Hide the top bar**<br>.
+  * Hide the top bar<br>.
+
 备份
 {% highlight text %}
 cd /usr/share/gnome-shell
