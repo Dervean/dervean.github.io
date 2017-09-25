@@ -135,7 +135,7 @@ gnome-session --version
     gnome-tweak-tool
   
 * **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
-  * Delete the bottom bar.
+  1. Delete the bottom bar.
 
 >cd /usr/share/gnome-shell/
 >
@@ -152,7 +152,7 @@ gnome-session --version
 >rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 >
 
-  * Hide the top bar.
+  2. Hide the top bar.
     
 >//备份
 >
@@ -219,8 +219,9 @@ gnome-session --version
 
 - **Step 5**&nbsp; &nbsp;界面还是不全，把**T4G_3.0_theme**里面的**gnome-theme**单独放在**/usr/share/gnome-shell/**中.
 
-    rm -r /usr/share/gnome-shell/theme
-    mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
+>rm -r /usr/share/gnome-shell/theme
+>
+>mv /usr/share/themes/T4G_3.0_theme/gnome-theme /usr/share/gnome-shell/theme
 
 按**alt+F2**可以调出对话框，再按**r**即可重启GNOME......Game Over，GNOME无法重新打开
 
@@ -228,7 +229,7 @@ gnome-session --version
 
 - **Step 6**&nbsp; &nbsp;在登陆用户界面，直接**ctrl+alt+F2**调出**startx**，也就是直接在shell中敲命令，通过之前备份的**/usr/share/gnome-shell/theme.backup**重新恢复.
 
-    mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
+>mv /usr/share/gnome-shell/theme.backup /usr/share/gnome-shell/theme
 
 重新启动，即可恢复GNOME
 
@@ -236,17 +237,27 @@ gnome-session --version
 
 - **Step 7**&nbsp; &nbsp;既然从主题上面安装吃了亏，另辟蹊径就好了，我还可以用软件(**cairo-dock**)改造（￣︶￣）↗，不过有好多工具都找不到，顺便改一下yum源.
 
-    cd /etc/yum.repos.d 
-    备份旧的配置文件
-    mv CentOS-Base.repo CentOS-Base.repo.bak 
-    下载阿里源的文件
-    wget -O CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-    添加EPEL源
-    sudo wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-7.repo 
-    清理缓存 
-    yum clean all 
-    重新生成缓存
-    yum makecache
+>cd /etc/yum.repos.d
+>
+>//备份旧的配置文件
+>
+>mv CentOS-Base.repo CentOS-Base.repo.bak
+>
+>//下载阿里源的文件
+>
+>wget -O CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+>
+>//添加EPEL源
+>
+>sudo wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/epel-7.repo
+>
+>//清理缓存
+>
+>yum clean all
+>
+>//重新生成缓存
+>
+>yum makecache
 
 - **Step 8**&nbsp; &nbsp;装**cairo-dock**，这让我深切体会到了Ubuntu的好处，很希望能一键apt-get啊，我想着去[cairo-dock](https://pkgs.org/download/cairo-dock)上下载，光是那些一层一层的依赖包就让我感觉毛骨悚然.果断选择其他方法（￣︶￣）↗.
 
