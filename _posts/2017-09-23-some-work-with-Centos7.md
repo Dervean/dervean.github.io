@@ -77,10 +77,15 @@ redirect_from:
 这里主要研究了一下Linux目录结构，因为我不知道安装程序该装到哪个文件夹里去，不过当我看到网上一个[博客](http://blog.csdn.net/aqxin/article/details/48324377)，里面把Linux文件夹和Windows做对比，便觉得豁然开朗.
 
 >/usr：系统级的目录，可以理解为C:/Windows/
+>
 >/usr/lib，理解为C:/Windows/System32
+>
 >/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/
+>
 >/opt：用户级的程序目录，可以理解为D:/Software
+>
 >/usr/src：系统级的源码目录
+>
 >/usr/local/src：用户级的源码目录
 
 - **Step 1**&nbsp; &nbsp;Download package from [webstorm](http://www.jetbrains.com/webstorm/download/#section=linux).
@@ -149,7 +154,7 @@ redirect_from:
   
 * **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
-1. Delete the bottom bar.
+1.Delete the bottom bar.
 
 >cd /usr/share/gnome-shell/
 >
@@ -166,7 +171,7 @@ redirect_from:
 >rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 >
 
-2. Hide the top bar.
+2.Hide the top bar.
     
 >//备份
 >
@@ -229,7 +234,6 @@ redirect_from:
 >  icon-size: 1px;
 >
 >  }
-
 
 - **Step 5**&nbsp; &nbsp;界面还是不全，把**T4G_3.0_theme**里面的**gnome-theme**单独放在**/usr/share/gnome-shell/**中.
 
