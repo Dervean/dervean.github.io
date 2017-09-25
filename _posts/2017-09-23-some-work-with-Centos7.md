@@ -148,7 +148,7 @@ redirect_from:
     rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 
 
-**隐藏顶栏.**
+**隐藏顶栏.**<br>
 备份
 {% highlight text %}
 cd /usr/share/gnome-shell
