@@ -152,7 +152,7 @@ gnome-session --version
 >
 >rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 
-  * Hide the top bar.
+   * Hide the top bar.
     
 >//备份
 >
