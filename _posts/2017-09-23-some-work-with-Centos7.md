@@ -138,17 +138,15 @@ gnome-session --version
 
   * Delete the bottom bar.
 
-{% highlight text %}
-cd /usr/share/gnome-shell/
-//备份
-cp -r /usr/share/gnome-shell/extensions/  /usr/share/gnome-shell/extensions.backup/
-//删除任务栏
-rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com
-//删除位置栏
-rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
-{% endhighlight %}
+    cd /usr/share/gnome-shell/
+    //备份
+    cp -r /usr/share/gnome-shell/extensions/  /usr/share/gnome-shell/extensions.backup/
+    //删除任务栏
+    rm -fr /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com
+    //删除位置栏
+    rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 
-  * Hide the top bar<br>.
+  * Hide the top bar<br>
 
 备份
 {% highlight text %}
