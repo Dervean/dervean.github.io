@@ -135,7 +135,7 @@ gnome-session --version
     gnome-tweak-tool
   
 * **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
-  1. Delete the bottom bar.
+1. Delete the bottom bar.
 
 >cd /usr/share/gnome-shell/
 >
@@ -152,7 +152,7 @@ gnome-session --version
 >rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 >
 
-  2. Hide the top bar.
+2. Hide the top bar.
     
 >//备份
 >
@@ -172,7 +172,7 @@ gnome-session --version
 >
 > }
 
->//修改 /usr/share/gnome-shell/theme/gnome-classic.css
+>//修改 **/usr/share/gnome-shell/theme/gnome-classic.css**
 >
 >#panel {
 >
