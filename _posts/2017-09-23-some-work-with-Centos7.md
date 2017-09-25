@@ -137,7 +137,7 @@ redirect_from:
   
 - **Step 4**&nbsp; &nbsp;加载主题后发现Centos底部任务栏和上部任务栏挡住了，美感大跌，忍不了，得把它们给删了.
 
-**删除Centos底部任务栏.**
+    * **删除Centos底部任务栏.**
 
     cd /usr/share/gnome-shell/
     //备份
@@ -148,31 +148,23 @@ redirect_from:
     rm -fr  /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com
 
 
-**隐藏顶栏.**<br>
-备份
+    *  **隐藏顶栏.**<br>
+      * 备份
 {% highlight text %}
 cd /usr/share/gnome-shell
 cp -r /usr/share/gnome-shell/modes/   /usr/share/gnome-shell/modes.backup/
 cp  -r /usr/share/gnome-shell/theme/  /usr/share/gnome-shell/theme.backup/
 {% endhighlight %}
 
-修改 classic.json
+      * 修改 /usr/share/gnome-shell/modes/classic.json
 {% highlight text %}
-cd modes/
-vi classic.json
-//修改如下
  "panel":{ "left": [],
     "center": [],
      "right": []
    }
 {% endhighlight %}
 
-修改 gnome-classic.css
-{% highlight text %}
-cd ../theme/
-vi gnome-classic.css
-{% endhighlight %}
-修改如下
+      * 修改 /usr/share/gnome-shell/theme/gnome-classic.css
 {% highlight text %}
 #panel {
     background-color: #e9e9e9;
@@ -190,7 +182,7 @@ vi gnome-classic.css
    }
 {% endhighlight %}
 
-修改 gnome-shell.css
+      * 修改 /usr/share/gnome-shell/theme/gnome-shell.css
 {% highlight text %}
 //第一处
 #panel {
