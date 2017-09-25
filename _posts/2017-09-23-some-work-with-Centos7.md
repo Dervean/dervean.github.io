@@ -30,11 +30,9 @@ redirect_from:
   网上对比了一下各种Linux系统，说是Ubuntu发行速度太快，UI界面吃内存吃的紧，而且搞开发的貌似都更倾向于选Red Hat，加上我之前的心理阴影，于是最后选择使用CentOS 7，但是装了Linux快一个多月了都没怎么碰.
 
 ## 契机
-  这两天老板要求助教要在可视化课上做展示，给大伙介绍可视化工具如何使用，我负责介绍[Vega](https://vega.github.io/vega/)这个virtualization grammar，展示需要使用电脑操作IDE一步步演示项目如何建立使用.
+  这两天老板要求助教要在可视化课上做展示，给大伙介绍可视化工具如何使用，我负责介绍[Vega](https://vega.github.io/vega/)，展示需要使用电脑操作IDE一步步演示项目如何建立使用.
 
-  正好借这个机会好好折腾一下Linux系统.
-
-  早上十点左右开始，我与OS的相爱相杀便正式开始（￣︶￣）↗.
+  正好借这个机会好好折腾一下Linux系统.（￣︶￣）↗.
 
 ## Chrome浏览器
 因为谷歌停止了对CentOS的支持，所以得找网上的资源.(步骤参照[博客](https://www.tecmint.com/install-google-chrome-on-redhat-centos-fedora-linux/))
