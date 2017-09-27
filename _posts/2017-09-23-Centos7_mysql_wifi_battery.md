@@ -2,9 +2,9 @@
 layout: post
 title: "MySQL installed on CentOS"
 author: Dervean
-description: "MySQL installed"
+description: "MySQL and Python installing"
 categories: [linux]
-tags: [linux,mysql]
+tags: [linux,mysql,python]
 redirect_from:
   - /2017/09/27/
 ---
@@ -17,19 +17,19 @@ redirect_from:
 
 - 本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
 
->//查看系统中是否已安装 MySQL 服务：
+>//查看系统中是否已安装 MySQL 服务
 >
 >rpm -qa \| grep mysql
 >
->//如果**已安装**则删除 MySQL 及其依赖的包：
+>//如果**已安装**则删除 MySQL 及其依赖的包
 >
 >yum -y remove mysql-libs.x86_64
 >
->//下载 mysql57-community-release-el7-11.noarch.rpm 的 YUM 源：
+>//下载 mysql57-community-release-el7-11.noarch.rpm 的 YUM 源
 >
 >wget http://repo.mysql.com/mysql57-community-release-el7-11.noarch.rpm
 >
->//安装 mysql57-community-release-el7-8.noarch.rpm：
+>//安装 mysql57-community-release-el7-8.noarch.rpm
 >
 >rpm -ivh mysql57-community-release-el7-8.noarch.rpm
 >
@@ -50,6 +50,43 @@ redirect_from:
 - 显示所有的用户.
 
 >SELECT User, Host, Password FROM mysql.user;
+
+
+## Python
+
+>//更新gcc
+>
+>yum -y install gcc
+>
+>//下载软件包
+>
+>wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz
+>
+>//解压
+>
+>tar -zxvf Python-3.6.2.tgz
+>
+>//进入解压目录
+>
+> cd Python-3.6.2
+>
+>//创建安装目录
+>
+>mkdir /opt/Python
+>
+>//编译
+>
+>./configure –prefix=/opt/Python
+>
+>//安装
+>
+>make && make install
+>
+>//建立软连接
+>
+>ln -s /opt/Python/bin/python3.6  /usr/bin/python3
+
+
 
 ## Wifi
 使用命令行连接WiFi.
