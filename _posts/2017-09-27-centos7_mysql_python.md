@@ -265,7 +265,9 @@ redirect_from:
 >
 > - download_updates = no
 
-## 用户与用户组
+## Linux
+
+**用户与用户组**
 
 - 用户列表文件：/etc/passwd
 - 用户组列表文件：/etc/group
