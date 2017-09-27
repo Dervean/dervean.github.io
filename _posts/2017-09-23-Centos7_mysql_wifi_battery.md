@@ -4,7 +4,7 @@ title: "MySQL installed on CentOS"
 author: Dervean
 description: "MySQL installed"
 categories: [linux]
-tags: [linux,mysql,wifi,battery,yum,cmake]
+tags: [linux,mysql]
 redirect_from:
   - /2017/09/27/
 ---
@@ -12,6 +12,44 @@ redirect_from:
 装MySQL笔记.
 
 ---
+
+## MySQL
+
+- 本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
+
+>//查看系统中是否已安装 MySQL 服务：
+>
+>rpm -qa \| grep mysql
+>
+>//如果**已安装**则删除 MySQL 及其依赖的包：
+>
+>yum -y remove mysql-libs.x86_64
+>
+>//下载 mysql57-community-release-el7-11.noarch.rpm 的 YUM 源：
+>
+>wget http://repo.mysql.com/mysql57-community-release-el7-11.noarch.rpm
+>
+>//安装 mysql57-community-release-el7-8.noarch.rpm：
+>
+>rpm -ivh mysql57-community-release-el7-8.noarch.rpm
+>
+>//安装 MySQL
+>
+>yum install mysql-server
+>
+>//重置密码
+>
+>mysql -u root
+>
+>mysql > use mysql;
+>
+>mysql > update user set password=password('123456') where user='root';
+>
+>mysql > exit;
+
+- 显示所有的用户.
+
+>SELECT User, Host, Password FROM mysql.user;
 
 ## Wifi
 使用命令行连接WiFi.
@@ -43,7 +81,6 @@ redirect_from:
 >//查看无线网卡地址信息
 >
 >ip addr show [name]
-
 
 ## Battery
 查看电源电量信息.(百分比)
@@ -84,44 +121,6 @@ redirect_from:
 >
 >source /etc/profile
 
-## MySQL
-
-- 本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
-
->//查看系统中是否已安装 MySQL 服务：
->
->rpm -qa \| grep mysql
->
->//如果**已安装**则删除 MySQL 及其依赖的包：
->
->yum -y remove mysql-libs.x86_64
->
->//下载 mysql57-community-release-el7-11.noarch.rpm 的 YUM 源：
->
->wget http://repo.mysql.com/mysql57-community-release-el7-11.noarch.rpm
->
->//安装 mysql57-community-release-el7-8.noarch.rpm：
->
->rpm -ivh mysql57-community-release-el7-8.noarch.rpm
->
->//安装 MySQL
->
->yum install mysql-server
->
->//重置密码
->
->mysql -u root
->
->mysql > use mysql;
->
->mysql > update user set password=password('123456') where user='root';
->
->mysql > exit;
-
-- 显示所有的用户.
-
->SELECT User, Host, Password FROM mysql.user;
-
 ## Yum
 
 1.提示**"Another app is currently holding the yum lock; waiting for it to exit..."**,yum在锁定状态中.
@@ -147,7 +146,6 @@ redirect_from:
 > - update_messages = no
 >
 > - download_updates = no
-
 
 ## 用户与用户组
 
