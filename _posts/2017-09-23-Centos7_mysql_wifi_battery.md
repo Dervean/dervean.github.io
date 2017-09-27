@@ -15,6 +15,8 @@ redirect_from:
 
 ## MySQL
 
+以下内容参考[在 CentOS7 上安装 MySQL5.7](http://www.linuxidc.com/Linux/2016-06/132676.htm)
+
 1.本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
 
 >//查看系统中是否已安装 MySQL 服务
