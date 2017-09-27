@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hi, CentOS."
+title: "MySQL installed on centos"
 author: Dervean
 description: "MySQL installed"
 categories: [linux]
@@ -16,8 +16,8 @@ redirect_from:
 ## Wifi
 使用命令行连接WiFi.
 
-//查询可用的无线网卡
-
+>//查询可用的无线网卡
+>
 >iw dev
 >
 >//启用无线卡,'name'指网卡号
@@ -30,7 +30,7 @@ redirect_from:
 >
 >//查看所有可用的无线网络信号
 >
->iw [name] scan | grep SSID
+>iw [name] scan \| grep SSID
 >
 >//连接无线网,'admin'指WiFi信号id,'password'指密码
 >
@@ -85,7 +85,8 @@ redirect_from:
 >source /etc/profile
 
 ## MySQL
->本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
+本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
+
 >
 >yum install mysql-server
 >
