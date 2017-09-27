@@ -4,7 +4,7 @@ title: "MySQL installed on centos"
 author: Dervean
 description: "MySQL installed"
 categories: [linux]
-tags: [linux,mysql]
+tags: [linux,mysql,wifi,battery,yum,cmake]
 redirect_from:
   - /2017/09/27/
 ---
