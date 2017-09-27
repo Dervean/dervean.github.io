@@ -122,15 +122,32 @@ redirect_from:
 
 >SELECT User, Host, Password FROM mysql.user;
 
-
-
 ## Yum
 
-提示**"Another app is currently holding the yum lock; waiting for it to exit..."**,yum在锁定状态中.
+1.提示**"Another app is currently holding the yum lock; waiting for it to exit..."**,yum在锁定状态中.
 
 >//强制关掉yum进程：
 >
 >rm -f /var/run/yum.pid
+
+2.安装的chrome浏览器莫名其妙的没了，我怀疑是自动更新的缘故.
+
+//CentOS7关闭自动下载更新
+
+>systemctl start crond
+>
+>yum -y install cronie
+>
+>yum -y install yum-cron
+>
+>systemctl start yum-cron
+>
+>gedit /etc/yum/yum-cron.conf
+>
+> - update_messages = no
+>
+> - download_updates = no
+
 
 ## 用户与用户组
 
