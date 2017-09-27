@@ -98,7 +98,7 @@ redirect_from:
 
 - **Step 4**&nbsp; &nbsp;Add soft link.
 
->sudo ln -s /usr/local//webstorm/bin/webstorm.sh /usr/local/bin/webstorm
+>sudo ln -s /usr/local/webstorm/bin/webstorm.sh /usr/local/bin/webstorm
 
 - **Step 5**&nbsp; &nbsp;Start webstorm.
 
