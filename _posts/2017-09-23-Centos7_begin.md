@@ -92,20 +92,20 @@ redirect_from:
 
 >tar xvzf ~/Downloads/WebStorm-2017.2.4.tar.gz -C /tmp/
 
-- **Step 3**&nbsp; &nbsp;Move the directory to /opt/.
+- **Step 3**&nbsp; &nbsp;Move the directory to /usr/local/.
 
->sudo mv /tmp/WebStorm-2017.2.4 /opt/Webstorm
+>sudo mv /tmp/WebStorm-2017.2.4 /usr/local//webstorm
 
 - **Step 4**&nbsp; &nbsp;Add soft link.
 
->sudo ln -s /opt/WebStorm/bin/webstorm.sh /usr/local/bin/webstorm
+>sudo ln -s /usr/local//webstorm/bin/webstorm.sh /usr/local/bin/webstorm
 
 - **Step 5**&nbsp; &nbsp;Start webstorm.
 
 >webstorm
 
 ## Nodejs
-从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压到**/opt/node**里，修改环境变量(NODE_HOME).
+从[官网](https://nodejs.org/en/download/)下载最新的nodejs包，然后直接解压到**/usr/local/**里，修改环境变量(NODE_HOME).
 
 我在这里栽了个跟头，我把环境变量写进**/etc/profile**文件里，可是每次关闭shell再重打开就怎么也用不了**node**和**npm**.
 

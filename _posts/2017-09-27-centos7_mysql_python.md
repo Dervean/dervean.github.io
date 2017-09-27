@@ -9,7 +9,7 @@ redirect_from:
   - /2017/09/27/
 ---
 
-装MySQL笔记.
+安装MySQL和python笔记.
 
 ---
 
@@ -149,15 +149,15 @@ redirect_from:
 >
 >//进入解压目录
 >
-> cd Python-3.6.2
+>cd Python-3.6.2
 >
 >//创建安装目录
 >
->mkdir /opt/Python3
+>mkdir /usr/local/Python3
 >
 >//编译
 >
->./configure –prefix=/opt/Python3
+>./configure –prefix=/usr/local/Python3
 >
 >//安装
 >
@@ -165,7 +165,7 @@ redirect_from:
 >
 >//建立软连接
 >
->ln -s /opt/Python3/bin/python3.6  /usr/bin/python3
+>ln -s /usr/local/Python3/bin/python3.6  /usr/bin/python3
 
 
 
@@ -231,9 +231,9 @@ redirect_from:
 >
 >//移动
 >
->mv cmake-3.3.2  /opt/cmake
+>mv cmake-3.3.2  /usr/local/cmake
 >
->//设置全局变量(PATH=/opt/cmake/bin:$PATH)
+>//设置全局变量(PATH=/usr/local/cmake/bin:$PATH)
 >
 >vi /etc/profile
 >
