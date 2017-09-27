@@ -15,7 +15,7 @@ redirect_from:
 
 ## MySQL
 
-- 本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
+1.本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
 
 >//查看系统中是否已安装 MySQL 服务
 >
@@ -36,20 +36,102 @@ redirect_from:
 >//安装 MySQL
 >
 >yum install mysql-server
+
+2.安装完毕后，在  /var/log/mysqld.log 文件中会自动生成一个随机的密码
+
+>grep "password" /var/log/mysqld.log
+>
+>使用获得的密码登陆
+>
+>mysql -u root -p [password]
+
+3.登录之后会要求立即修改密码,我本想设置个简单的数字密码，可是报错("Your password does not satisfy the current policy requirements")，才知道MySQL现在对密码有要求，不仅要达到最小长度，还要必须含有数字，小写或大写字母，特殊字符.
+我只是用于学习使用，就不用搞这么麻烦了，把对密码的要求改一下就行.
+
+>//修改validate_password_policy参数的值,这个必须改
+>
+>set global validate_password_policy=0;
+>
+>//密码长度最小值
+>
+>set global validate_password_length=6;
+>
+>//密码中特殊字符的长度
+>
+>set global validate_password_special_char_count=0;
+>
+>//密码中大小字母的长度
+>
+>set global validate_password_mixed_case_count=0;
 >
 >//重置密码
 >
->mysql -u root
->
->mysql > use mysql;
->
->mysql > update user set password=password('123456') where user='root';
->
->mysql > exit;
+>set password = password('[password]'); 
 
-- 显示所有的用户.
+3.修改字符编码方式
+
+>//查看 MySQL 的字符集
+>
+>show variables like '%character%';
+
+设置 MySQL 的字符集为 UTF-8，打开 /etc 目录下的 my.cnf 文件（此文件是 MySQL 的主配置文件）.
+
+>/etc/my.cnf
+
+在 [mysqld] 前添加如下代码
+
+>[client]
+>
+>default-character-set=utf8
+
+在 [mysqld] 后添加如下代码：
+
+>character_set_server=utf8
+
+3.MySQL操作.
+
+- 显示所有的用户
 
 >SELECT User, Host, Password FROM mysql.user;
+
+- 启动 MySQL 服务
+
+>service mysqld start
+
+- 关闭 MySQL 服务
+
+>service mysqld stop
+
+- 重启 MySQL 服务
+
+>service mysqld restart
+
+- 查看 MySQL 的状态
+
+>service mysqld status
+
+- /var/lib/mysql 存放数据库文件的目录
+
+- /var/log 目录下的 mysqld.log 文件记录 MySQL 的日志
+
+- 默认端口号为 3306
+
+- 如果忘记密码时，可用如下方法重置
+
+>service mysqld stop
+>
+>mysqld_safe --user=root --skip-grant-tables --skip-networking &
+>
+>mysql -u root
+>
+>mysql> use mysql;
+>
+>mysql> update user set password=password("new_password") where user="root";
+>
+>mysql> flush privileges;
+
+
+
 
 
 ## Python
