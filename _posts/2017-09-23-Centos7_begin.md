@@ -94,7 +94,7 @@ redirect_from:
 
 - **Step 3**&nbsp; &nbsp;Move the directory to /usr/local/.
 
->sudo mv /tmp/WebStorm-2017.2.4 /usr/local//webstorm
+>sudo mv /tmp/WebStorm-2017.2.4 /usr/local/webstorm
 
 - **Step 4**&nbsp; &nbsp;Add soft link.
 
