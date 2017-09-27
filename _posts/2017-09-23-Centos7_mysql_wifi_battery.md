@@ -90,7 +90,7 @@ redirect_from:
 
 >//查看系统中是否已安装 MySQL 服务：
 >
->rpm -qa | grep mysql
+>rpm -qa \| grep mysql
 >
 >//如果**已安装**则删除 MySQL 及其依赖的包：
 >
