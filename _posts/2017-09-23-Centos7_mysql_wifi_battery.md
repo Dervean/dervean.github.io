@@ -132,8 +132,8 @@ redirect_from:
 
 2.安装的chrome浏览器莫名其妙的没了，我怀疑是自动更新的缘故.
 
-//CentOS7关闭自动下载更新
-
+>//CentOS7关闭自动下载更新
+>
 >systemctl start crond
 >
 >yum -y install cronie
