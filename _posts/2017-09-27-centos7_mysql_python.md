@@ -153,11 +153,11 @@ redirect_from:
 >
 >//创建安装目录
 >
->mkdir /opt/Python
+>mkdir /opt/Python3
 >
 >//编译
 >
->./configure –prefix=/opt/Python
+>./configure –prefix=/opt/Python3
 >
 >//安装
 >
@@ -165,7 +165,7 @@ redirect_from:
 >
 >//建立软连接
 >
->ln -s /opt/Python/bin/python3.6  /usr/bin/python3
+>ln -s /opt/Python3/bin/python3.6  /usr/bin/python3
 
 
 
