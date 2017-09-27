@@ -85,8 +85,27 @@ redirect_from:
 >source /etc/profile
 
 ## MySQL
+
 - 本想着离线安装，但出现了一些问题，索性还是直接**YUM**来的更加简便.
 
+>//查看系统中是否已安装 MySQL 服务：
+>
+>rpm -qa | grep mysql
+>
+>//如果**已安装**则删除 MySQL 及其依赖的包：
+>
+>yum -y remove mysql-libs.x86_64
+>
+>//下载 mysql57-community-release-el7-11.noarch.rpm 的 YUM 源：
+>
+>wget http://repo.mysql.com/mysql57-community-release-el7-11.noarch.rpm
+>
+>//安装 mysql57-community-release-el7-8.noarch.rpm：
+>
+>rpm -ivh mysql57-community-release-el7-8.noarch.rpm
+>
+>//安装 MySQL
+>
 >yum install mysql-server
 >
 >//重置密码
