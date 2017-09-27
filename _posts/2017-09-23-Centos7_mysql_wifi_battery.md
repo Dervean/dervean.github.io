@@ -100,3 +100,16 @@ redirect_from:
 >
 >mysql > exit;
 
+## Yum
+
+提示**"Another app is currently holding the yum lock; waiting for it to exit..."**,yum在锁定状态中.
+
+>//强制关掉yum进程：
+>
+>rm -f /var/run/yum.pid
+
+
+
+
+
+
