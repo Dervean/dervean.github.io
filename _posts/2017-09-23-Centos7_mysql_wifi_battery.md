@@ -70,7 +70,7 @@ redirect_from:
 >
 >set password = password('[password]'); 
 
-3.修改字符编码方式
+4.修改字符编码方式
 
 >//查看 MySQL 的字符集
 >
@@ -90,7 +90,7 @@ redirect_from:
 
 >character_set_server=utf8
 
-3.MySQL操作.
+5.MySQL操作.
 
 - 显示所有的用户
 
@@ -131,9 +131,6 @@ redirect_from:
 >mysql> update user set password=password("new_password") where user="root";
 >
 >mysql> flush privileges;
-
-
-
 
 
 ## Python
