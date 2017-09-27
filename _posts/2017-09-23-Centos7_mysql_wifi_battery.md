@@ -142,7 +142,7 @@ redirect_from:
 >
 >systemctl start yum-cron
 >
->gedit /etc/yum/yum-cron.conf
+>sudo vi /etc/yum/yum-cron.conf
 >
 > - update_messages = no
 >
