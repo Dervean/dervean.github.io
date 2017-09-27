@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MySQL installed on CentOS"
+title: "MySQL and Python installing"
 author: Dervean
 description: "MySQL and Python installing"
 categories: [linux]
