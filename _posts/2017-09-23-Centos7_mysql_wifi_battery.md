@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MySQL installed on centos"
+title: "MySQL installed on CentOS"
 author: Dervean
 description: "MySQL installed"
 categories: [linux]
