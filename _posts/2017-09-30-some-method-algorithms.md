@@ -8,7 +8,9 @@ tags: [algorithm,python]
 redirect_from:
   - /2017/09/30/
 ---
+
 算法整理
+
 ---
 
 ## 插入排序
