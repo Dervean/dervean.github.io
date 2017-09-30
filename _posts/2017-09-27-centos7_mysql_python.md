@@ -4,7 +4,7 @@ title: "MySQL and Python installing on CentOS"
 author: Dervean
 description: "MySQL and Python installing"
 categories: [linux]
-tags: [linux,mysql,python]
+tags: [linux]
 redirect_from:
   - /2017/09/27/
 ---
