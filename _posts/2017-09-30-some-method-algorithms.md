@@ -2,7 +2,7 @@
 layout: post
 title: "Insertion-sort, quick-sort and heap-sort"
 author: Dervean
-description: "one divide-and-conqure method"
+description: "some sort method"
 categories: [algorithm]
 tags: [algorithm,python]
 redirect_from:
