@@ -4,7 +4,7 @@ title: "Hi, CentOS."
 author: Dervean
 description: "First come up with Linux."
 categories: [linux]
-tags: [linux,chrome,gnome,webstorm,nodejs]
+tags: [linux]
 redirect_from:
   - /2017/09/23/
 ---
