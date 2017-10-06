@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Insertion-sort, quick-sort and heap-sort"
+title: "Insertion-sort, quick-sort, merge-sort and heap-sort"
 author: Dervean
 description: "some sort method"
 categories: [algorithm]
