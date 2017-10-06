@@ -184,3 +184,62 @@ if __name__ == '__main__':
     heap_sort(heap1)
     print(heap1.array())
 ~~~
+
+## 归并排序
+
+~~~ python
+import math
+
+def merge_sort(num_array,low,high):
+    '''
+    :param num_array: to-be sorted array,which only contains numbers
+    :param low: subscript of num_array
+    :param high: subscript of num_array
+    :return:
+    '''
+    if low < high:
+        mid = math.floor((low + high)/2)
+        merge_sort(num_array,low,mid)
+        merge_sort(num_array,mid + 1,high)
+        merge(num_array,low,mid,high)
+
+def merge(num_array,low,mid,high):
+    '''
+    :param num_array: to-be sorted array,which only contains numbers
+    :param low: subscript of num_array
+    :param mid: subscript of num_array
+    :param high: subscript of num_array
+    :return:
+    '''
+    L = []
+    R = []
+    # copy sub-array
+    for k in range(low, mid + 1):
+        L.append(num_array[k])
+    for k in range(mid + 1,high + 1):
+        R.append(num_array[k])
+    i = 0
+    j = 0
+    k = low
+    while (i <= mid - low) & (mid + 1 + j <= high):
+        if L[i] <= R[j]:
+            num_array[k] = L[i]
+            i += 1
+        else:
+            num_array[k] = R[j]
+            j += 1
+        k += 1
+    while i <= mid - low:
+        num_array[k] = L[i]
+        i += 1
+        k += 1
+    while mid + 1 + j <= high:
+        num_array[k] = R[j]
+        j += 1
+        k += 1
+
+if __name__ == '__main__':
+    array = [2,1,4,1,2,3,2,5,3,6,8,5,6,7,8,96,4,7,3,4]
+    merge_sort(array,0,len(array)-1)
+    print(array)
+~~~
