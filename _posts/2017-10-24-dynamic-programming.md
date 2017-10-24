@@ -3,7 +3,7 @@ layout: post
 title: "Dynamic programming - Cut Rod and Matrix Chain Multiplication"
 author: Dervean
 description: "two problems solving by dp"
-categories: [algorithm,dynamic programming]
+categories: [algorithm,dynamic_programming]
 tags: [algorithm,python]
 redirect_from:
   - /2017/10/24/
