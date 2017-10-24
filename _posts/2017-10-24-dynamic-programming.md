@@ -31,7 +31,7 @@ redirect_from:
  * 简单来说，就是利用一个数组保存求解过的子问题的解。
  * 这里保存**长度为i的钢管的最高价格**，保存在**数组r**中，数组r共**n+1**项，其中只使用后n项。
 2. 自底向上法（bottom-up method）
- * 自底向上法不需要使用递归栈，避免了递归开销，虽然时间复杂度都为O(n[^2])，但其系数更小。
+ * 自底向上法不需要使用递归栈，避免了递归开销，虽然时间复杂度都为O(n^2)，但其系数更小。
  * 可以保存一个**辅助数组s**用来表示**在长度为i的钢管上切割下的第一块钢管的长度**，因为问题具有最优子结构的性质，所以只需要保存第一块的长度即可。
 
 ### 带备忘的自顶向下递归法
@@ -39,28 +39,31 @@ redirect_from:
 ~~~ python
 def cut_rod_R(price_array,n):
     '''
-    :param price_array: the price array of rod, valid index should start from 1
+    :param price_array: the price array of rod
     :param n: the length of rod
-    :return: store the max cost of given rod length, valid index should start from 1
+    :return: store the max cost of given rod length
     '''
-    # store the max cost of given rod length, valid index should start from 1
+    # 长度为i的钢管最高卖价
     r = [None for i in range(0,n+1)]
     cut_rod_R_partition(price_array,n,r)
     return r
 
 def cut_rod_R_partition(price_array,n,r):
     '''
-    :param price_array: the price array of rod, valid index should start from 1
+    :param price_array: the price array of rod
     :param n: the length of rod
-    :param r: store the max cost of given rod length, valid index should start from 1
+    :param r: store the max cost of given rod length
     :return:
     '''
+    # 子问题已经被解得
     if r[n] is not None and r[n] >= 0:
         return r[n]
+    # q：长度为n的钢管最高售价
     if n == 0:
         q = 0
     else:
         q = None
+        # i：切下来的第一段钢管长度
         for i in range(1,n+1):
             newq = price_array[i] + cut_rod_R_partition(price_array,n-i,r)
             if q is None:
@@ -70,6 +73,41 @@ def cut_rod_R_partition(price_array,n,r):
                     q = newq
     r[n] = q
     return q
+~~~
+
+### 自底向上法
+
+~~~ python
+def cut_rod_bottom_up(price_array,n):
+    '''
+    :param price_array: the price array of rod
+    :param n: the length of rod
+    :return:
+    '''
+    # 长度为i的钢管最高卖价
+    r = [None for i in range(0, n + 1)]
+    # 长度为n的钢管，如果想要卖出最高价，切下的第一段钢管长度
+    s = [None for i in range(0, n + 1)]
+    r[0] = 0
+    # j：钢管长度
+    for j in range(1,n+1):
+        # q：长度为j的钢管最高售价
+        q = None
+        # i：切下来的第一段钢管长度
+        for i in range(1,j+1):
+            newq = price_array[i] + r[j-i]
+            if q is None or q < newq:
+                q = newq
+                s[j] = i
+            r[j] = q
+    return r,s
+
+# 钢管如何切割
+def print_solution(price_array,n):
+    (r,s) = cut_rod_bottom_up(price_array,n)
+    while n > 0:
+        print("%d\t"%s[n],end='')
+        n = n - s[n]
 ~~~
 
 ## 快速排序
