@@ -21,28 +21,55 @@ redirect_from:
 
 ---
 
-## 插入排序
+## 切钢管
 
-自小到大排列.
+问题描述：一条长度为n的钢管，不同长度的钢管售价不同，如何切割钢管使售价最高。
+
+如果使用自顶向下递归求解，会同简单求解斐波纳切问题一样陷入求解时间复杂度指数型增长的困境，这里使用动态规划可以有两种方式：
+
+1. 带备忘的自顶向下递归法（top down with memoization）
+ * 简单来说，就是利用一个数组保存求解过的子问题的解。
+ * 这里保存的是**长度为i的钢管的最高价格**，保存在**数组r**中，数组r共**n+1**项，其中只使用后n项
+2. 自底向上法（bottom-up method）
+ * 自底向上法不需要使用递归栈，避免了递归开销，虽然时间复杂度都为O(n2)，但其系数更小。
+ * 可以保存一个**辅助数组s**用来表示**在长度为i的钢管上切割下的第一块钢管的长度**，因为问题具有最优子结构的性质，所以只需要保存第一块的长度即可。
+
+### 带备忘的自顶向下递归法
 
 ~~~ python
-def insertion_sort(num_array):
+def cut_rod_R(price_array,n):
     '''
-    :param num_array: to-be sorted array,which only contains numbers
+    :param price_array: the price array of rod, valid index should start from 1
+    :param n: the length of rod
+    :return: store the max cost of given rod length, valid index should start from 1
+    '''
+    # store the max cost of given rod length, valid index should start from 1
+    r = [None for i in range(0,n+1)]
+    cut_rod_R_partition(price_array,n,r)
+    return r
+
+def cut_rod_R_partition(price_array,n,r):
+    '''
+    :param price_array: the price array of rod, valid index should start from 1
+    :param n: the length of rod
+    :param r: store the max cost of given rod length, valid index should start from 1
     :return:
     '''
-    for i in range(1,len(num_array)):
-        key = num_array[i]
-        j = i - 1
-        while(j>=0 and num_array[j]>key):
-            num_array[j+1] = num_array[j]
-            j -= 1
-        num_array[j+1] = key
-
-if __name__=='__main__':
-    array = [2,3,4,1,2,3,2,5,3,6,8,5,6,7,8,96,4,7,3,4]
-    insertion_sort(array)
-    print(array)
+    if r[n] is not None and r[n] >= 0:
+        return r[n]
+    if n == 0:
+        q = 0
+    else:
+        q = None
+        for i in range(1,n+1):
+            newq = price_array[i] + cut_rod_R_partition(price_array,n-i,r)
+            if q is None:
+                q = newq
+            else:
+                if q < newq:
+                    q = newq
+    r[n] = q
+    return q
 ~~~
 
 ## 快速排序
