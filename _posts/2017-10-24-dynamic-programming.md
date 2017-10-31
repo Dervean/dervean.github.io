@@ -42,6 +42,7 @@ redirect_from:
 
 
 ~~~ python
+import math
 def cut_rod_R(price_array,n):
     '''
     :param price_array: the price array of rod
@@ -67,15 +68,12 @@ def cut_rod_R_partition(price_array,n,r):
     if n == 0:
         q = 0
     else:
-        q = None
+        q = -math.inf
         # i：切下来的第一段钢管长度
         for i in range(1,n+1):
             newq = price_array[i] + cut_rod_R_partition(price_array,n-i,r)
-            if q is None:
+            if q < newq:
                 q = newq
-            else:
-                if q < newq:
-                    q = newq
     r[n] = q
     return q
 ~~~
@@ -84,6 +82,7 @@ def cut_rod_R_partition(price_array,n,r):
 
 
 ~~~ python
+import math
 def cut_rod_bottom_up(price_array,n):
     '''
     :param price_array: the price array of rod
@@ -98,22 +97,15 @@ def cut_rod_bottom_up(price_array,n):
     # j：钢管长度
     for j in range(1,n+1):
         # q：长度为j的钢管最高售价
-        q = None
+        q = -math.inf
         # i：切下来的第一段钢管长度
         for i in range(1,j+1):
             newq = price_array[i] + r[j-i]
-            if q is None or q < newq:
+            if q < newq:
                 q = newq
                 s[j] = i
             r[j] = q
     return r,s
-
-# 钢管如何切割
-def print_solution(price_array,n):
-    (r,s) = cut_rod_bottom_up(price_array,n)
-    while n > 0:
-        print("%d\t"%s[n],end='')
-        n = n - s[n]
 ~~~
 
 ## 矩阵链式乘法
@@ -153,6 +145,7 @@ def print_solution(price_array,n):
 
 
 ~~~ python
+import math
 def matrix_chain_R(size_matrix):
     '''
     :param size_matrix: the size of matrix set, like: 1,3,5,10 --> (1,3),(3,5),(5,10)
@@ -163,7 +156,7 @@ def matrix_chain_R(size_matrix):
     # m 是一个(n+1)^2的二维数组，只使用其中的部分空间，存储从第i个矩阵到第j个矩阵相乘所需要的最少乘法次数
     m = [[] for i in range(0,n_matrix + 1)]
     for i in range(0,n_matrix+1):
-        m[i] = [None for j in range(0,n_matrix+1)]
+        m[i] = [math.inf for j in range(0,n_matrix+1)]
     # 调用lookup_chain函数，其实是用来计算m中的各项值，虽然我们只需要m[1][n]的值
     # m[1][n]就是从第1个矩阵到第n个矩阵相乘所需要的最少乘法次数
     lookup_chain(size_matrix,m,1,n_matrix)
@@ -171,7 +164,7 @@ def matrix_chain_R(size_matrix):
 
 # 查找（计算）从第i个矩阵到第j个矩阵相乘所需要的最少乘法次数
 def lookup_chain(size_matrix,m,i,j):
-    if m[i][j] is not None:
+    if m[i][j] is not math.inf:
         return m[i][j]
     # 如果只有一个矩阵
     if i == j:
@@ -180,7 +173,7 @@ def lookup_chain(size_matrix,m,i,j):
         for k in range(i,j):
             # AiA2...Aj 可以递归求解：(Ai...Ak)(Ak+1...Aj)，问题归为求解 Ai...Ak的乘法次数 加上 Ak+1...Aj的乘法次数 加上 两个结果矩阵的乘法次数
             q = lookup_chain(size_matrix,m,i,k) + lookup_chain(size_matrix,m,k+1,j) + size_matrix[i-1]*size_matrix[k]*size_matrix[j]
-            if m[i][j] is None or q < m[i][j]:
+            if q < m[i][j]:
                 m[i][j] = q
     return m[i][j]
 ~~~
@@ -189,7 +182,7 @@ def lookup_chain(size_matrix,m,i,j):
 
 
 ~~~ python
-def matrix_chain_multiplication(size_matrix):
+def mcm(size_matrix):
     '''
     :param size_matrix: the size of matrix set, like: 1,3,5,10 --> (1,3),(3,5),(5,10)
     :return:
@@ -211,14 +204,11 @@ def matrix_chain_multiplication(size_matrix):
             # j: the end index of sub chain
             j = l + i - 1
             # useful index of m start from 1
-            m[i][j] = None
+            m[i][j] = math.inf
             for k in range(i,j):
                 # calculate the cost
                 c = m[i][k] + m[k+1][j]+size_matrix[i - 1]*size_matrix[k]*size_matrix[j]
-                if m[i][j] is None:
-                    m[i][j] = c
-                    s[i][j] = k
-                elif c < m[i][j]:
+                if c < m[i][j]:
                     m[i][j] = c
                     s[i][j] = k
     return (m,s)
