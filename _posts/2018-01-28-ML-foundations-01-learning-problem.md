@@ -13,13 +13,13 @@ redirect_from:
 
 ---
 
-### 什么时候该使用机器学习
+### Key Essence
 
 * Exists some underlying pattern to be learned.
 * No programmable definition.
 * There is data about the pattern.
 
-### Formalize the learming problem
+### Formalize the learning problem
 
 * training examples
 * target function
@@ -35,5 +35,6 @@ redirect_from:
 * learning algorithm：此时通过一个学习算法，从历史数据中学习；
 * hypothesis set：学习后得到许多从X到Y的函数，且都是可以programmable definited的，这些函数是大部分甚至全部满足历史数据{(X,Y)}的；
 * hypothesis：尽可能得减小和真实函数**f**的差距，需要从hypothesis set里选一个最好hypothesis。
+
 
 ![definition](/images/ML/definition-ML.png "definition")
