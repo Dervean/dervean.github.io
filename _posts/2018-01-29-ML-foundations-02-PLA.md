@@ -13,9 +13,7 @@ redirect_from:
 
 ---
 
-## Perceptron Learning Algorithm
-
-### perceptrons $\Leftrightarrow$ linear(binary) classifiers
+## perceptrons $\Leftrightarrow$ linear(binary) classifiers
 
 感知器(perceptrons)就是一个线性分类器，用于解决二分类问题，例如回答是/不是。
 
@@ -36,3 +34,15 @@ $$
 * 当$h(x)>0$则$y=1$；当$h(x)<0$则$y=-1$。
 
 ![definition](/images/ML/perceptrons.png "perceptrons")
+
+## Perceptron Learning Algorithm
+
+我们已经知道所有的$H={perceptrons}$，如何从$H$中选择一个$g=hypothesis$呢？
+
+* want: $g \approx f$，要求$g$在测试集$D$上大体满足甚至完全满足。 
+* difficult: $H$ is of **infinite** size.
+* idea: start from some $g_0$, 然后不断根据测试集$D$修改$g$. 
+
+
+
+
