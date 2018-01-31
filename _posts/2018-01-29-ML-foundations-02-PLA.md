@@ -56,6 +56,21 @@ $$
 
 直到测试集中所有的点都符合分类要求，则将$W$作为$g$返回.
 
+![PLA-implementation](/images/ML/PLA-implementation.png "PLA-implementation")
+
+## 数据线性可分和PLA的算法有穷性
+
+PLA算法要求最终能够找到一个直线（或者超平面）能够将所有数据点一分为二，但如果找不到怎么办呢？那是否意味着PLA算法有可能永远不会停止？
+
+数据（$D$）的线性可分（linear separable）：
+
+![PLA-linear-seperable](/images/ML/PLA-linear-seperable.png "PLA-linear-seperable")
+
+可以证明：linear separable $D$ $\Leftrightarrow$ exists perfect $w_f$ such that $y_n=sign((w_f)^Tx_n)$.
+
+
+
+
 
 
 
