@@ -17,10 +17,10 @@ redirect_from:
 
 感知器(perceptrons)就是一个线性分类器，用于解决二分类问题，例如回答是/不是。
 
-perceptron 可以看成一个简单的hypothesis set（$\mathcal{H}$），还是使用信贷公司公司的例子：
+perceptron 可以看成一个简单的hypothesis set（$H$），还是使用信贷公司公司的例子：
 * 用户的年龄、每月收入以及欠款额度等信息记作$x = (x_1,x_2,...,x_d)$，称作用户的**特征**($features$)，如果每个特征都赋予一个权重分数w，计算总分数 $\sum_{i=1}^d w_ix_i$。
 * 给定一个$threshold$，当$\sum_{i=1}^d w_ix_i > threshold$时接受发贷款；当$\sum_{i=1}^d w_ix_i < thredshold$时拒绝发贷款。
-* $y:\left\\{+1,-1\right\\}$，线性公式$h \in \mathcal{H}$：
+* $y:\left\\{+1,-1\right\\}$，线性公式$h \in H$：
 
 $$
 \begin{array}{rcl}
@@ -33,15 +33,50 @@ $$
 
 * 当$h(x)>0$则$y=1$；当$h(x)<0$则$y=-1$。
 
-![definition](/images/ML/perceptrons.png "perceptrons")
-
-## Perceptron Learning Algorithm
+![perceptrons](/images/ML/perceptrons.png "perceptrons")
 
 我们已经知道所有的$H={perceptrons}$，如何从$H$中选择一个$g=hypothesis$呢？
 
 * want: $g \approx f$，要求$g$在测试集$D$上大体满足甚至完全满足。 
 * difficult: $H$ is of **infinite** size.
 * idea: start from some $g_0$, 然后不断根据测试集$D$修改$g$. 
+
+## Perceptron Learning Algorithm
+
+![PLA](/images/ML/PLA.png "PLA")
+
+如上图所示，PLA算法选择以不断“改错”来求得最终解，里面应用到一个有趣的向量计算的方法：对于两个向量$\vec{a}$和$\vec{b}$，
+
+* $\vec{a}+\vec{b}$与$\vec{b}$的夹角小于$\vec{a}$与$\vec{b}$的夹角；
+* $\vec{a}-\vec{b}$与$\vec{b}$的夹角大于$\vec{a}$与$\vec{b}$的夹角。
+
+当实际$y=+1$而判断为$-1$时，则使用$\vec{w}+\vec{x}$代替$\vec{w}$;
+
+当实际$y=-1$而判断为$+1$时，则使用$\vec{w}-\vec{x}$代替$\vec{w}$.
+
+直到测试集中所有的点都符合分类要求，则将$W$作为$g$返回.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
