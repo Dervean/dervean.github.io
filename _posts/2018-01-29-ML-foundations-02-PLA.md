@@ -33,6 +33,6 @@ h(x)	&	=	&	sign((\sum_{i=1}^d w_ix_i)-threshold)      \\
 \end{array}
 $$
 
-当$h(x)>0$则$y=1$；当h(x)<0则$y=-1$。
+* 当$h(x)>0$则$y=1$；当$h(x)<0$则$y=-1$。
 
 ![definition](/images/ML/perceptrons.png "perceptrons")
