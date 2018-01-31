@@ -23,7 +23,7 @@ perceptron 可以看成一个简单的hypothesis set（$\mathcal{H}$），还是
 * 用户的年龄、每月收入以及欠款额度等信息记作$x = (x_1,x_2,...,x_d)$，称作用户的**特征**(features)，如果每个特征都赋予一个权重分数w，计算总分数 $\sum_{i=1}^d w_ix_i$，给定一个threshold，
 当$\sum_{i=1}^d w_ix_i > threshold$时接受发贷款；
 当$\sum_{i=1}^d w_ix_i < thredshold$时拒绝发贷款。
-* $y:\left{+1,-1\right}$，线性公式$h \in \mathcal{H}$：
+* $y:\left\{+1,-1\right\}$，线性公式$h \in \mathcal{H}$：
 
 $$
 \begin{array}{rcl}
