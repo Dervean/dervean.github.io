@@ -36,5 +36,6 @@ redirect_from:
 * hypothesis set：学习后得到许多从X到Y的函数，且都是可以programmable definited的，这些函数是大部分甚至全部满足历史数据{(X,Y)}的；
 * hypothesis：尽可能得减小和真实函数**f**的差距，需要从hypothesis set里选一个最好hypothesis。
 
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 
 ![definition](/images/ML/definition-ML.png "definition")
