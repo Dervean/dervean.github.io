@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "机器学习基石：什么时候该使用机器学习"
+title: "机器学习基石第1课：什么时候该使用机器学习"
 author: Dervean
-description: "机器学习基石第一课"
+description: "机器学习基石第1课"
 categories: [machine learning]
-tags: [ML]
+tags: [machine learning]
 redirect_from:
   - /2018/01/28/
 ---
@@ -13,13 +13,13 @@ redirect_from:
 
 ---
 
-### Key Essence
+## Key Essence
 
 * Exists some underlying pattern to be learned.
 * No programmable definition.
 * There is data about the pattern.
 
-### Formalize the learning problem
+## Formalize the learning problem
 
 * training examples
 * target function
