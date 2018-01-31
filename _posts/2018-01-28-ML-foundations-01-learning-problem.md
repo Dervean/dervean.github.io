@@ -27,15 +27,13 @@ redirect_from:
 * hypothesis set
 * hypothesis
 
-$$ \sum_{i=0}^{n}i^2 $$
-
 以信贷公司发放贷款为例：
-* 信贷公司拥有每个用户的数据：例如用户的年龄、每月收入以及欠款额度等信息，记作X；
-* 决定是否发放贷款，记作Y；
-* target function：**f**是X到Y的函数，该函数是无法 programmable definited的，所以没法知道到底是什么；
-* training examples：信贷公司存在一些历史数据{(X,Y)}；
+* 信贷公司拥有每个用户的数据：例如用户的年龄、每月收入以及欠款额度等信息，记作$X$；
+* 决定是否发放贷款，记作$Y$；
+* target function：$f$是$X$到$Y$的函数，该函数是无法 programmable definited的，所以没法知道到底是什么；
+* training examples：信贷公司存在一些历史数据${(X,Y)}$；
 * learning algorithm：此时通过一个学习算法，从历史数据中学习；
-* hypothesis set：学习后得到许多从X到Y的函数，且都是可以programmable definited的，这些函数是大部分甚至全部满足历史数据{(X,Y)}的；
-* hypothesis：尽可能得减小和真实函数**f**的差距，需要从hypothesis set里选一个最好hypothesis。
+* hypothesis set：学习后得到许多从$X$到$Y$的函数，且都是可以programmable definited的，这些函数是大部分甚至全部满足历史数据${(X,Y)}$的；
+* hypothesis：尽可能得减小和真实函数$f$的差距，需要从hypothesis set里选一个最好hypothesis。
 
 ![definition](/images/ML/definition-ML.png "definition")
