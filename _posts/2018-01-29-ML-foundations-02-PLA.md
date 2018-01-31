@@ -24,6 +24,7 @@ perceptron 可以看成一个简单的hypothesis set（$\mathcal{H}$），还是
 当$\sum_{i=1}^d w_ix_i > threshold$时接受发贷款；
 当$\sum_{i=1}^d w_ix_i < thredshold$时拒绝发贷款。
 * $y:\{+1,-1\}$，线性公式$h \in \mathcal{H}$：
+
 $$
 \begin{array}{rcl}
 h(x)	&	=	&	sign((\sum_{i=1}^d w_ix_i)-threshold)      \\
