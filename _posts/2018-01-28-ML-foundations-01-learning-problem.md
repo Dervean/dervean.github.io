@@ -27,9 +27,7 @@ redirect_from:
 * hypothesis set
 * hypothesis
 
-$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-
-\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
+![1]<http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}>
 
 以信贷公司发放贷款为例：
 * 信贷公司拥有每个用户的数据：例如用户的年龄、每月收入以及欠款额度等信息，记作X；
