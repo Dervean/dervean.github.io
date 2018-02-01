@@ -18,7 +18,7 @@ redirect_from:
 
 # Numpy
 
-#### 基本属性
+### 基本属性
 
 ~~~ python
 import numpy as np
@@ -42,7 +42,7 @@ print("size:",array.size)
 print("number type: ",array.dtype)
 ~~~
 
-#### 全0矩阵
+### 全0矩阵
 
 ~~~ python
 import numpy as np
@@ -51,7 +51,7 @@ import numpy as np
 array = np.zeros((3, 4))
 ~~~
 
-#### 全1矩阵
+### 全1矩阵
 
 ~~~ python
 import numpy as np
@@ -60,7 +60,7 @@ import numpy as np
 array = np.ones((3, 4))
 ~~~
 
-#### arange，reshape
+### arange，reshape
 
 ~~~ python
 import numpy as np
@@ -71,7 +71,7 @@ array = np.arange(0, 20, 2)
 array = array.reshape((2, 5))
 ~~~
 
-#### inspace
+### inspace
 
 ~~~ python
 import numpy as np
