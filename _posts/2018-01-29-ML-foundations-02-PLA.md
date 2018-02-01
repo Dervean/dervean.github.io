@@ -94,9 +94,12 @@ Pocket algorithm（口袋算法）是用来解决当数据中存在噪声数据�
 
 口袋算法思想：**每当要“修正”一个错误然后修改$w$的时候，都要跟原来的$w$比较，看谁犯的错误更多，如果新的$w$错误更少，就修改，否则不修改。**
 
-口袋算法虽然能够处理噪声数据，但如果数据是可以线性可分的时候，口袋算法和$PLA$算法运行结果相同（因为每次比较肯定都会优于原来的一个），相比较$PLA$算法，口袋算法因为多了比较的步骤，它的运行时间更长。
+口袋算法虽然能够处理噪声数据，但如果数据是可以线性可分的时候，口袋算法和$PLA$算法运行结果相同（因为每次比较肯定都会优于原来），相比较$PLA$算法，口袋算法因为多了比较的步骤，它的运行时间更长。
 
 ## python实现
+
+Problem description: Each line of the data set contains one $(x_n, y_n)$ with $x_n \in \mathbb4{R}^4$. The first 4 numbers of the line contains the components of $x_n$ orderly, the last number is $y_n$. Please initialize your algorithm with $w = 0$ and take $sign(0)$ as $−1$. As a friendly reminder, remember to add $x_0 = 1$ as always!
+
 
 
 
