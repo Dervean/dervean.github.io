@@ -98,7 +98,7 @@ Pocket algorithm（口袋算法）是用来解决当数据中存在噪声数据�
 
 ## python实现
 
-Problem description: Each line of the data set contains one $(x_n, y_n)$ with $x_n \in \mathbb{R}^4$. The first 4 numbers of the line contains the components of $x_n$ orderly, the last number is $y_n$. Please initialize your algorithm with $w = 0$ and take $sign(0)$ as $−1$. As a friendly reminder, remember to add $x_0 = 1$ as always!
+Problem description: Each line of the data set contains one $(x_n, y_n)$ with $x_n \in \mathbb R^4$. The first 4 numbers of the line contains the components of $x_n$ orderly, the last number is $y_n$. Please initialize your algorithm with $w = 0$ and take $sign(0)$ as $−1$. As a friendly reminder, remember to add $x_0 = 1$ as always!
 
 
 
