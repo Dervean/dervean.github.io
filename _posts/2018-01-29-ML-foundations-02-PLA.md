@@ -78,6 +78,9 @@ $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
 ![PLA-proof-2](/images/ML/PLA-proof-2.png "PLA-proof-2")
 
+因为$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \le 1$，所以一定能在有穷步收敛。
+
+其中$constant = \frac{\min \limits_{n} y_n\frac{w_f_T}{\|w_f\|}x_n}{\max \limits_{n} \| {x_n}^2 \|$.
 
 
 
