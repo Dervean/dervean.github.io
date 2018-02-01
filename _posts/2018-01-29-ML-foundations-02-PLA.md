@@ -13,7 +13,10 @@ redirect_from:
 
 ---
 
-## perceptrons $\Leftrightarrow$ linear(binary) classifiers
+* Kramdown table of contents
+{:toc .toc}
+
+# perceptrons $\Leftrightarrow$ linear(binary) classifiers
 
 感知器(perceptrons)就是一个线性分类器，用于解决二分类问题，例如回答是/不是。
 
@@ -41,7 +44,7 @@ $$
 * difficult: $H$ is of **infinite** size.
 * idea: start from some $g_0$, 然后不断根据测试集$D$修改$g$. 
 
-## Perceptron Learning Algorithm
+# Perceptron Learning Algorithm
 
 ![PLA](/images/ML/PLA.png "PLA")
 
@@ -96,7 +99,7 @@ Pocket algorithm（口袋算法）是用来解决当数据中存在噪声数据�
 
 口袋算法虽然能够处理噪声数据，但如果数据是可以线性可分的时候，口袋算法和$PLA$算法运行结果相同（因为每次比较肯定都会优于原来），相比较$PLA$算法，口袋算法因为多了比较的步骤，它的运行时间更长。
 
-## python实现
+# python实现
 
 **Problem description**: 
 Each line of the data set contains one $(x_n, y_n)$ with $x_n \in \mathbb{R}^4$. The first 4 numbers of the line contains the components of $x_n$ orderly, the last number is $y_n$. Please initialize your algorithm with $w = 0$ and take $sign(0)$ as $−1$. As a friendly reminder, remember to add $x_0 = 1$ as always!
