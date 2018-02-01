@@ -68,19 +68,19 @@ PLA算法要求最终能够找到一个直线（或者超平面）能够将所�
 
 可以证明：linear separable $D$ $\Leftrightarrow$ exists perfect $w_f$ such that $y_n=sign(w_f^Tx_n)$.
 
-1. $w_t$与$w_f$的夹角越来越小，即越来越接近：
+(1)$w_t$与$w_f$的夹角越来越小，即越来越接近：
 
 ![PLA-proof-1](/images/ML/PLA-proof-1.png "PLA-proof-1")
 
-2. $w_t$不会增长得太快，但经过$T$步后，
+(2)$w_t$不会增长得太快，但经过$T$步后，
 
 $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
 ![PLA-proof-2](/images/ML/PLA-proof-2.png "PLA-proof-2")
 
-因为$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \le 1$，所以一定能在有穷步收敛。
+因为$\frac{w_f^T}{\parallel w_f \parallel}\frac{w^T}{\parallel w_T \parallel} \le 1$，所以一定能在有穷步收敛。
 
-其中$constant = \frac{\min \limits_{n} y_n } {\max \limits_{n} \|{x_n}^2\|}$.（根据上面两步可以得到，还没证出来，以后再看...）
+其中$constant = \frac{\min \limits_{n} {y_n \frac{w_f_T}{\parallel w_f \parallel} x_n} {\max \limits_{n} \parallel{x_n}^2\parallel}$.（根据上面两步可以得到，还没证出来，以后再看...）
 
 
 
