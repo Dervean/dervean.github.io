@@ -82,6 +82,26 @@ $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
 其中$constant = \frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}^2\parallel}$.（根据上面两步可以得到，还没证出来，以后再看...）
 
+## 当数据不是线性可分的时候：Pocket algorithm
+
+当数据中存在许多噪声数据时候，数据不是线性可分，如何处理噪声数据呢？
+
+![PLA-noise](/images/ML/PLA-noise.png "PLA-noise")
+
+Pocket algorithm（口袋算法）是用来解决当数据中存在噪声数据的PLA问题，即找一条能满足大部分的数据的线（超平面），可以看成PLA的变种。
+
+![PLA-pocket-algorithm](/images/ML/PLA-pocket-algorithm.png "PLA-pocket-algorithm")
+
+口袋算法思想：**每当要“修正”一个错误然后修改$w$的时候，都要跟原来的$w$比较，看谁犯的错误更多，如果新的$w$错误更少，就修改，否则不修改。**
+
+口袋算法虽然能够处理噪声数据，但如果数据是可以线性可分的时候，口袋算法和$PLA$算法运行结果相同（因为每次比较肯定都会优于原来的一个），相比较$PLA$算法，口袋算法因为多了比较的步骤，它的运行时间更长。
+
+## python实现
+
+
+
+
+
 
 
 
