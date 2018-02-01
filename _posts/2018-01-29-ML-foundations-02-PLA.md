@@ -80,7 +80,7 @@ $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
 因为$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \le 1$，所以一定能在有穷步收敛。
 
-其中$constant = \frac{\min \limits_{n} y_n \frac{w_f_T}{\|w_f\|}x_n} {\max \limits_{n} \|{x_n}^2\|}$.（根据上面两步可以得到，还没证出来，以后再看...）
+其中$constant = \frac{\min \limits_{n} y_n } {\max \limits_{n} \|{x_n}^2\|}$.（根据上面两步可以得到，还没证出来，以后再看...）
 
 
 
