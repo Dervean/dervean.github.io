@@ -87,11 +87,11 @@ $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
 由（1）可知，经过$T$步之后：
 
-$$w_f^Tw_T \ge w_f^Tw_{T-1} + \min \limits_{n}{y_nw_f^Tx_n} \ge \cdots \ge T\min \limits_{n}{y_nw_f^Tx_n}$$
+$$w_f^Tw_t \ge w_f^Tw_{t-1} + \min \limits_{n}{y_nw_f^Tx_n} \ge \cdots \ge T\min \limits_{n}{y_nw_f^Tx_n}$$
 
 由（2）可知：
 
-$$\parallel{w_T}^2\parallel \le \parallel{w_{T-1}}^2\parallel + \max \limits_{n} \parallel{x_n}^2\parallel \le \cdots \le T\max \limits_{n} \parallel{x_n}^2\parallel$$
+$$\parallel{w_t}^2\parallel \le \parallel{w_{t-1}}^2\parallel + \max \limits_{n} \parallel{x_n}^2\parallel \le \cdots \le T\max \limits_{n} \parallel{x_n}^2\parallel$$
 
 即：
 
@@ -99,7 +99,7 @@ $$\frac{1}{\parallel{w_t}\parallel} \ge \frac{1}{\sqrt{T}\max \limits_{n} \paral
 
 综合可得：
 
-$$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\min \limits_{n}{y_nw_f^Tx_n}}{\sqrt{T}\max \limits_{n} \parallel{x_n}\parallel\parallel{w_f^T}\parallel}=\sqrt{T}\cdotp\frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$$
+$$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\min \limits_{n}{y_nw_f^Tx_n}}{\sqrt{T} \parallel\parallel{w_f^T}\parallel \max \limits_{n} \parallel{x_n}} = \sqrt{T}\cdotp\frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$$
 
 
 
