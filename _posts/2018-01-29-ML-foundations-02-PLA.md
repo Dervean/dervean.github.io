@@ -106,7 +106,7 @@ Each line of the data set contains one $(x_n, y_n)$ with $x_n \in \mathbb{R}^4$.
 
 **Solution**:
 
-<script src="/scripts_and_data/Perceptrons_Learning_Algorithm/PLA.py"></script>
+<script src="/scripts_and_data/machine_learning/Perceptrons_Learning_Algorithm/PLA.py"></script>
 
 
 
