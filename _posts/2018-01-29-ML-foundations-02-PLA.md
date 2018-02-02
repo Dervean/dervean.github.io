@@ -16,7 +16,7 @@ redirect_from:
 * Kramdown table of contents
 {:toc .toc}
 
-# perceptrons $\Leftrightarrow$ linear(binary) classifiers
+# Perceptrons $\Leftrightarrow$ Linear(binary) classifiers
 
 感知器(perceptrons)是一个线性分类器，用于解决二分类问题，例如回答是/不是。
 
@@ -100,8 +100,6 @@ $$\frac{1}{\parallel{w_t}\parallel} \ge \frac{1}{\sqrt{T}\max \limits_{n} \paral
 综合可得：
 
 $$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\min \limits_{n}{y_nw_f^Tx_n}}{\sqrt{T} \parallel{w_f^T}\parallel \max \limits_{n} \parallel{x_n}\parallel} = \sqrt{T}\cdotp\frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$$
-
-
 
 ## 当数据不是线性可分的时候：Pocket algorithm
 
