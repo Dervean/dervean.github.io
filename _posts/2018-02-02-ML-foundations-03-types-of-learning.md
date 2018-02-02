@@ -3,8 +3,8 @@ layout: post
 title: "机器学习基石第3课：机器学习分类"
 author: Dervean
 description: "机器学习基石第3课"
-categories: [machine-learning]
-tags: [machine-learning]
+categories: [machine_learning]
+tags: [machine_learning]
 redirect_from:
   - /2018/02/02/
 ---
