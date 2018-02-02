@@ -99,7 +99,7 @@ $$\frac{1}{\parallel{w_t}\parallel} \ge \frac{1}{\sqrt{T}\max \limits_{n} \paral
 
 综合可得：
 
-$$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\min \limits_{n}{y_nw_f^Tx_n}}{\sqrt{T} \parallel\parallel{w_f^T}\parallel \max \limits_{n} \parallel{x_n}} = \sqrt{T}\cdotp\frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$$
+$$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\min \limits_{n}{y_nw_f^Tx_n}}{\sqrt{T} \parallel{w_f^T}\parallel \max \limits_{n} \parallel{x_n}\parallel} = \sqrt{T}\cdotp\frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$$
 
 
 
