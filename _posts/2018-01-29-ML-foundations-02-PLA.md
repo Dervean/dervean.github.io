@@ -3,8 +3,8 @@ layout: post
 title: "机器学习基石第2课：PLA"
 author: Dervean
 description: "机器学习基石第2课"
-categories: [machine learning]
-tags: [machine learning]
+categories: [ML]
+tags: [ML]
 redirect_from:
   - /2018/01/29/
 ---
