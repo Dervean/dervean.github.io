@@ -18,7 +18,7 @@ redirect_from:
 
 # perceptrons $\Leftrightarrow$ linear(binary) classifiers
 
-感知器(perceptrons)就是一个线性分类器，用于解决二分类问题，例如回答是/不是。
+感知器(perceptrons)是一个线性分类器，用于解决二分类问题，例如回答是/不是。
 
 perceptron 可以看成一个简单的hypothesis set（$H$），还是使用信贷公司的例子：
 * 用户的年龄、每月收入以及欠款额度等信息记作$x = (x_1,x_2,...,x_d)$，称作用户的**特征**($features$)，如果每个特征都赋予一个权重分数w，计算总分数 $\sum_{i=1}^d w_ix_i$。
@@ -71,11 +71,11 @@ PLA算法要求最终能够找到一个直线（或者超平面）能够将所�
 
 可以证明：linear separable $D$ $\Leftrightarrow$ exists perfect $w_f$ such that $y_n=sign(w_f^Tx_n)$.
 
-(1)$w_t$与$w_f$的夹角越来越小，即越来越接近：
+(1) $w_t$与$w_f$的夹角越来越小，即越来越接近：
 
 ![PLA-proof-1](/images/ML/PLA-proof-1.png "PLA-proof-1")
 
-(2)$w_t$不会增长得太快，但经过$T$步后，
+(2) $w_t$不会增长得太快，但经过$T$步后，
 
 $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
@@ -83,7 +83,25 @@ $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
 因为$\frac{w_f^T}{\parallel w_f \parallel}\frac{w^T}{\parallel w_T \parallel} \le 1$，所以一定能在有穷步收敛。
 
-其中$constant = \frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}^2\parallel}$.（根据上面两步可以得到，还没证出来，以后再看...）
+其中$constant = \frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$.证明如下:
+
+由（1）可知，经过$T$步之后：
+
+$$w_f^Tw_T \ge w_f^Tw_{T-1} + \min \limits_{n}{y_nw_f^Tx_n} \ge \cdots \ge T\min \limits_{n}{y_nw_f^Tx_n}$$
+
+由（2）可知：
+
+$$\parallel{w_T}^2\parallel \le \parallel{w_{T-1}}^2\parallel + \max \limits_{n} \parallel{x_n}^2\parallel \le \cdots \le T\max \limits_{n} \parallel{x_n}^2\parallel$$
+
+即：
+
+$$\frac{1}{\parallel{w_t}\parallel} \ge \frac{1}{\sqrt{T}\max \limits_{n} \parallel{x_n}\parallel}$$
+
+综合可得：
+
+$$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\min \limits_{n}{y_nw_f^Tx_n}}{\sqrt{T}\max \limits_{n} \parallel{x_n}\parallel\parallel{w_f^T}\parallel}=\sqrt{T}\cdotp\frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$$
+
+
 
 ## 当数据不是线性可分的时候：Pocket algorithm
 
@@ -113,7 +131,7 @@ Each line of the data set contains one $(x_n, y_n)$ with $x_n \in \mathbb{R}^4$.
 
 **Problem description**: 
 
-As before.
+As above.
 
 [**Solution**](https://github.com/Dervean/machine_learning_foundations/tree/master/Pocket_Algorithm)
 
