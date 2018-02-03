@@ -30,9 +30,9 @@ redirect_from:
 
 # [Hoeffding Inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality)
 
-课程中给出一个例子来引出 $Hoeffding Inequality$：
+课程中给出一个例子来引出 **Hoeffding Inequality**：
 
-有一个罐子，罐子里面有许许多多的橘色和绿色的弹珠，我们无法将所有弹珠都数一遍，如何知道**橘色弹珠的比例**。
+有一个罐子，罐子里面有许许多多的橘色和绿色的弹珠，我们无法将所有弹珠都数一遍，如何知道**橘色弹珠的比例**？
 
 这时候可以利用**抽样**来估计，为了减少误差，需要增大抽样的样本数目 **$N$**.
 
