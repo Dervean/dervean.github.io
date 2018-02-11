@@ -64,7 +64,7 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2exp(−2 \epsilon^2 N)$$
 
 $E_{in}(h) \approx E_{out}(h)$  **and**  $E_{in}(h)$  **small**  $\Rightarrow$ $E_{out}(h)$  **small**  $\Rightarrow$ $h \approx f$ with respect to P
 
-# 多个hypothesis
+# Multiple hypothesis
 
 上述描述的是只有一个 $hypothesis$ 的情况，但实际情况可能存在多个 $hypothesis$，这样的话上述结论（$h \approx f$）还成立吗？
 
@@ -90,7 +90,7 @@ $E_{in}(h) \approx E_{out}(h)$  **and**  $E_{in}(h)$  **small**  $\Rightarrow$ $
 
 **如果所有数据都满足同一分布，模型的hypothesis的个数 $M$ 是有限的，样本数目 $N$ 足够大，则能保证 $E_{in}(h) \approx E_{out}(h)$，此时如果再能找到一个$E_{in}(h) \approx 0$，则$E_{out}(h) \approx 0$，从而实现机器学习。**
 
-现在还没有讨论当 $M = \infty$ 该怎么办，例如 $PLA$ 的 $hypothesis$ 的个数无限大的时候，还听下回分解。
+现在还没有讨论当 $M = \infty$ 该怎么办，例如 $PLA$ 的 $hypothesis$ 的个数无限大的时候。
 
 
 
