@@ -26,7 +26,7 @@ redirect_from:
 
 $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp M \cdotp exp(−2 \epsilon^2 N)$$
 
-其中有一个限制条件是: $M$ 是有限的. 
+其中有一个限制条件是: $M$ 是有限的。
 
 那如果 $M$ 是无限的情况该怎么考虑，机器学习是否还可行？ 
 
@@ -44,13 +44,29 @@ $$
 
 其中使用的是 union bound. 即假设每个 hypothesis 的 bad data 的分布没有互相重叠，然而现实情况下这种条件并不能满足，这样看来这个 upper bound 应该是被高估(**over-estimating**)了。
 
-例如 PLA , 虽然 hypothesis 的数目趋于无穷，但相似的两个 hypothesis 的 bad data 的分布也是会有许多重叠的情况。
+例如 PLA , 虽然 hypothesis 的数目无穷，但相似的两个 hypothesis 的 bad data 的分布也是会有许多重叠的情况。
 
-在这种情况下，我们修改一下上面的公式，即然 hypothesis 有无穷多个，那我们考虑将无穷多个 hypothesis 分成若干类 $m_H$ ，则使用 $m_H$ 来代替 **infinite M**:
+在这种情况下，我们修改一下上面的公式，即然 hypothesis 有无穷多个，那我们考虑将无穷多个 hypothesis 分成若干类 $m_H$ ，使用 $m_H$ 来代替 **infinite M**，hypothesis 的种类个数与 input 有关，所以 $m_H$ 是一个关于 input 个数的单调递增函数:
 
 $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(−2 \epsilon^2 N)$$
 
 # Effective Number of Line
+
+如何将无穷多个 hypothesis 分成若干类 $m_H$ ？
+
+讲义中以一个例子解释了什么是 **Effective Number**:
+
+- 假设平面上有一些点，现在用一根直线把这些点分成两类（+1、-1），请问这根直线最多有几种。
+
+- 如果只有 1 个点 $x_1$，那么直线有 2 种：一种将 $x_1$ 划为+1，另一种将 $x_1$ 划为-1。（$2^1$）
+
+- 如果有 2 个点 $x_1$，$x_2$，那么直线有 4 种: $x_1$，$x_2$ 都为+1，$x_1$，$x_2$ 都为-1，$x_1$ 为+1 $x_2 为 -1，$x_2$ 为+1 $x_1 为 -1。（$2^2$）
+
+- 如果有 3 个点 $x_1$，$x_2$，$x_3$，注意此时可能三点共线，所以直线**最多** 8 种。（$2^3$）
+
+- 但是当有 4 个点的时候，情况出现了变化，此时直线**最多 14 种**。此时的 4 是 $m_H$ **break point**。（$14 < 2^4$）
+
+![effective-number-of-line](/images/ML/training-versus-testing-1.png "当有四个点时，最多有14种直线将这些点分成两类")
 
 
 
