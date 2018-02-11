@@ -28,6 +28,8 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp M \cdotp exp(−
 
 其中有一个限制条件是: $M$ 是有限的. 那如果 $M$ 是无限的情况该怎么考虑，机器学习是否还可行？ 
 
+注意上述公式推导选择 bad data 的概率时:
+
 $$
 \begin{array}{rcl}
 \mathbb{P}_D(Bad \ D) 	 & 			= 		& \mathbb{P}_D(Bad \ D \ for \ h_1 \ or \ Bad \ D \ for \ h_2 \ or \ ... \ or \ Bad \ D \ for \ h_M) 	\\
@@ -38,6 +40,15 @@ $$
 \end{array}
 $$
 
+其中使用的是 union bound. 即假设每个 hypothesis 的 bad data 的分布没有互相重叠，然而现实情况下这种条件并不能满足，这样看来这个 upper bound 应该是被高估(**over-estimating**)了。
+
+例如 PLA , 虽然 hypothesis 的数目趋于无穷，但相似的两个 hypothesis 的 bad data 的分布也是会有许多重叠的情况。
+
+在这种情况下，我们修改一下上面的公式，即然 hypothesis 有无穷多个，那我们考虑将无穷多个 hypothesis 分成若干类 $m_H$ ，则使用 $m_H$ 来代替 **infinite M**:
+
+$$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(−2 \epsilon^2 N)$$
+
+# Effective Number of Line
 
 
 
