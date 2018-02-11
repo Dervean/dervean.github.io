@@ -86,13 +86,11 @@ $$
 \begin{array}{rcl}
 \mathbb{P}_D(Bad \ D) 	 & 			= 		& \mathbb{P}_D(Bad \ D \ for \ h_1 \ or \ Bad \ D \ for \ h_2 \ or \ ... \ or \ Bad \ D \ for \ h_M) 	\\
 						 & 			\le 	& \mathbb{P}_D(Bad \ D \ for \ h_1) + \mathbb{P}_D(Bad \ D \ for \ h_2) + ... + \mathbb{P}_D(Bad \ D \ for \ h_M)		\\
-						 &	(union bound) 	&								\\
+						 &	(union \ bound) &								\\
 						 & 			\le 	& 2exp(−2 \epsilon^2 N) + 2exp(−2 \epsilon^2 N) + ... + 2exp(−2 \epsilon^2 N) \\
 						 & 			=		& 2Mexp(−2 \epsilon^2 N)	
 \end{array}
 $$
-
-![bad-data](/images/ML/feasibilty-bad-data-3.png "bad-data")
 
 其概率**只取决于 $M$, $N$, $\epsilon$**.
 
