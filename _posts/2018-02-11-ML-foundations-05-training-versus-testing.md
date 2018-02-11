@@ -26,7 +26,9 @@ redirect_from:
 
 $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp M \cdotp exp(−2 \epsilon^2 N)$$
 
-其中有一个限制条件是: $M$ 是有限的. 那如果 $M$ 是无限的情况该怎么考虑，机器学习是否还可行？ 
+其中有一个限制条件是: $M$ 是有限的. 
+
+那如果 $M$ 是无限的情况该怎么考虑，机器学习是否还可行？ 
 
 注意上述公式推导选择 bad data 的概率时:
 
