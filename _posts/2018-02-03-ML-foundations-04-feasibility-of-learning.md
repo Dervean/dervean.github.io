@@ -88,7 +88,7 @@ $$
 						 & 			\le 	& \mathbb{P}_D(Bad \ D \ for \ h_1) + \mathbb{P}_D(Bad \ D \ for \ h_2) + ... + \mathbb{P}_D(Bad \ D \ for \ h_M)		\\
 						 &	(union \ bound) &								\\
 						 & 			\le 	& 2exp(−2 \epsilon^2 N) + 2exp(−2 \epsilon^2 N) + ... + 2exp(−2 \epsilon^2 N) \\
-						 & 			=		& 2Mexp(−2 \epsilon^2 N)	
+						 & 			=		& 2 \cdotp M \cdotp exp(−2 \epsilon^2 N)	
 \end{array}
 $$
 
