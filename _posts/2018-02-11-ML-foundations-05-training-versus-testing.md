@@ -60,11 +60,11 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(�
 
 - 如果只有 1 个点 $x_1$，那么直线有 2 种：一种将 $x_1$ 划为+1，另一种将 $x_1$ 划为-1。（$2^1$）
 
-- 如果有 2 个点 $x_1$，$x_2$，那么直线有 4 种: $x_1$，$x_2$ 都为+1，$x_1$，$x_2$ 都为-1，$x_1$ 为+1 $x_2 为 -1，$x_2$ 为+1 $x_1 为 -1。（$2^2$）
+- 如果有 2 个点 $x_1$，$x_2$，那么直线有 4 种: $x_1$ 和 $x_2$ 都为+1，$x_1$ 和 $x_2$ 都为-1，$x_1$ 为+1 $x_2$ 为 -1，$x_2$ 为+1 $x_1$ 为 -1。（$2^2$）
 
 - 如果有 3 个点 $x_1$，$x_2$，$x_3$，注意此时可能三点共线，所以直线**最多 8 种**。（$2^3$）
 
-- 但是当有 4 个点的时候，情况出现了变化，此时直线**最多 14 种**。此时的 4 是 $m_H$ **break point**。（$14 < 2^4$）
+- 但是当有 4 个点的时候，情况出现了变化，此时直线**最多 14 种**。此时的 4 是 $m_H$ 的 **break point**。（$14 < 2^4$）
 
 ![effective-number-of-line](/images/ML/training-versus-testing-1.png "当有四个点时，最多有14种直线将这些点分成两类")
 
@@ -84,7 +84,7 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp effective(N) \cd
 
 这里引出一个新的名词: $dichotomy$. 中文意思是“二分”，意思是将空间中的点（例如二维平面）用一条直线分成正类（蓝色o）和负类（红色x）。
 
-空间里面有 N 个点，每个 hypothesis 是可以将这些点分开的直线，令 H 是所有 $hypothesis$ 的集合，而 $dichotomy(H)$ 代表着 hypothesis 的种类数目。可以知道 $|H|$ 可能是无穷的，但 $dichotomy(H) \le 2^N$.
+空间里面有 N 个点，每个 hypothesis 是可以将这些点分开的直线，令 H 是所有 $hypothesis$ 的集合，而 $dichotomy(H)$ 代表着 hypothesis 的种类数目。可以知道 $\|H\|$ 可能是无穷的，但 $dichotomy(H) \le 2^N$.
 
 我们将之前引入的 $m_H(N)$ 称为**成长函数(growth function)**，指的是对应不同的 N 时 hypothesis 的最大的种类数目，也就是最大的 $dichotomy(H)$，易知 $m_H(N) \le 2^N$.
 
