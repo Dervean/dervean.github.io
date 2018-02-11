@@ -54,7 +54,7 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(�
 
 如何将无穷多个 hypothesis 分成若干类 $m_H$ ？
 
-讲义中以一个例子解释了什么是 **Effective Number**:
+讲义中以一个例子（其实就是 PLA 的情况）解释了什么是 **Effective Number**:
 
 - 假设平面上有一些点，现在用一根直线把这些点分成两类（+1、-1），请问这根直线最多有几种。
 
@@ -62,15 +62,43 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(�
 
 - 如果有 2 个点 $x_1$，$x_2$，那么直线有 4 种: $x_1$，$x_2$ 都为+1，$x_1$，$x_2$ 都为-1，$x_1$ 为+1 $x_2 为 -1，$x_2$ 为+1 $x_1 为 -1。（$2^2$）
 
-- 如果有 3 个点 $x_1$，$x_2$，$x_3$，注意此时可能三点共线，所以直线**最多** 8 种。（$2^3$）
+- 如果有 3 个点 $x_1$，$x_2$，$x_3$，注意此时可能三点共线，所以直线**最多 8 种**。（$2^3$）
 
 - 但是当有 4 个点的时候，情况出现了变化，此时直线**最多 14 种**。此时的 4 是 $m_H$ **break point**。（$14 < 2^4$）
 
 ![effective-number-of-line](/images/ML/training-versus-testing-1.png "当有四个点时，最多有14种直线将这些点分成两类")
 
+我们将直线的种类数目称为 Effective Number of Line，Effective Number 意味着线虽无穷但类别有穷，即:
 
+effective(N) $\Leftrightarrow$ maximum kinds of lines with respect to N inputs $x_1$, $x_2$, ..., $x_N$
 
+进一步可得:
 
+$$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp effective(N) \cdotp exp(−2 \epsilon^2 N)$$
+
+其中 $effective(N) \le 2^N$
+
+**如果 $effective(N)$ 可以替代 M，且 $effective(N) \ll 2^N$，则学习可行。**
+
+# Effective Number of Hypotheses
+
+这里引出一个新的名词: $dichotomy$. 中文意思是“二分”，意思是将空间中的点（例如二维平面）用一条直线分成正类（蓝色o）和负类（红色x）。
+
+空间里面有 N 个点，每个 hypothesis 是可以将这些点分开的直线，令 H 是所有 $hypothesis$ 的集合，而 $dichotomy(H)$ 代表着 hypothesis 的种类数目。可以知道 $|H|$ 可能是无穷的，但 $dichotomy(H) \le 2^N$.
+
+我们将之前引入的 $m_H(N)$ 称为**成长函数(growth function)**，指的是对应不同的 N 时 hypothesis 的最大的种类数目，也就是最大的 $dichotomy(H)$，易知 $m_H(N) \le 2^N$.
+
+讲义中又介绍了三种成长函数:
+
+(1) Positive Rays，连续 N 个点分布在一条一维直线上，现在要从 N+1 个间隔选择出一个将 N 个点分成两类，$m_H(N) = N + 1$.
+
+![effective-number-of-hypotheses](/images/ML/training-versus-testing-2.png "Positive Rays")
+
+(2) Positive Intervals，仍然是连续 N 个点分布在一条一维直线上，根据 N+1 个间隔选择出一段点（interval），将 N 个点分成两类，处于 interval 上的点属于 +1，处于 interval 外的点属于 -1。
+
+![effective-number-of-hypotheses](/images/ML/training-versus-testing-3.png "Positive Intervals")
+
+(3) 
 
 
 
