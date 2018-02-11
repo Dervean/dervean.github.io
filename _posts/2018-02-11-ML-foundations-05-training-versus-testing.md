@@ -94,7 +94,7 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp effective(N) \cd
 
 ![effective-number-of-hypotheses](/images/ML/training-versus-testing-2.png "Positive Rays")
 
-(2) Positive Intervals，仍然是连续 N 个点分布在一条一维直线上，根据 N+1 个间隔选择出一段点（interval），将 N 个点分成两类，处于 interval 上的点属于 +1，处于 interval 外的点属于 -1。
+(2) Positive Intervals，仍然是连续 N 个点分布在一条一维直线上，根据 N+1 个间隔选择出一段点（interval），将 N 个点分成两类，处于 interval 上的点属于 +1，处于 interval 外的点属于 -1。 $m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$
 
 ![effective-number-of-hypotheses](/images/ML/training-versus-testing-3.png "Positive Intervals")
 
