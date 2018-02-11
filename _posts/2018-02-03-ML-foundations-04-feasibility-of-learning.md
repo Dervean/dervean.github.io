@@ -82,6 +82,18 @@ $E_{in}(h) \approx E_{out}(h)$  **and**  $E_{in}(h)$  **small**  $\Rightarrow$ $
 
 选择出 bad data 的概率:
 
+$$
+\begin{array}{rcl}
+\mathbb{P}_D(Bad \ D) 	 & 			= 		& \mathbb{P}_D(Bad \ D for h_1 or Bad \ D for h_2 or ... or Bad \ D for h_M) 	\\
+						 & 			\le 	& \mathbb{P}_D(Bad \ D for h_1) + \mathbb{P}_D(Bad \ D for h_2) + ... + \mathbb{P}_D(Bad \ D for h_M)		\\
+						 &	(union bound) 	&								\\
+						 & 			\le 	& 2exp(−2 \epsilon^2 N) + 2exp(−2 \epsilon^2 N) + ... + 2exp(−2 \epsilon^2 N) \\
+						 & 			=		& 2Mexp(−2 \epsilon^2 N)	
+\end{array}
+$$
+
+$\mathbb{P} = $
+
 ![bad-data](/images/ML/feasibilty-bad-data-3.png "bad-data")
 
 其概率**只取决于 $M$, $N$, $\epsilon$**.
@@ -91,50 +103,5 @@ $E_{in}(h) \approx E_{out}(h)$  **and**  $E_{in}(h)$  **small**  $\Rightarrow$ $
 **如果所有数据都满足同一分布，模型的hypothesis的个数 $M$ 是有限的，样本数目 $N$ 足够大，则能保证 $E_{in}(h) \approx E_{out}(h)$，此时如果再能找到一个$E_{in}(h) \approx 0$，则$E_{out}(h) \approx 0$，从而实现机器学习。**
 
 现在还没有讨论当 $M = \infty$ 该怎么办，例如 $PLA$ 的 $hypothesis$ 的个数无限大的时候。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
