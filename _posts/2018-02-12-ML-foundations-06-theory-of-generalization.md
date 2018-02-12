@@ -148,7 +148,7 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
 但是事实上这个上界比我们预计的要高:
 
-$$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 2 \cdotp 2 m_{2 \mathcal{H} }(N) \cdotp exp(-2 \frac{1}{16}\epsilon^2N)}$$
+$$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 2 \cdotp 2 m_{\mathcal{H} }(2N) \cdotp exp(-2 \frac{1}{16}\epsilon^2N)}$$
 
 
 
