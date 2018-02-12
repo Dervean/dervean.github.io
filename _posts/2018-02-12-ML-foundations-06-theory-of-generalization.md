@@ -142,7 +142,7 @@ $$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k�
 
 # VC bound
 
-按照之前的讨论，本来希望想要得到的公式是:
+按照之前的讨论，本来希望想要得到:
 
 $$ \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 2 \cdotp m_{ \mathcal{H} } (N) \cdotp exp(-2 \epsilon^2N) $$
 
@@ -160,9 +160,45 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
 - Step 1: Replace $E_{out}$ by $E_{in}\'$
 
+  虽然没办法处理无穷大的情况，但可以使用 $E_{in}\'$ 近似代替 $E_{out}$，$E_{in}\'$ 是从所有数据随机取出的样本数据，样本大小为 N。
+
+  $$\frac{1}{2} \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})$$
+
+  ![vc-bound-proof-1](/images/ML/theory-of-generalization-vc-bound-proof-1.png "proof")
+
 - Step 2: Decompose $\mathcal{H}$ by Kind
 
+  infinite $\mathcal{H}$ becomes $|\mathcal{H}(x_1, ..., x_N, x_1\', ...,x_N\')|$ kinds.
+
+  $$
+  \begin{array}{rcl}
+  BAD     &   \le    &    2\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})    \\
+          &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})
+  \end{array}
+  $$
+
+  ![vc-bound-proof-2](/images/ML/theory-of-generalization-vc-bound-proof-2.png "proof")
+
 - Step 3: Use Hoeffding without Replacement
+
+  consider bin of 2N examples, choose N for $E_{in}$, leave others for $E_{in}\'$.
+
+  $$
+  |E_{in} - E_{in}\'| > \frac{\epsilon}{2} \Leftrightarrow |E_{in} - \frac{E_{in} + E_{in}\'}{2}| > \frac{\epsilon}{4}
+  $$
+
+  $$
+  \begin{array}{rcl}
+  BAD     &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})    \\
+          &   \le    &    2 \cdotp m_{\mathcal{H}}(2N) \cdotp 2 exp(-2 (\frac{\epsilon}{4})^2 N)
+  \end{array}
+  $$
+
+  ![vc-bound-proof-3](/images/ML/theory-of-generalization-vc-bound-proof-3.png "proof")
+
+
+
+
 
 
 
