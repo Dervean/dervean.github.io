@@ -309,4 +309,4 @@ redirect_from:
 
 - **Step 10**&nbsp; &nbsp;点击cairo-dock图标即可.
 
-![smiley](/images/Screenshot_from_2017-09-24_02-30-38.png "Screenshot")
+![centos7](/images/centos7.png "centos7")
