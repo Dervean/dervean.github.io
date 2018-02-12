@@ -84,9 +84,7 @@ bounding function $B(N,k)$:  maximum possible $m_H(N)$ when break point = k.
 
 下一步我们根据归纳（inductive）来补全这张表:
 
-首先我们可以暴力计算出 
-
-$$B(4,3) = 11$$
+首先我们可以暴力计算出: $B(4,3) = 11$
 
 ![bounding-function-inductive-case-1](/images/ML/theory-of-generalization-bounding-function-inductive-1.png "B(4,3) = 11")
 
