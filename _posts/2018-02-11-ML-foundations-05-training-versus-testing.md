@@ -123,6 +123,8 @@ $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
 **Break point**: if no k inputs can be shattered by $H$, call k a **break point** for $H$.
 
 	|-----------------------+---------------------------------------------------------------+---------------|
+	| Type  		 		| Growth function												| break point	|
+	|-----------------------|:-------------------------------------------------------------:|:--------------|
     | Positive Rays 		| $m_H(N) = N + 1$ 												| k = 2			|
 	| Positive Intervals 	| $m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$ 	| k = 3			|
 	| Convex Sets 			| $m_H(N) = 2^N$ 												| no break point|
