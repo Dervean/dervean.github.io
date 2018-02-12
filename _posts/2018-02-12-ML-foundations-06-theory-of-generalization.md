@@ -132,8 +132,11 @@ B(N,k)                      &          =       & 2 \cdotp \alpha + \beta    \\
 \end{array}
 $$
 
+这样就可以将表补全:
+
 ![bounding-function-inductive-case-5](/images/ML/theory-of-generalization-bounding-function-inductive-5.png "inductive case")
 
+$$B(N,k) \le \sum_{i=0}^{k-1} \tbinom{N}{i}$$
 
 
 
