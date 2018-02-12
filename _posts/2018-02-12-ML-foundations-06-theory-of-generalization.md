@@ -162,37 +162,40 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
   虽然没办法处理无穷大的情况，但可以使用 $E_{in}\'$ 近似代替 $E_{out}$，$E_{in}\'$ 是从所有数据随机取出的样本数据，样本大小为 N。
 
-  $$\frac{1}{2} \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})$$
-
   ![vc-bound-proof-1](/images/ML/theory-of-generalization-vc-bound-proof-1.png "proof")
+
+$$\frac{1}{2} \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})$$
+
+  
 
 - Step 2: Decompose $\mathcal{H}$ by Kind
 
-  infinite $\mathcal{H}$ becomes $|\mathcal{H}(x_1, ..., x_N, x_1\', ...,x_N\')|$ kinds.
-
-  $$
-  \begin{array}{rcl}
-  BAD     &   \le    &    2\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})    \\
-          &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})
-  \end{array}
-  $$
+  infinite $\mathcal{H}$ becomes $\| \mathcal{H}(x_1, ..., x_N, x_1\', ...,x_N\') \|$ kinds.
 
   ![vc-bound-proof-2](/images/ML/theory-of-generalization-vc-bound-proof-2.png "proof")
 
+$$
+\begin{array}{rcl}
+BAD     &   \le    &    2\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})    \\
+        &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})
+\end{array}
+$$
+
 - Step 3: Use Hoeffding without Replacement
 
-  consider bin of 2N examples, choose N for $E_{in}$, leave others for $E_{in}\'$: $
- \|E_{in} - E_{in}'\| > \frac{\epsilon}{2} \Leftrightarrow \|E_{in} - \frac{E_{in} + E_{in}'}{2} \| >\frac{\epsilon}{4}
- $
+  consider bin of 2N examples, choose N for $E_{in}$, leave others for $E_{in}\'$: 
 
- $$
- \begin{array}{rcl}
- BAD     &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}'(h) | >\frac{\epsilon}{2})    \\
-         &   \le    &    2 \cdotp m_{\mathcal{H}}(2N) \cdotp 2 exp(-2 (\frac{\epsilon}{4})^2 N)
- \end{array}
- $$
+$$\|E_{in} - E_{in}'\| > \frac{\epsilon}{2} \Leftrightarrow \|E_{in} - \frac{E_{in} + E_{in}'}{2} \| >\frac{\epsilon}{4}$$
 
   ![vc-bound-proof-3](/images/ML/theory-of-generalization-vc-bound-proof-3.png "proof")
+
+$$
+\begin{array}{rcl}
+BAD     &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}'(h) | >\frac{\epsilon}{2})    \\
+        &   \le    &    2 \cdotp m_{\mathcal{H}}(2N) \cdotp 2 exp(-2 (\frac{\epsilon}{4})^2 N)
+\end{array}
+$$
+
 
 
 
