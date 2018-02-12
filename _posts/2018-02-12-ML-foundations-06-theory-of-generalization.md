@@ -82,15 +82,13 @@ bounding function $B(N,k)$:  maximum possible $m_H(N)$ when break point = k.
 
 ![bounding-function-basic-case](/images/ML/theory-of-generalization-bounding-function-basic.png "bounding function —— basic case")
 
-下一步我们根据归纳（inductive）来补全这张表:
+下一步我们通过归纳（inductive）来补全这张表:
 
 首先我们可以暴力计算出: $B(4,3) = 11$
 
 ![bounding-function-inductive-case-1](/images/ML/theory-of-generalization-bounding-function-inductive-1.png "B(4,3) = 11")
 
-11 = 4 + 7 ？
-
-下面来进一步研究 $B(4,3)$ 的组成。
+11 = 4 + 7 ？表中元素之间是否有某种关系 ？下面来进一步研究 $B(4,3)$ 的组成。
 
 ![bounding-function-inductive-case-2](/images/ML/theory-of-generalization-bounding-function-inductive-2.png "B(4,3)")
 
@@ -134,7 +132,7 @@ B(N,k)                      &          =       & 2 \cdotp \alpha + \beta    \\
 \end{array}
 $$
 
-
+![bounding-function-inductive-case-5](/images/ML/theory-of-generalization-bounding-function-inductive-5.png "inductive case")
 
 
 
