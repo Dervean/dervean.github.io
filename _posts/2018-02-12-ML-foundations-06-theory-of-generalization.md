@@ -52,7 +52,21 @@ redirect_from:
 
   - 但也会存在 4 个 dichotomy 但是 shatter 其中两个点的情况。
 
-  ![4-dichotomy-shatter](/images/ML/theory-of-generalization-5.png "4 个 dichotomy，shatter 其中两个点")
+  ![4-dichotomy-shatter](/images/ML/theory-of-generalization-5.png "4 个 dichotomy，shatter 其中两个点 x2、x3")
+
+  - 然而我们没办法在不 shatter 任意两个点的前提下找到 5 个 dichotomy.
+
+  ![5-dichotomy-shatter-1](/images/ML/theory-of-generalization-6.png "5 个 dichotomy，shatter 其中两个点 x1、x3")
+
+  ![5-dichotomy-shatter-2](/images/ML/theory-of-generalization-7.png "5 个 dichotomy，shatter 其中两个点 x1、x2")
+
+  - 所以 N = 3，k = 2 最多有 4 个 dichotomy （$4 < 2^3$），可以看出来，break point 对成长函数的增长有很大的影响（本来应该是 $2^3$，现在只有 4）。
+
+下面我们来证明 存在 break point 时，$m_H(N)$ 是多项式型的。
+
+# Bounding Function
+
+bounding function $B(N,k)$:  maximum possible $m_H(N)$ when break point = k.
 
 
 
