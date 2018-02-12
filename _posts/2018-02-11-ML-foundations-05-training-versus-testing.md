@@ -118,15 +118,21 @@ $$m_H(N) = 2^N$$
 
 $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
 
-# break point
+# Break point
 
-由上面可知:
-
+**Break point**: if no k inputs can be shattered by $H$, call k a **break point** for $H$.
 
 	|---
-    | Positive Rays | $m_H(N) = N + 1$
-	| Positive Intervals | $m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$
-	| Convex Sets | $m_H(N) = 2^N$
+    | Positive Rays | $m_H(N) = N + 1$ | k = 2
+	| Positive Intervals | $m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$ | k = 3
+	| Convex Sets | $m_H(N) = 2^N$ | no break point
+	| 2D perceptrons | $m_H(N) < 2^N$ | k = 4
+
+由上面可以猜测:
+
+- no break point: $m_H(N) = 2^N$
+
+- break point k: $m_H(N) = O(N^{k-1})$
 
 
 
