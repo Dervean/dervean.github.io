@@ -169,7 +169,7 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
 - Step 2: Decompose $\mathcal{H}$ by Kind
 
-  infinite $\mathcal{H}$ becomes $ | \mathcal{H}(x_1, ..., x_N, x_1\', ...,x_N\') |$ kinds.
+  infinite $\mathcal{H}$ becomes $ \| \mathcal{H}(x_1, ..., x_N, x_1\', ...,x_N\') \|$ kinds.
 
   $$
   BAD \ \le \ 2\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}'(h) | > \frac{\epsilon}{2})    
