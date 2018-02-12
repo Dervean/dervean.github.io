@@ -34,11 +34,27 @@ redirect_from:
 
 - 基于上面两个条件，我们现在来看 N = 3，k = 2 最多有多少个 dichotomy.
 
-  - 首先，肯定能存在 1、2、3 个 dichotomy 能保证不会 shatter 任意两个点
+  - 首先，在不 shatter 任意两个点的前提下，肯定能存在 1 个 dichotomy.
+
+  ![1-dichotomy](/images/ML/theory-of-generalization-1.png "1 dichotomy")
+
+  - 存在 2 个dichotomy.
+
+  ![2-dichotomy](/images/ML/theory-of-generalization-2.png "2 dichotomy")
+
+  - 存在 3 个dichotomy.
+
+  ![3-dichotomy](/images/ML/theory-of-generalization-3.png "3 dichotomy")
+
+  - 现在我们来研究是否存在 4 个 dichotomy. 首先，确实存在 4 个 dichotomy 且能满足不会 shatter 任意两个点。
+
+  ![4-dichotomy-no-shatter](/images/ML/theory-of-generalization-4.png "不 shatter 任意两个点，存在 4 个 dichotomy")
+
+  - 但也会存在 4 个 dichotomy 但是 shatter 其中两个点的情况。
+
+  ![4-dichotomy-shatter](/images/ML/theory-of-generalization-5.png "4 个 dichotomy，shatter 其中两个点")
 
 
-
-  - 现在我们来研究
 
 
 
