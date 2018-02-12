@@ -61,7 +61,7 @@ $$
 
 ![PLA-implementation](/images/ML/PLA-implementation.png "PLA-implementation")
 
-## 数据线性可分和PLA的算法有穷性
+### 数据线性可分和PLA的算法有穷性
 
 PLA算法要求最终能够找到一个直线（或者超平面）能够将所有数据点一分为二，但如果找不到怎么办呢？那是否意味着PLA算法有可能永远不会停止？
 
@@ -101,7 +101,7 @@ $$\frac{1}{\parallel{w_t}\parallel} \ge \frac{1}{\sqrt{T}\max \limits_{n} \paral
 
 $$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\min \limits_{n}{y_nw_f^Tx_n}}{\sqrt{T} \parallel{w_f^T}\parallel \max \limits_{n} \parallel{x_n}\parallel} = \sqrt{T}\cdotp\frac{\min \limits_{n} {y_n \frac{w_f^T}{\parallel w_f \parallel} x_n}} {\max \limits_{n} \parallel{x_n}\parallel}$$
 
-## 当数据不是线性可分的时候：Pocket algorithm
+### 当数据不是线性可分的时候：Pocket algorithm
 
 当数据中存在许多噪声数据时候，数据不是线性可分，如何处理噪声数据呢？
 
@@ -117,7 +117,7 @@ Pocket algorithm（口袋算法）是用来解决当数据中存在噪声数据�
 
 # python实现
 
-## PLA
+### PLA
 
 **Problem description**: 
 
@@ -125,7 +125,7 @@ Each line of the data set contains one $(x_n, y_n)$ with $x_n \in \mathbb{R}^4$.
 
 [**Solution**](https://github.com/Dervean/machine_learning_foundations/tree/master/Perceptrons_Learning_Algorithm)
 
-## PA
+### PA
 
 **Problem description**: 
 
