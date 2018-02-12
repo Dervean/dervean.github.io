@@ -136,7 +136,7 @@ $$
 
 ![bounding-function-inductive-case-5](/images/ML/theory-of-generalization-bounding-function-inductive-5.png "inductive case")
 
-$$B(N,k) \le \sum_{i=0}^{k-1} \tbinom{N}{i}$$
+$$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \dbinom{N}{i}}$$
 
 
 
