@@ -130,6 +130,14 @@ $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
     | Convex Sets | $m_H(N) = 2^N$ | no break point
     | 2D perceptrons | $m_H(N) < 2^N$ | k = 4
 
+    |---
+    | Default aligned | Left aligned | Center aligned | Right aligned
+    |-|:-|:-:|-:
+    | First body part | Second cell | Third cell | fourth cell
+    | Second line |foo | **strong** | baz
+    | Third line |quux | baz | bar
+    | Footer row
+
 由上面可以猜测:
 
 - no break point: $m_H(N) = 2^N$
