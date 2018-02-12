@@ -28,13 +28,15 @@ redirect_from:
 
 本节课通过一个简单的例子来说明 break point 对成长函数增长的影响。
 
-- 当 k = 1 时，对于一个点我们肯定可以找到两种 dichotomy 使得这个点要么是 +1 要么是 -1，即 $m_H(N) = 2$ 
+- 首先，对于一个点我们肯定可以找到两种 dichotomy 使得这个点要么是 +1 要么是 -1，即 $m_H(N) \ge 2$ 
 
-- 假设我们没办法 shatter 住两个点，即当 k = 2 的时候，$m_H(N) < 4$，即 minimum break point k = 2，不妨令 $m_H(N) = 3$。
+- 假设我们没办法 shatter 住任意两个点，即 minimum break point k = 2，当 N = 2 的时候，$m_H(N) < 4$，不妨令 $m_H(N) = 3$。
 
 - 基于上面两个条件，我们现在来看 N = 3，k = 2 最多有多少个 dichotomy.
 
-  - 首先，肯定能存在 1、2、3 个 dichotomy 能保证不会 shatter 住任意两个点
+  - 首先，肯定能存在 1、2、3 个 dichotomy 能保证不会 shatter 任意两个点
+
+
 
   - 现在我们来研究
 
