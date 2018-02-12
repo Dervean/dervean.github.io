@@ -164,19 +164,16 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
   ![vc-bound-proof-1](/images/ML/theory-of-generalization-vc-bound-proof-1.png "proof")
 
-$$\frac{1}{2} \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})$$
+$$\frac{1}{2} \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}'(h) | > \frac{\epsilon}{2})$$
 
-  
 
 - Step 2: Decompose $\mathcal{H}$ by Kind
 
   infinite $\mathcal{H}$ becomes $\| \mathcal{H}(x_1, ..., x_N, x_1\', ...,x_N\') \|$ kinds.
 
 $$
-\begin{array}{rcl}
-BAD     &   \le    &    2\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})    \\
-        &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})
-\end{array}
+BAD  \le  2\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}'(h) | > \frac{\epsilon}{2})    
+     \le  2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}'(h) | > \frac{\epsilon}{2})
 $$
 
 - Step 3: Use Hoeffding without Replacement
@@ -186,10 +183,8 @@ $$
 $$\|E_{in} - E_{in}'\| > \frac{\epsilon}{2} \Leftrightarrow \|E_{in} - \frac{E_{in} + E_{in}'}{2} \| >\frac{\epsilon}{4}$$
 
 $$
-\begin{array}{rcl}
-BAD     &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}'(h) | >\frac{\epsilon}{2})    \\
-        &   \le    &    2 \cdotp m_{\mathcal{H}}(2N) \cdotp 2 exp(-2 (\frac{\epsilon}{4})^2 N)
-\end{array}
+BAD  \le  2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}'(h) | >\frac{\epsilon}{2}) 
+     \le  2 \cdotp m_{\mathcal{H}}(2N) \cdotp 2 exp(-2 (\frac{\epsilon}{4})^2 N)
 $$
 
 ![vc-bound-proof-2](/images/ML/theory-of-generalization-vc-bound-proof-2.png "proof")
