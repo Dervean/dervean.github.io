@@ -134,9 +134,9 @@ $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
 
 由上面可以猜测:
 
-- no break point:	$m_H(N) = 2^N$
+- no break point: $m_H(N) = 2^N$
 
-- break point	:	$m_H(N) = O(N^{k-1})$
+- break point k	: $m_H(N) = O(N^{k-1})$
 
 
 
