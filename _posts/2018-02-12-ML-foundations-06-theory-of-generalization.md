@@ -142,13 +142,19 @@ $$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k�
 
 # VC bound
 
-按照我们之前的讨论，本来希望想要得到的公式是:
+按照之前的讨论，本来希望想要得到的公式是:
 
 $$ \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 2 \cdotp m_{ \mathcal{H} } (N) \cdotp exp(-2 \epsilon^2N) $$
 
 但是事实上这个上界比我们预计的要高:
 
 $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 2 \cdotp 2 m_{\mathcal{H} } (2N) \cdotp exp(-2 \frac{1}{16}\epsilon^2N)$$
+
+而这个 bound 就是 Vapnik-Chervonenkis(VC) bound.
+
+$$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 4 m_{\mathcal{H} } (2N) \cdotp exp(- \frac{1}{8}\epsilon^2N)$$
+
+证明如下:
 
 
 
