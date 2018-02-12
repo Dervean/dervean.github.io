@@ -146,16 +146,23 @@ $$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k�
 
 $$ \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 2 \cdotp m_{ \mathcal{H} } (N) \cdotp exp(-2 \epsilon^2N) $$
 
-但是事实上，如果 N 足够的大($10^4$, $10^5...$)，这个上界比我们预计的要高:
+但是事实上，这种替代有一定问题，因为 $E_{in}$ 的取值可能是有限的，而 $E_{out}$ 的取值有无穷多个可能。
+
+如果 N 足够的大($10^4$, $10^5...$)，这个上界比我们预计的要高:
 
 $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 2 \cdotp 2 m_{\mathcal{H} } (2N) \cdotp exp(-2 \frac{1}{16}\epsilon^2N)$$
 
-这个上界就是 **Vapnik-Chervonenkis(VC) bound**.
+而且这个上界就是 **Vapnik-Chervonenkis(VC) bound**.
 
 $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le 4 m_{\mathcal{H} } (2N) \cdotp exp(- \frac{1}{8}\epsilon^2N)$$
 
 证明如下:
 
+- Step 1: Replace $E_{out}$ by $E_{in}\'$
+
+- Step 2: Decompose $\mathcal{H}$ by Kind
+
+- Step 3: Use Hoeffding without Replacement
 
 
 
