@@ -68,8 +68,73 @@ redirect_from:
 
 bounding function $B(N,k)$:  maximum possible $m_H(N)$ when break point = k.
 
+定义这样一个函数是为了研究 $m_H(N)$ 的上界以及增长情况，现在我们来证明 $B(N,k) \le poly(N)$.
 
+- 由上面的例子分析可以知道: $B(2,2) = 3$, $B(2,2) = 4$.
 
+- 当 N < k 的时候，$B(N,k) = 2^N$，因为 break point = k，所以一定可以 shatter 住 $N \le k-1$ 个点。
+
+- 当 k = 1 时，$B(N,k) = 1$，连一个点都 shatter 不住了，更别提更多的点了。
+
+- 当 N = k 时，$B(N,k) < 2^k$，不妨取上界 $B(N,k) = 2^k - 1$
+
+所以可以得到下面的表:
+
+![bounding-function-basic-case](/images/ML/theory-of-generalization-bounding-function-basic.png "bounding function —— basic case")
+
+下一步我们根据归纳（inductive）来补全这张表:
+
+首先我们可以暴力计算出 
+
+$$B(4,3) = 11$$
+
+![bounding-function-inductive-case-1](/images/ML/theory-of-generalization-bounding-function-inductive-1.png "B(4,3) = 11")
+
+11 = 4 + 7 ？
+
+下面来进一步研究 $B(4,3)$ 的组成。
+
+![bounding-function-inductive-case-2](/images/ML/theory-of-generalization-bounding-function-inductive-2.png "B(4,3)")
+
+重新排列一下
+
+![bounding-function-inductive-case-3](/images/ML/theory-of-generalization-bounding-function-inductive-3.png "B(4,3)")
+
+图中的 dichotomy 分成橘色和紫色两个部分，橘色的部分两两成双，每一对的 dichotomy 在 $x_1, x_2, x_3$ 上的分量相同，我们把 $x_1, x_2, x_3$ 不同的部分提取出来
+
+![bounding-function-inductive-case-4](/images/ML/theory-of-generalization-bounding-function-inductive-4.png "B(4,3)")
+
+橘色部分的分量的个数记为 $\alpha$，紫色的部分的个数记为 $\beta$，可以得到: 
+
+$$B(4,3) = 2 \cdotp \alpha + \beta$$
+
+又因为在任意三个点上都不会 shatter，所以 
+
+$$\alpha + \beta \le B(3,3)$$
+
+只观察橘色的部分，$x_1, x_2, x_3$ 中任意两点不能 shatter: 假如能够 shatter，例如 $x_1, x_2$ 能够 shatter，则 $x_1, x_2, x_4$ 也能 shatter，矛盾。所以能得到
+
+$$\alpha \le B(3,2)$$
+
+综上所述:
+
+$$
+\begin{array}{rcl}
+B(4,3)     &          =       & 2 \cdotp \alpha + \beta   \\
+           &          \le     & B(4,3) + B(3,2)  
+\end{array}
+$$
+
+递推可得:
+
+$$
+\begin{array}{rcl}
+B(N,k)                      &          =       & 2 \cdotp \alpha + \beta    \\
+\alpha + \beta              &          \le     & B(N-1,k)                   \\
+\alpha                      &          \le     & B(N-1,k-1)                 \\
+\Rightarrow     B(N,k)      &          \le     & B(N-1,k) + B(N-1,k-1)
+\end{array}
+$$
 
 
 
