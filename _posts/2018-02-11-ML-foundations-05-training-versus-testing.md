@@ -46,7 +46,7 @@ $$
 
 例如 PLA , 虽然 hypothesis 的数目无穷，但相似的两个 hypothesis 的 bad data 的分布也是会有许多重叠的情况。
 
-在这种情况下，我们修改一下上面的公式，即然 hypothesis 有无穷多个，那我们考虑将无穷多个 hypothesis 分成若干类 $m_H$ ，使用 $m_H$ 来代替 **infinite M**，hypothesis 的种类个数与 input 有关，所以 $m_H$ 是一个关于 input 个数的单调递增函数:
+在这种情况下，我们修改一下上面的公式，考虑将无穷多个 hypothesis 分成若干类 $m_H$ ，使用 $m_H$ 来代替 **infinite M**，hypothesis 的种类个数与 input 有关，所以 $m_H$ 是一个关于 input 个数的单调递增函数:
 
 $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(−2 \epsilon^2 N)$$
 
@@ -122,25 +122,15 @@ $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
 
 **Break point**: if no k inputs can be shattered by $H$, call k a **break point** for $H$.
 
-* Table 2
+* 每种 hypothesis 对应的成长函数以及 break point
 
     |---
-    | Type | Growth function | break point
-    |-|:-|-:
+    | Hypothesis | Growth function | break point
+    |-|:-|:-
     | Positive Rays | $m_H(N) = N + 1$ | k = 2
     | Positive Intervals | $m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$ | k = 3
     | Convex Sets | $m_H(N) = 2^N$ | no break point
     | 2D perceptrons | $m_H(N) < 2^N$ | k = 4
-
-* Table 2
-
-    |---
-    | Default aligned | Left aligned | Center aligned | Right aligned
-    |-|:-|:-:|-:
-    | First body part | Second cell | Third cell | fourth cell
-    | Second line |foo | **strong** | baz
-    | Third line |quux | baz | bar
-    | Footer row
 
 由上面可以猜测:
 
