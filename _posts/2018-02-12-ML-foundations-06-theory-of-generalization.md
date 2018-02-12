@@ -18,7 +18,7 @@ redirect_from:
 
 # Preview
 
-上节课指出对于无穷多个 hypothesis 的情况下我们可以使用 **$m_H$** 代替 $M$，并介绍了什么是成长函数以及 break point。
+上节课指出对于无穷多个 hypothesis 的情况下我们可以使用 **$m_{ \mathcal{H} }$** 代替 $M$，并介绍了什么是成长函数以及 break point。
 
 本节课是证明**存在 break point 时，成长函数满足多项式增长，机器学习是可行的**。
 
@@ -28,9 +28,9 @@ redirect_from:
 
 本节课通过一个简单的例子来说明 break point 对成长函数增长的影响。
 
-- 首先，对于一个点我们肯定可以找到两种 dichotomy 使得这个点要么是 +1 要么是 -1，即 $m_H(N) \ge 2$ 
+- 首先，对于一个点我们肯定可以找到两种 dichotomy 使得这个点要么是 +1 要么是 -1，即 $m_{ \mathcal{H} }(N) \ge 2$ 
 
-- 假设我们没办法 shatter 住任意两个点，即 minimum break point k = 2，当 N = 2 的时候，$m_H(N) < 4$，不妨令 $m_H(N) = 3$。
+- 假设我们没办法 shatter 住任意两个点，即 minimum break point k = 2，当 N = 2 的时候，$m_{ \mathcal{H} }(N) < 4$，不妨令 $m_{ \mathcal{H} }(N) = 3$。
 
 - 基于上面两个条件，我们现在来看 N = 3，k = 2 最多有多少个 dichotomy.
 
@@ -62,13 +62,13 @@ redirect_from:
 
   - 所以 N = 3，k = 2 最多有 4 个 dichotomy （$4 < 2^3$），可以看出来，break point 对成长函数的增长有很大的影响（本来应该是 $2^3$，现在只有 4）。
 
-下面我们来证明 存在 break point 时，$m_H(N)$ 是多项式型的。
+下面我们来证明 存在 break point 时，$m_{ \mathcal{H} }(N)$ 是多项式型的。
 
 # Bounding Function
 
-bounding function $B(N,k)$:  maximum possible $m_H(N)$ when break point = k.
+bounding function $B(N,k)$:  maximum possible $m_{ \mathcal{H} }(N)$ when break point = k.
 
-定义这样一个函数是为了研究 $m_H(N)$ 的上界以及增长情况，现在我们来证明 $B(N,k) \le poly(N)$.
+定义这样一个函数是为了研究 $m_{ \mathcal{H} }(N)$ 的上界以及增长情况，现在我们来证明 $B(N,k) \le poly(N)$.
 
 - 由上面的例子分析可以知道: $B(2,2) = 3$, $B(2,2) = 4$.
 
@@ -138,7 +138,7 @@ $$
 
 $$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k−1}}$$
 
-**for fixed k, B(N,k) upper bounded by poly(N) $\Rightarrow$ $m_H(N)$ is poly(N) if break point exists.**
+**for fixed k, B(N,k) upper bounded by poly(N) $\Rightarrow$ $m_{ \mathcal{H} }(N)$ is poly(N) if break point exists.**
 
 # VC bound
 
