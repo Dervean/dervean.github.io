@@ -110,9 +110,23 @@ $$m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$$
 
 平面上 N 个点，求 convex polygon 的个数的成长函数。
 
-$$m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$$
+$$m_H(N) = 2^N$$
 
 ![effective-number-of-hypotheses](/images/ML/training-versus-testing-4.png "Convex Sets")
+
+新的名词: **shatter**
+
+$m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
+
+# break point
+
+由上面可知:
+
+
+	|---
+    | Positive Rays | $m_H(N) = N + 1$
+	| Positive Intervals | $m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$
+	| Convex Sets | $m_H(N) = 2^N$
 
 
 
