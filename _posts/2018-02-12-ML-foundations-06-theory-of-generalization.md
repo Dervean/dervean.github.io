@@ -181,18 +181,16 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
 - Step 3: Use Hoeffding without Replacement
 
-  consider bin of 2N examples, choose N for $E_{in}$, leave others for $E_{in}\'$.
+  consider bin of 2N examples, choose N for $E_{in}$, leave others for $E_{in}\'$: $
+ \|E_{in} - E_{in}'\| > \frac{\epsilon}{2} \Leftrightarrow \|E_{in} - \frac{E_{in} + E_{in}'}{2} \| >\frac{\epsilon}{4}
+ $
 
-  $$
-  |E_{in} - E_{in}\'| > \frac{\epsilon}{2} \Leftrightarrow |E_{in} - \frac{E_{in} + E_{in}\'}{2}| > \frac{\epsilon}{4}
-  $$
-
-  $$
-  \begin{array}{rcl}
-  BAD     &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}\'(h) | > \frac{\epsilon}{2})    \\
-          &   \le    &    2 \cdotp m_{\mathcal{H}}(2N) \cdotp 2 exp(-2 (\frac{\epsilon}{4})^2 N)
-  \end{array}
-  $$
+ $$
+ \begin{array}{rcl}
+ BAD     &   \le    &    2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}'(h) | >\frac{\epsilon}{2})    \\
+         &   \le    &    2 \cdotp m_{\mathcal{H}}(2N) \cdotp 2 exp(-2 (\frac{\epsilon}{4})^2 N)
+ \end{array}
+ $$
 
   ![vc-bound-proof-3](/images/ML/theory-of-generalization-vc-bound-proof-3.png "proof")
 
