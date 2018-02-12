@@ -138,7 +138,7 @@ $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
 
 - **break point k	: $m_H(N) = O(N^{k-1})$**
 
-
+如何证明呢？
 
 
 
