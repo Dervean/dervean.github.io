@@ -125,7 +125,7 @@ $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
 * 每种 hypothesis 对应的成长函数以及 break point
 
     |---
-    | Hypothesis | Growth function | break point
+    | Hypothesis | Growth function | minimal break point
     |-|:-|:-
     | Positive Rays | $m_H(N) = N + 1$ | k = 2
     | Positive Intervals | $m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$ | k = 3
@@ -136,9 +136,9 @@ $m_H(N) = 2^N$ $\Leftrightarrow$ exists N inputs that can be shattered
 
 - no break point: $m_H(N) = 2^N$
 
-- **break point k	: $m_H(N) = O(N^{k-1})$**
+- **break point k	: $m_H(N) = O(N^{k-1})$** —— 如何证明呢？
 
-如何证明呢？
+
 
 
 
