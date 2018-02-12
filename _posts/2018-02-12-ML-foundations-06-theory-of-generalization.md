@@ -136,7 +136,17 @@ $$
 
 ![bounding-function-inductive-case-5](/images/ML/theory-of-generalization-bounding-function-inductive-5.png "inductive case")
 
-$$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{total}$$
+$$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k−1}}$$
+
+**for fixed k, B(N,k) upper bounded by poly(N) $\Rightarrow$ $m_H(N)$ is poly(N) if break point exists.**
+
+# VC bound
+
+
+
+
+
+
 
 
 
