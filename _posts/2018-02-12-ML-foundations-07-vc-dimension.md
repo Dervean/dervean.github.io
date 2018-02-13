@@ -129,7 +129,7 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   ![vc-dimension-perceptrons-2](/images/ML/vc-dimension-perceptrons-2.png "2D dimension special case")
 
-  这是二维空间上的四个点，前面在讨论 Effective Number of Line 的时候曾经说过，四个点的时候只存在 14 (< 16) 直线将这 4 个点分为 ox 两种类别，有两种是被我们排出在外的，也就是:
+  这是二维空间上的四个点，前面在讨论 Effective Number of Line 的时候曾经说过，四个点的时候只存在 14 (< 16) 种直线将这 4 个点分为 ox 两种类别，有两种是被我们排出在外的，也就是:
 
   ![vc-dimension-perceptrons-3](/images/ML/vc-dimension-perceptrons-3.png "2D dimension special case")
 
