@@ -174,7 +174,7 @@ $$
 计算 $E_{out}(g)$ 的置信区间:
 
 $$
-E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}		\le 	 E_{out}(g)		\le		E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}	
+E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}		\le 	 E_{out}(g)		\le		E_{in}(g) + \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}	
 $$
 
 令 
@@ -203,7 +203,7 @@ $$
 
 $$N \ge 10000 \cdotp d_{VC}$$
 
-但是上述的推导公式我们给的条件非常的 loose:
+但是上述的推导公式我们给的条件非常 loose:
 
 - Hoeffding for unknown $E_{out}$.	$\Longrightarrow$ 推导公式适用于 **any distribution, any target**.
 
