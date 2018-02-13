@@ -126,11 +126,43 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
   $
   find $w$ such that 
 
+  \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+
   $sign(Xw) = y$ $\Leftarrow$ $(Xw) = y$ $\Leftrightarrow$ $w = X^{-1}y$
 
 - $d_{VC} \le d + 1$
 
   We cannot shatter any set of d+2 inputs.
+
+  先研究一下二维的一个 special case:
+
+  ![vc-dimension-perceptrons-2](/images/ML/vc-dimension-perceptrons-2.png "2D dimension special case")
+
+  这是二维空间上的四个点，前面在讨论 Effective Number of Line 的时候曾经说过，四个点的时候只存在 14 (< 16) 直线将这 4 个点分为 ox 两种类别，有两种是被我们排出在外的，也就是:
+
+  ![vc-dimension-perceptrons-3](/images/ML/vc-dimension-perceptrons-3.png "2D dimension special case")
+
+  如上图，"?" 号所在的点不可能为 "x"，类似于
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
