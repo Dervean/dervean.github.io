@@ -50,14 +50,14 @@ $$ m_{\mathcal{H}}(N) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ 
 
 下面我们来回顾一下 VC bound:
 
-For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for $N \ge 2$, $k \ge 3$:
+For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for <strike>$N \ge 2$</strike>, $k \ge 3$:
 
 $$
 \begin{array}{rcl}
-\mathbb{P}(| E_{in}(g) - E_{out}(g) | > \epsilon) 	& 	\le 	&	\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(g) - E_{out}(g) | > \epsilon) 	\\
-													& 	\le 	&	4m_{\mathcal{H}}(2N)exp(-\frac{1}{8} \epsilon^2 N) 										\\
-													& 	if \ k \ exists																						\\
-													& 	\le 	& 4(2N)^{k-1} exp(-\frac{1}{8} \epsilon^2 N)
+\mathbb{P}_{\mathcal{D}}(| E_{in}(g) - E_{out}(g) | > \epsilon) 	& 	\le 	&	\mathbb{P}_{\mathcal{D}}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(g) - E_{out}(g) | > \epsilon) 	\\
+																	& 	\le 	&	4m_{\mathcal{H}}(2N)exp(-\frac{1}{8} \epsilon^2 N) 										\\
+																	& 	if \ k \ exists																						\\
+																	& 	\le 	& 4(2N)^{k-1} exp(-\frac{1}{8} \epsilon^2 N)
 \end{array}
 $$
 
@@ -159,6 +159,9 @@ VC dimension 可以看作 ***自由度***
 
 # Interpreting VC Dimension
 
+For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for <strike>$N \ge 2$</strike>, $k \ge 3$:
+
+$$ \mathbb{P}_{\mathcal{D}}(\underbrace{| E_{in}(g) - E_{out}(g) | > \epsilon}{BAD}) \le \underbrace{4(2N)^{d_{VC}} exp(-\frac{1}{8} \epsilon^2 N)}{\delta} $$
 
 
 
