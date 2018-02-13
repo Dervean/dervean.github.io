@@ -126,7 +126,27 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
   $
   find $w$ such that 
 
-  \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+  $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$
+
+
+  $$
+  \begin{equation}
+  H_x=\frac{1}{3}\times{
+  \left[ \begin{array}{ccc}
+  1 & 0 & -1\\
+  1 & 0 & -1\\
+  1 & 0 & -1
+  \end{array} 
+  \right ]},
+  H_y=\frac{1}{3}\times{
+  \left[ \begin{array}{ccc}
+  1 & 1 & 1\\
+  0& 0 & 0\\
+  1 & 1 & 1
+  \end{array}
+  \right ]}
+  \end{equation}
+  $$
 
   $sign(Xw) = y$ $\Leftarrow$ $(Xw) = y$ $\Leftrightarrow$ $w = X^{-1}y$
 
@@ -142,7 +162,11 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   ![vc-dimension-perceptrons-3](/images/ML/vc-dimension-perceptrons-3.png "2D dimension special case")
 
-  如上图，"?" 号所在的点不可能为 "x"，类似于
+  如上图，"?" 号所在的点不可能为 "x"，这让我们联想到了线形相关矩阵:
+
+  ![vc-dimension-perceptrons-4](/images/ML/vc-dimension-perceptrons-4.png "2D dimension special case")
+
+
 
 
 
