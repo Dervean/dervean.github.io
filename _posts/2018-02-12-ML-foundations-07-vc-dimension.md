@@ -105,13 +105,13 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
 现在分两步证明 $d_{VC} = d + 1$:
 
-- $d_{VC} \ge d + 1$ $Longreftarrow$ There are **some** d+1 inputs we can shatter.
+- $d_{VC} \ge d + 1$ $\Longrightarrow$ There are **some** d+1 inputs we can shatter.
 
   下面构造一组可以 shatter 的 input.
 
   ![vc-dimension-perceptrons-1](/images/ML/vc-dimension-perceptrons-1.png "trivial input")
 
-  X 是个可逆矩阵，d 个维度分别取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold。
+  X 是个可逆矩阵，d 个维度分别取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold.
 
   我们来证明 X 可以被 shatter.
 
@@ -123,7 +123,7 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   $sign(Xw) = y$ $\Longleftarrow$ $(Xw) = y$ $\Longleftrightarrow$ $w = X^{-1}y$
 
-- $d_{VC} \le d + 1$ $Longreftarrow$ We cannot shatter any set of d+2 inputs.
+- $d_{VC} \le d + 1$ $\Longrightarrow$ We cannot shatter any set of d+2 inputs.
 
   先研究一下二维的一个 special case:
 
