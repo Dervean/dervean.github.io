@@ -115,7 +115,9 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   上面的 X 是个可逆矩阵，d 个维度分别 取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold。我们来证明 X 可以被 shatter.
 
-  for any $y = \begin{bmatrix} y_1 \\ ... \\ y_{d+1} \end{bmatrix} $ find $w$ such that 
+  for any $y = $ 
+
+  $$\begin{bmatrix} y_1 \\ ... \\ y_{d+1} \end{bmatrix}$$ find $w$ such that 
 
   $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$
 
@@ -139,7 +141,13 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   从而证明了 "?" 所在点一定为 "o"，即这个 case 我们一定没办法 shatter.
 
-  由上面给我们启发：利用矩阵的线性相关性质来证明。构造一个 general case:
+  由上面带来的启发：我们可以利用矩阵的线性相关性质来证明。
+
+  ![vc-dimension-perceptrons-5](/images/ML/vc-dimension-perceptrons-5.png "general case")
+
+
+
+
 
 
 
