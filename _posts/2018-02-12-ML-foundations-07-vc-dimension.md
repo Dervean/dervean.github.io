@@ -107,7 +107,7 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
 - $d_{VC} \ge d + 1$ 
 
-  There are **some** d + 1 inputs we can shatter.
+  There are **some** d+1 inputs we can shatter.
 
   下面构造一组可以 shatter 的 input.
 
@@ -129,6 +129,10 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
   $sign(Xw) = y$ $\Leftarrow$ $(Xw) = y$ $\Leftrightarrow$ $w = X^{-1}y$
 
 - $d_{VC} \le d + 1$
+
+  We cannot shatter any set of d+2 inputs.
+
+
 
 
 
