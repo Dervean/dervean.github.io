@@ -18,7 +18,7 @@ redirect_from:
 
 # Preview
 
-回顾上节课所说的内容，可以得到下列的结论:
+回顾上节课所说的内容:
 
 if $m_{\mathcal{H}}$ **breaks** somewhere and **N large enough**  $\Leftrightarrow$  $E_{out} \approx E_{in}$ possible.
 
@@ -79,7 +79,7 @@ $$
 
 - $N \le d_{VC} \Rightarrow H$ can shatter some $N$ inputs. 
 
-  对应矩阵的上三角部分，注意这里并不是对于任意 N 个 input 都能 shatter。
+  对应矩阵的上三角部分，注意这里并不是对于任意 N 个 input 都能 shatter.
 
   所以当存在一组 N 个 input 能被 shatter 的时候也不能断定 $N \le d_{VC}$，当存在一组 N 个 input 不能被 shatter 的时候也不能断定 $N > d_{VC}$.
 
@@ -89,7 +89,7 @@ $$
 
 现在使用 VC dimension 代替了 k:
 
-$$if \ N \ge 2, \ d_{VC} \ge 2, \ $m_{\mathcal{H}}(N) \le N^{d_{VC}}$$.
+$$if \ N \ge 2, \ d_{VC} \ge 2, \ m_{\mathcal{H}}(N) \le N^{d_{VC}}$$.
 
 提出 VC dimension 的重要在于：如果我们能够找到一个有限的$d_{VC}$，则一定能 generalize 一个 $g$ 使得 $E_{in}(g) \approx E_{out}(g)$。
 
