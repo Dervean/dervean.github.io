@@ -69,7 +69,7 @@ $$
 
 - good $\mathcal{A}$: $\mathcal{A}$ picks a $g$ with small $E_{in}$ $\Rightarrow$ probably learned.
 
-而 VC Dimension 的定义就是上面的  **k-1**  . 代表着 **maximum non-break point**.
+而 VC Dimension 的定义就是上面的  ***k-1***  . 代表着 **maximum non-break point**.
 
 **Definition**: VC dimension of $\mathcal{H}$, denoted $d_{VC}(\mathcal{H})$ is **largest N** for which $m_{\mathcal{H}}(N) = 2^N$.
 
@@ -91,9 +91,9 @@ $$
 
 if $N \ge 2$, $d_{VC} \ge 2$, $m_{\mathcal{H}}(N) \le N^{d_{VC}}$.
 
-提出 VC dimension 的重要在于：如果我们能够找到一个有限的$d_{VC}$，则一定能 generaliz 一个 $g$ 使得 $E_{in}(g) \approx E_{out}(g)$。
+提出 VC dimension 的重要在于：如果我们能够找到一个有限的$d_{VC}$，则一定能 generalize 一个 $g$ 使得 $E_{in}(g) \approx E_{out}(g)$。
 
-注意这个结论**与选择什么学习算法无关，与输入是什么分布无关，与目标函数是什么无关**。
+注意这个结论***与选择什么学习算法无关，与输入是什么分布无关，与目标函数是什么无关***。
 
 # VC Dimension of Perceptrons
 
@@ -116,17 +116,14 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
   上面的 X 是个可逆矩阵，d 个维度分别 取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold。我们来证明 X 可以被 shatter.
 
   for any 
-
-  \begin{equation}
+  $
   y = 
-  \left[ \begin{array}{ccc}
+  \begin{bmatrix}
   y_1 				\\
   ... 				\\
   y_{d+1}
-  \end{array} 
-  \right ]
-  \end{equation} 
-
+  \end{bmatrix} 
+  $
   find $w$ such that 
 
   $sign(Xw) = y$ $\Leftarrow$ $(Xw) = y$ $\Leftrightarrow$ $w = X^{-1}y$
