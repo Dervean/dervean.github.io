@@ -183,6 +183,28 @@ $$\Omega(N,\mathcal{H},\delta) = \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delt
 
 $\Omega(N,\mathcal{H},\delta)$ 可以看作是 **penalty for model complexity**.
 
+得到 $E_{out}(g)$ 的上界:
+
+$$
+E_{out}(g)		\le		E_{in}(g) - \undergrace{\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}}_{\Omega(N,\mathcal{H},\delta)}
+$$
+
+上面的不等式揭示了 **$E_{in}$、$E_{out}$ 和 model 三者之间的关系**。也可以用下图表示:
+
+![vc-dimension-interpreting-1](/images/ML/vc-dimension-interpreting-1.png "Interpreting of VC Dimension")
+
+这张图直观解释了: 
+
+- **powerful $\mathcal{H}$ not always good.** (过拟合) 
+
+- **best $d_{VC}^{\*} in the middle$.**
+
+理论上来说 
+
+
+
+
+
 
 
 
