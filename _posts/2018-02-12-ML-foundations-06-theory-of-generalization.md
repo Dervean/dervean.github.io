@@ -138,6 +138,10 @@ $$
 
 $$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k−1}}$$
 
+可以更进一步证明得到:
+
+$$B(N,k) = \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k−1}}$$
+
 **for fixed k, B(N,k) upper bounded by poly(N) $\Rightarrow$ $m_{ \mathcal{H} }(N)$ is poly(N) if break point exists.**
 
 # VC bound
