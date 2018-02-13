@@ -203,7 +203,7 @@ $$
 
 $$N \ge 10000 \cdotp d_{VC}$$
 
-但是上述的推导公式我们给的条件非常的 loose, looseness 来源于以下四个原因:
+但是上述的推导公式我们给的条件非常的 loose:
 
 - Hoeffding for unknown $E_{out}$.	$\Longrightarrow$ 推导公式适用于 **any distribution, any target**.
 
