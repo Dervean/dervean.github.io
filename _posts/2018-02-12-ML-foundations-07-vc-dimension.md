@@ -186,7 +186,7 @@ $\Omega(N,\mathcal{H},\delta)$ 可以看作是 **penalty for model complexity**.
 得到 $E_{out}(g)$ 的上界:
 
 $$
-E_{out}(g)		\le		E_{in}(g) - \undergrace{\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}}_{\Omega(N,\mathcal{H},\delta)}
+E_{out}(g)		\le		E_{in}(g) - \underbrace{\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}}_{\Omega(N,\mathcal{H},\delta)}
 $$
 
 上面的不等式揭示了 **$E_{in}$、$E_{out}$ 和 model 三者之间的关系**。也可以用下图表示:
@@ -197,7 +197,7 @@ $$
 
 - **powerful $\mathcal{H}$ not always good.** (过拟合) 
 
-- **best $d_{VC}^{\*} in the middle$.**
+- **best $d_{VC}^{\*}$ in the middle.**
 
 根据公式计算得到我们需要的 input 的数量一般需要
 
@@ -207,7 +207,7 @@ $$N \ge 10000 \cdotp d_{VC}$$
 
 - Hoeffding for unknown $E_{out}$.	$\Longrightarrow$ 推导公式适用于 **any distribution, any target**.
 
-- $m_{\mathcal{H}}(N)$ instead of $\|\mathcal{H}(x_1,...,x_N)\|$.	$\Longrightarrow$ 推导公式适用于 **any data**.
+- $m_{\mathcal{H}}(N)$ instead of $\|\mathcal{H}(x_1,...,x_N)\|$.	$\Longrightarrow$ 推导公式适用于 **'any' data**.
 
 - $N^{d_{VC}}$ instead of $m_{\mathcal{H}}(N)$.	$\Longrightarrow$ 推导公式适用于 **‘any’ $\mathcal{H}$ of same $d_{VC}$**.
 
