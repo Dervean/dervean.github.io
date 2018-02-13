@@ -89,7 +89,7 @@ $$
 
 现在使用 VC dimension 代替了 k:
 
-if $N \ge 2$, $d_{VC} \ge 2$, $m_{\mathcal{H}}(N) \le N^{d_{VC}}$.
+$$if \ N \ge 2, \ d_{VC} \ge 2, \ $m_{\mathcal{H}}(N) \le N^{d_{VC}}$$.
 
 提出 VC dimension 的重要在于：如果我们能够找到一个有限的$d_{VC}$，则一定能 generalize 一个 $g$ 使得 $E_{in}(g) \approx E_{out}(g)$。
 
@@ -149,7 +149,13 @@ $$d_{VC} \approx \ \#free \ parameters \ (but \ not \ always)$$
 
 VC dimension 可以看作 ***自由度***
 
-![vc-dimension-physical-1](/images/ML/vc-dimension-physical-1.png "Physical intuition")
+- Positive rays ($d_{VC} = 1$)
+  
+  ![vc-dimension-physical-1](/images/ML/vc-dimension-physical-1.png "Physical intuition")
+
+- Positive intervals ($d_{VC} = 2$)
+  
+  ![vc-dimension-physical-2](/images/ML/vc-dimension-physical-2.png "Physical intuition")
 
 # Interpreting VC Dimension
 
