@@ -84,6 +84,7 @@ $$
   所以当存在一组 N 个 input 能被 shatter 的时候也不能断定 $N \le d_{VC}$，当存在一组 N 个 input 不能被 shatter 的时候也不能断定 $N > d_{VC}$.
 
 - $N > d_{VC} \Rightarrow k$ is a break point for $\mathcal{H}$. 
+
   对于所有的整数 $k > d_{VC}$ 都是 $\mathcal{H}$ 的 break point.
 
 现在使用 VC dimension 代替了 k:
@@ -104,11 +105,31 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
 现在分两步证明 $d_{VC} = d + 1$:
 
-- $d_{VC} \ge d + 1$
+- $d_{VC} \ge d + 1$ 
 
-  There are some d + 1 inputs we can shatter.
+  There are **some** d + 1 inputs we can shatter.
 
+  下面构造一组可以 shatter 的 input.
 
+  ![vc-dimension-perceptrons-1](/images/ML/vc-dimension-perceptrons-1.png "trivial input")
+
+  上面的 X 是个可逆矩阵，d 个维度分别 取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold。我们来证明 X 可以被 shatter.
+
+  for any 
+
+  \begin{equation}
+  y = 
+  \left[ \begin{array}{ccc}
+  y_1 				\\
+  ... 				\\
+  y_{d+1}
+  \end{array} 
+  \right ]
+  \end{equation} 
+
+  find $w$ such that 
+
+  $sign(Xw) = y$ $\Leftarrow$ $(Xw) = y$ $\Leftrightarrow$ $w = X^{-1}y$
 
 - $d_{VC} \le d + 1$
 
