@@ -83,9 +83,11 @@ $$
 
 现在使用 VC dimension 代替了 k:
 
-if $N \ge 2$, $d_{VC} \ge 2$, $m_{\mathcal{H}}(N) \le N^{d_{VC}$.
+if $N \ge 2$, $d_{VC} \ge 2$, $m_{\mathcal{H}}(N) \le N^{d_{VC}}$.
 
- 
+提出 VC dimension 的重要在于：如果我们能够找到一个有限的$d_{VC}$，则一定能 generaliz 一个 $g$ 使得 $E_{in}(g) \approx E_{out}(g)$。
+
+注意这个结论**与选择什么学习算法无关，与输入是什么分布无关，与目标函数是什么无关**。
 
 
 
