@@ -78,7 +78,10 @@ $$
 - $d_{VC}$ = 'minimum k' - 1.
 
 - $N \le d_{VC} \Rightarrow H$ can shatter some $N$ inputs. 
-  对应矩阵的上三角部分，注意这里并不是对于任意 N 个 input 都能 shatter。所以当存在一组 N 个 input 能被 shatter 的时候也不能断定 $N \le d_{VC}$，当存在一组 N 个 input 不能被 shatter 的时候也不能断定 $N > d_{VC}$.
+
+  对应矩阵的上三角部分，注意这里并不是对于任意 N 个 input 都能 shatter。
+
+  所以当存在一组 N 个 input 能被 shatter 的时候也不能断定 $N \le d_{VC}$，当存在一组 N 个 input 不能被 shatter 的时候也不能断定 $N > d_{VC}$.
 
 - $N > d_{VC} \Rightarrow k$ is a break point for $\mathcal{H}$. 
   对于所有的整数 $k > d_{VC}$ 都是 $\mathcal{H}$ 的 break point.
@@ -91,10 +94,23 @@ if $N \ge 2$, $d_{VC} \ge 2$, $m_{\mathcal{H}}(N) \le N^{d_{VC}}$.
 
 注意这个结论**与选择什么学习算法无关，与输入是什么分布无关，与目标函数是什么无关**。
 
+# VC Dimension of Perceptrons
+
+一维的 perceptron 的 $d_{VC} = 2$
+
+二维的 perceptron 的 $d_{VC} = 3$
+
+d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
+
+现在分两步证明 $d_{VC} = d + 1$:
+
+- $d_{VC} \ge d + 1$
+
+  There are some d + 1 inputs we can shatter.
 
 
 
-
+- $d_{VC} \le d + 1$
 
 
 

@@ -86,7 +86,7 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp effective(N) \cd
 
 空间里面有 N 个点，每个 hypothesis 是可以将这些点分开的直线，令 H 是所有 $hypothesis$ 的集合，而 $dichotomy(H)$ 代表着 hypothesis 的种类数目。可以知道 $\|H\|$ 可能是无穷的，但 $dichotomy(H) \le 2^N$.
 
-我们将之前引入的 $m_H(N)$ 称为**成长函数(growth function)**，指的是对应不同的 N 时 hypothesis 的最大的种类数目，也就是最大的 $dichotomy(H)$，易知 $m_H(N) \le 2^N$.
+我们将之前引入的 $m_H(N)$ 称为**成长函数(growth function)**，**$m_{\mathcal{H}}(N)$ is the most number of dichotomies of $N$ inputs.**，易知 $m_H(N) \le 2^N$.
 
 讲义中又介绍了三种成长函数:
 
