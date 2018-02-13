@@ -36,7 +36,7 @@ $$
 
 * 当$h(x)>0$则$y=1$；当$h(x)<0$则$y=-1$。
 
-![perceptrons](/images/ML/perceptrons.png "perceptrons")
+![perceptrons](/images/ML/PLA-perceptrons.png "perceptrons")
 
 我们已经知道所有的$H={perceptrons}$，如何从$H$中选择一个$g=hypothesis$呢？
 
@@ -46,7 +46,7 @@ $$
 
 # Perceptron Learning Algorithm
 
-![PLA](/images/ML/PLA.png "PLA")
+![PLA](/images/ML/PLA-pla.png "PLA")
 
 如上图所示，PLA算法选择以不断“改错”来求得最终解，里面应用到一个有趣的向量计算的方法：对于两个向量$\vec{a}$和$\vec{b}$，
 
