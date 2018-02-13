@@ -189,7 +189,7 @@ $$
 E_{out}(g)		\le		E_{in}(g) - \underbrace{\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}}_{\Omega(N,\mathcal{H},\delta)}
 $$
 
-上面的不等式揭示了 **$E_{in}$、$E_{out}$ 和 model 三者之间的关系**。也可以用下图表示:
+上面的不等式揭示了 $E_{in}$、$E_{out}$ 和 model 三者之间的关系。也可以用下图表示:
 
 ![vc-dimension-interpreting-1](/images/ML/vc-dimension-interpreting-1.png "Interpreting of VC Dimension")
 
