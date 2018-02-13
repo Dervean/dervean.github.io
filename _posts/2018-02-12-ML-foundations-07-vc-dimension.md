@@ -186,7 +186,7 @@ $\Omega(N,\mathcal{H},\delta)$ 可以看作是 **penalty for model complexity**.
 得到 $E_{out}(g)$ 的上界:
 
 $$
-E_{out}(g)		\le		E_{in}(g) - \underbrace{\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}}_{\Omega(N,\mathcal{H},\delta)}
+E_{out}(g)		\le		E_{in}(g) + \underbrace{\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}}_{\Omega(N,\mathcal{H},\delta)}
 $$
 
 上面的不等式揭示了 $E_{in}$、$E_{out}$ 和 model 三者之间的关系。也可以用下图表示:
