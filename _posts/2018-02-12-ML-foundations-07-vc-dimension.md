@@ -117,9 +117,9 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   for any $y = $ 
 
-  $$\begin{bmatrix} y_1 \\ ... \\ y_{d+1} \end{bmatrix}$$ find $w$ such that 
+  $$\begin{bmatrix} y_1 \\ ... \\ y_{d+1} \end{bmatrix}$$ 
 
-  $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$
+  find $w$ such that 
 
   $sign(Xw) = y$ $\Longleftarrow$ $(Xw) = y$ $\Longleftrightarrow$ $w = X^{-1}y$
 
@@ -144,6 +144,10 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
   由上面带来的启发：我们可以利用矩阵的线性相关性质来证明。
 
   ![vc-dimension-perceptrons-5](/images/ML/vc-dimension-perceptrons-5.png "general case")
+
+# Physical intuition of VC Dimension
+
+$$ d_{VC} \approx \ #free \ parameters \ (but \ not \ always)$$
 
 
 
