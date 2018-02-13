@@ -167,18 +167,19 @@ $$
 
 将坏情况的概率设为 $\delta$，则好情况的概率为 $1 - \delta$，出现好情况即 $\| E_{in}(g) - E_{out}(g) \| \le \epsilon$.
 
+$$
+| E_{in}(g) - E_{out}(g) |		 \le 		\epsilon	 = 		\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}	
+$$
+
 计算 $E_{out}(g)$ 的置信区间:
 
 $$
-\begin{array}{rcl}
-| E_{in}(g) - E_{out}(g) |	& \le &	\epsilon	& = &	\sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}	\\
-E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}	& \le &		E_{out}(g)	& \le &		E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}	
-\end{array}
+E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}		\le 	 E_{out}(g)		\le		E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}	
 $$
 
 令 
 
-$$\Omega(N,\mathcal{H},\delta) = \sqrt{\frac{8}{N}ln(\frac{4(2N)^d_{VC}}{\delta})}$$
+$$\Omega(N,\mathcal{H},\delta) = \sqrt{\frac{8}{N}ln(\frac{4(2N)^{d_{VC}}}{\delta})}$$
 
 $\Omega(N,\mathcal{H},\delta)$ 可以看作是 **penalty for model complexity**.
 
