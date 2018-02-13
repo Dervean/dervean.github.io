@@ -115,38 +115,9 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   上面的 X 是个可逆矩阵，d 个维度分别 取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold。我们来证明 X 可以被 shatter.
 
-  for any 
-  $
-  y = 
-  \begin{bmatrix}
-  y_1 				\\
-  ... 				\\
-  y_{d+1}
-  \end{bmatrix} 
-  $
-  find $w$ such that 
+  for any $y = \begin{bmatrix} y_1 \\ ... \\ y_{d+1} \end{bmatrix} $ find $w$ such that 
 
   $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$
-
-
-  $$
-  \begin{equation}
-  H_x=\frac{1}{3}\times{
-  \left[ \begin{array}{ccc}
-  1 & 0 & -1\\
-  1 & 0 & -1\\
-  1 & 0 & -1
-  \end{array} 
-  \right ]},
-  H_y=\frac{1}{3}\times{
-  \left[ \begin{array}{ccc}
-  1 & 1 & 1\\
-  0& 0 & 0\\
-  1 & 1 & 1
-  \end{array}
-  \right ]}
-  \end{equation}
-  $$
 
   $sign(Xw) = y$ $\Leftarrow$ $(Xw) = y$ $\Leftrightarrow$ $w = X^{-1}y$
 
@@ -165,6 +136,12 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
   如上图，"?" 号所在的点不可能为 "x"，这让我们联想到了线形相关矩阵:
 
   ![vc-dimension-perceptrons-4](/images/ML/vc-dimension-perceptrons-4.png "2D dimension special case")
+
+  从而证明了 "?" 所在点一定为 "o"，即这个 case 我们一定没办法 shatter.
+
+  由上面给我们启发：利用矩阵的线性相关性质来证明。构造一个 general case:
+
+
 
 
 
