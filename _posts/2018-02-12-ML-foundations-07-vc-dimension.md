@@ -199,7 +199,26 @@ $$
 
 - **best $d_{VC}^{\*} in the middle$.**
 
-理论上来说 
+根据公式计算得到我们需要的 input 的数量一般需要
+
+$$N \ge 10000 \cdotp d_{VC}$$
+
+但是上述的推导公式我们给的条件非常的 loose, looseness 来源于以下四个原因:
+
+- Hoeffding for unknown $E_{out}$.	$\Longrightarrow$ 推导公式适用于 **any distribution, any target**.
+
+- $m_{\mathcal{H}}(N)$ instead of $\|\mathcal{H}(x_1,...,x_N)\|$.	$\Longrightarrow$ 推导公式适用于 **any data**.
+
+- $N^{d_{VC}}$ instead of $m_{\mathcal{H}}(N)$.	$\Longrightarrow$ 推导公式适用于 **‘any’ $\mathcal{H}$ of same $d_{VC}$**.
+
+- union bound on worst cases.	$\Longrightarrow$ 推导公式适用于 **any choice made by $\mathcal{A}$**.
+
+在整个推理过程中多次放大标准，得到的结果适用于现实中所有的情况，所以理论上得到需要的 input 的数量远远高于实际。
+
+实际上只需要 $N \ge 10 \cdotp d_{VC}$ 即可！
+
+
+
 
 
 
