@@ -77,9 +77,11 @@ $$
 
 - $d_{VC}$ = 'minimum k' - 1.
 
-- $N \le d_{VC} \Rightarrow H$ can shatter some $N$ inputs. 这也对应矩阵的上三角部分，注意这里并不是对于任意 N 个 input 都能 shatter。所以当存在一组 N 个 input 能被 shatter 的时候也不能断定 $N \le d_{VC}$，当存在一组 N 个 input 不能被 shatter 的时候也不能断定 $N > d_{VC}$.
+- $N \le d_{VC} \Rightarrow H$ can shatter some $N$ inputs. 
+  对应矩阵的上三角部分，注意这里并不是对于任意 N 个 input 都能 shatter。所以当存在一组 N 个 input 能被 shatter 的时候也不能断定 $N \le d_{VC}$，当存在一组 N 个 input 不能被 shatter 的时候也不能断定 $N > d_{VC}$.
 
-- $N > d_{VC} \Rightarrow k$ is a break point for $\mathcal{H}$. 对于所有的整数 $k > d_{VC}$ 都是 $\mathcal{H}$ 的 break point.
+- $N > d_{VC} \Rightarrow k$ is a break point for $\mathcal{H}$. 
+  对于所有的整数 $k > d_{VC}$ 都是 $\mathcal{H}$ 的 break point.
 
 现在使用 VC dimension 代替了 k:
 
