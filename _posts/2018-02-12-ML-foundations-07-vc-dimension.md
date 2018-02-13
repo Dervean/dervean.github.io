@@ -161,7 +161,9 @@ VC dimension 可以看作 ***自由度***
 
 For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for <strike>$N \ge 2$</strike>, $k \ge 3$:
 
-$$ \mathbb{P}_{\mathcal{D}}(\underbrace{| E_{in}(g) - E_{out}(g) | > \epsilon}_{BAD})  \le  \underbrace{4(2N)^{d_{VC}} exp(-\frac{1}{8} \epsilon^2 N)}_{\delta} $$
+$$ 
+\mathbb{P}_{\mathcal{D}}(\underbrace{| E_{in}(g) - E_{out}(g) | > \epsilon}_{BAD})  \le  \underbrace{4(2N)^{d_{VC}} exp(-\frac{1}{8} \epsilon^2 N)}_{\delta}
+$$
 
 
 
