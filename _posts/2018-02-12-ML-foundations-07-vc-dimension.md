@@ -113,7 +113,7 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   ![vc-dimension-perceptrons-1](/images/ML/vc-dimension-perceptrons-1.png "trivial input")
 
-  上面的 X 是个可逆矩阵，d 个维度分别 取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold。我们来证明 X 可以被 shatter.
+  上面的 X 是个可逆矩阵，d 个维度分别取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold。我们来证明 X 可以被 shatter.
 
   for any $y = $ 
 
@@ -121,7 +121,7 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$
 
-  $sign(Xw) = y$ $\Leftarrow$ $(Xw) = y$ $\Leftrightarrow$ $w = X^{-1}y$
+  $sign(Xw) = y$ $\Longleftarrow$ $(Xw) = y$ $\Longleftrightarrow$ $w = X^{-1}y$
 
 - $d_{VC} \le d + 1$
 
