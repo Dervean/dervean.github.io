@@ -50,7 +50,7 @@ $$ m_{\mathcal{H}}(N) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ 
 
 下面我们来回顾一下 VC bound:
 
-For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, $k \ge 3$:
+For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for $N \ge 2$, $k \ge 3$:
 
 $$
 \begin{array}{rcl}
@@ -69,13 +69,25 @@ $$
 
 - good $\mathcal{A}$: $\mathcal{A}$ picks a $g$ with small $E_{in}$ $\Rightarrow$ probably learned.
 
-而 VC Dimension 的定义就是上面的 (k-1). 代表着 **maximum non-break poingt**.
+而 VC Dimension 的定义就是上面的  **k-1**  . 代表着 **maximum non-break point**.
 
 **Definition**: VC dimension of $\mathcal{H}$, denoted $d_{VC}(\mathcal{H})$ is **largest N** for which $m_{\mathcal{H}}(N) = 2^N$.
 
 - the **most** inputs $\mathcal{H}$ that can shatter.
 
-- $d_{VC}$ = 'minimum k' - 1. 
+- $d_{VC}$ = 'minimum k' - 1.
+
+- $N \le d_{VC} \Rightarrow H$ can shatter some $N$ inputs. 这也对应矩阵的上三角部分，注意这里并不是对于任意 N 个 input 都能 shatter。所以当存在一组 N 个 input 能被 shatter 的时候也不能断定 $N \le d_{VC}$，当存在一组 N 个 input 不能被 shatter 的时候也不能断定 $N > d_{VC}$.
+
+- $N > d_{VC} \Rightarrow k$ is a break point for $\mathcal{H}$. 对于所有的整数 $k > d_{VC}$ 都是 $\mathcal{H}$ 的 break point.
+
+现在使用 VC dimension 代替了 k:
+
+if $N \ge 2$, $d_{VC} \ge 2$, $m_{\mathcal{H}}(N) \le N^{d_{VC}$.
+
+ 
+
+
 
 
 
