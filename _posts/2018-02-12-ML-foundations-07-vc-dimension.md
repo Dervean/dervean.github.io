@@ -50,7 +50,7 @@ $$ m_{\mathcal{H}}(N) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ 
 
 下面我们来回顾一下 VC bound:
 
-For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for <strike>$N \ge 2$</strike>, $k \ge 3$:
+For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for $N \ge 2$, $k \ge 3$:
 
 $$
 \begin{array}{rcl}
@@ -159,10 +159,22 @@ VC dimension 可以看作 ***自由度***
 
 # Interpreting VC Dimension
 
-For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for <strike>$N \ge 2$</strike>, $k \ge 3$:
+For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for $N \ge 2$, $k \ge 3$:
 
 $$ 
 \mathbb{P}_{\mathcal{D}}(\underbrace{| E_{in}(g) - E_{out}(g) | > \epsilon}_{BAD})  \le  \underbrace{4(2N)^{d_{VC}} exp(-\frac{1}{8} \epsilon^2 N)}_{\delta}
+$$
+
+将坏情况的概率设为 $\delta$，则好情况的概率为 $1 - \delta$，出现好情况即 $| E_{in}(g) - E_{out}(g) | \le \epsilon$.
+
+计算 $E_{out}(g)$ 的置信区间:
+
+$$
+\begin{array}{rcl}
+| E_{in}(g) - E_{out}(g) | 										& 	        \le 				&	\epsilon														\\
+																& 	         = 					&	\sqrt{\frac{8}{N}ln(\frac{4(2N)^d_{VC}}{\delta})}				\\
+E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^d_{VC}}{\delta})}	& \le &		E_{out}(g)	& \le 	&		E_{in}(g) - \sqrt{\frac{8}{N}ln(\frac{4(2N)^d_{VC}}{\delta})}	
+\end{array}
 $$
 
 
