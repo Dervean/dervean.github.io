@@ -44,7 +44,7 @@ $$ m_{\mathcal{H}}(N) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ 
 
 可以看出两点:
 
-- 当 $N \ge 2$，$k \ge 3$ 时，$B(N,k) \le N{k-1}$.
+- 当 $N \ge 2$，$k \ge 3$ 时，$B(N,k) \le N^{k-1}$.
 
 - 随着 N 的增长，$N^{k-1}$ 的增长速度（特别是当 k 比较大的时候）远超过 $B(N,k)$.
 
@@ -54,15 +54,28 @@ For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $
 
 $$
 \begin{array}{rcl}
-&  			&	\mathbb{P}(| E_{in}(g) - E_{out}(g) | > \epsilon) 										\\
-& 	\le 	&	\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(g) - E_{out}(g) | > \epsilon) 	\\
-& 	\le 	&	4m_{\mathcal{H}}(2N)exp(-\frac{1}{8} \epsilon^2 N) 										\\
-& 	if \ k \ exists																						\\
-& 	\le 	& 4(2N)^{k-1} exp(-\frac{1}{8} \epsilon^2 N)
+\mathbb{P}(| E_{in}(g) - E_{out}(g) | > \epsilon) 	& 	\le 	&	\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(g) - E_{out}(g) | > \epsilon) 	\\
+													& 	\le 	&	4m_{\mathcal{H}}(2N)exp(-\frac{1}{8} \epsilon^2 N) 										\\
+													& 	if \ k \ exists																						\\
+													& 	\le 	& 4(2N)^{k-1} exp(-\frac{1}{8} \epsilon^2 N)
 \end{array}
 $$
 
-学习可行
+从上面来看，学习可行需要有三个条件:
+
+- good $\mathcal{H}$: $m_{\mathcal{H}}(N)$ breaks at k.
+
+- good $\mathcal{D}$: N large enough $\Rightarrow$ probably generalized '$E_{in} \approx E_{out}$'.
+
+- good $\mathcal{A}$: $\mathcal{A}$ picks a $g$ with small $E_{in}$ $\Rightarrow$ probably learned.
+
+而 VC Dimension 的定义就是上面的 (k-1). 代表着 **maximum non-break poingt**.
+
+**Definition**: VC dimension of $\mathcal{H}$, denoted $d_{VC}(\mathcal{H})$ is **largest N** for which $m_{\mathcal{H}}(N) = 2^N$.
+
+- the **most** inputs $\mathcal{H}$ that can shatter.
+
+- $d_{VC}$ = 'minimum k' - 1. 
 
 
 
