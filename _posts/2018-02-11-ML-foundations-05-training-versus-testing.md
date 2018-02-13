@@ -46,7 +46,7 @@ $$
 
 例如 PLA , 虽然 hypothesis 的数目无穷，但相似的两个 hypothesis 的 bad data 的分布也是会有许多重叠的情况。
 
-在这种情况下，我们修改一下上面的公式，考虑将无穷多个 hypothesis 分成若干类 $m_H$ ，使用 $m_H$ 来代替 **infinite M**，hypothesis 的种类个数与 input 有关，所以 $m_H$ 是一个关于 input 个数的单调递增函数:
+在这种情况下，我们修改一下上面的公式，考虑将无穷多个 hypothesis 分成若干类 **$m_H$** ，使用 $m_H$ 来代替 **infinite M**，hypothesis 的种类个数与 input 有关，所以 $m_H$ 是一个关于 input 个数的单调递增函数:
 
 $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(−2 \epsilon^2 N)$$
 
