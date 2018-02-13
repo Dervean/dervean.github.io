@@ -147,6 +147,12 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
 $$d_{VC} \approx \ \#free \ parameters \ (but \ not \ always)$$
 
+VC dimension 可以看作 ***自由度***
+
+![vc-dimension-physical-1](/images/ML/vc-dimension-physical-1.png "Physical intuition")
+
+# Interpreting VC Dimension
+
 
 
 
