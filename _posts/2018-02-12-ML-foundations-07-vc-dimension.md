@@ -38,7 +38,7 @@ if $m_{\mathcal{H}}$ **breaks** somewhere and **N large enough**  $\Leftrightarr
 
 $$ m_{\mathcal{H}}(N) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k−1}}$$
 
-对比 $B(N,k)$ 和 $N{k-1}$:
+对比 $B(N,k)$ 和 $N^{k-1}$:
 
 ![vc-dimension-definition-1](/images/ML/vc-dimension-definition-1.png "vc dimention definition")
 
@@ -46,22 +46,23 @@ $$ m_{\mathcal{H}}(N) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ 
 
 - 当 $N \ge 2$，$k \ge 3$ 时，$B(N,k) \le N{k-1}$.
 
-- 随着 N 的增长，$N{k-1}$ 的增长速度（特别是当 k 比较大的时候）远超过 $B(N,k)$.
+- 随着 N 的增长，$N^{k-1}$ 的增长速度（特别是当 k 比较大的时候）远超过 $B(N,k)$.
 
 下面我们来回顾一下 VC bound:
 
-For any $g = \mathcal{A}(D) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, $k \ge 3$:
+For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, $k \ge 3$:
 
 $$
 \begin{array}{rcl}
-  		&	\mathbb{P}(| E_{in}(g) - E_{out}(g) | > \epsilon) 										\\
-\le 	&	\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(g) - E_{out}(g) | > \epsilon) 	\\
-\le 	&	4m_{\mathcal{H}}(2N)exp(-\frac{1}{8} \epsilon^2 N) 										\\
-if k exists																							\\
-\le 	& 4(2N)^{k-1} exp(-\frac{1}{8} \epsilon^2 N)
+&  			&	\mathbb{P}(| E_{in}(g) - E_{out}(g) | > \epsilon) 										\\
+& 	\le 	&	\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(g) - E_{out}(g) | > \epsilon) 	\\
+& 	\le 	&	4m_{\mathcal{H}}(2N)exp(-\frac{1}{8} \epsilon^2 N) 										\\
+& 	if \ k \ exists																						\\
+& 	\le 	& 4(2N)^{k-1} exp(-\frac{1}{8} \epsilon^2 N)
 \end{array}
 $$
 
+学习可行
 
 
 
