@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "机器学习基石第7课：VC dimension"
+title: "机器学习基石第7课：VC Dimension"
 author: Dervean
 description: "机器学习基石第7课"
 categories: [machine_learning]
