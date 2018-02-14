@@ -39,4 +39,4 @@ redirect_from:
 * hypothesis set：学习后得到许多函数$g: X \rightarrow Y$，且都是可以 programmable definited 的，这些函数是大部分甚至全部满足历史数据$D$的；
 * hypothesis：尽可能得减小和真实函数$f$的差距，需要从 hypothesis set 里选一个最好的 hypothesis。
 
-![definition](/images/ML/definition-ML.png "definition")
+![definition](/images/machine-learning-foundations/definition-ML.png "definition")

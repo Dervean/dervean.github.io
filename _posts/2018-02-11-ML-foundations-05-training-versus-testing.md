@@ -66,7 +66,7 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp m_H \cdotp exp(�
 
 - 但是当有 4 个点的时候，情况出现了变化，此时直线**最多 14 种**。此时的 4 是 $m_H$ 的 **break point**。（$14 < 2^4$）
 
-![effective-number-of-line](/images/ML/training-versus-testing-1.png "当有四个点时，最多有14种直线将这些点分成两类")
+![effective-number-of-line](/images/machine-learning-foundations/training-versus-testing-1.png "当有四个点时，最多有14种直线将这些点分成两类")
 
 我们将直线的种类数目称为 Effective Number of Line，Effective Number 意味着线虽无穷但类别有穷，即:
 
@@ -96,7 +96,7 @@ $$P(\mid E_{in}(h) − E_{out}(h) \mid > \epsilon) \le 2 \cdotp effective(N) \cd
 
 $$m_H(N) = N + 1$$
 
-![effective-number-of-hypotheses](/images/ML/training-versus-testing-2.png "Positive Rays")
+![effective-number-of-hypotheses](/images/machine-learning-foundations/training-versus-testing-2.png "Positive Rays")
 
 (2) Positive Intervals
 
@@ -104,7 +104,7 @@ $$m_H(N) = N + 1$$
 
 $$m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$$
 
-![effective-number-of-hypotheses](/images/ML/training-versus-testing-3.png "Positive Intervals")
+![effective-number-of-hypotheses](/images/machine-learning-foundations/training-versus-testing-3.png "Positive Intervals")
 
 (3) Convex Sets
 
@@ -112,7 +112,7 @@ $$m_H(N) = C_{N+1}^2 + 1 = \frac{1}{2}N^2 + \frac{1}{2}N + 1$$
 
 $$m_H(N) = 2^N$$
 
-![effective-number-of-hypotheses](/images/ML/training-versus-testing-4.png "Convex Sets")
+![effective-number-of-hypotheses](/images/machine-learning-foundations/training-versus-testing-4.png "Convex Sets")
 
 新的名词: **shatter**
 

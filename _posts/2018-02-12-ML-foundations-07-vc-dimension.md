@@ -40,7 +40,7 @@ $$ m_{\mathcal{H}}(N) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ 
 
 对比 $B(N,k)$ 和 $N^{k-1}$:
 
-![vc-dimension-definition-1](/images/ML/vc-dimension-definition-1.png "vc dimention definition")
+![vc-dimension-definition-1](/images/machine-learning-foundations/vc-dimension-definition-1.png "vc dimention definition")
 
 可以看出两点:
 
@@ -109,7 +109,7 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   下面构造一组可以 shatter 的 input.
 
-  ![vc-dimension-perceptrons-1](/images/ML/vc-dimension-perceptrons-1.png "trivial input")
+  ![vc-dimension-perceptrons-1](/images/machine-learning-foundations/vc-dimension-perceptrons-1.png "trivial input")
 
   X 是个可逆矩阵，d 个维度分别取单位向量，再加上原点，总共 d+1 个 input，灰色部分代表常数 threshold.
 
@@ -127,21 +127,21 @@ d 维的 perceptron 的 $d_{VC} = d + 1$。(如何证明呢？)
 
   先研究一下二维的一个 special case:
 
-  ![vc-dimension-perceptrons-2](/images/ML/vc-dimension-perceptrons-2.png "2D dimension special case")
+  ![vc-dimension-perceptrons-2](/images/machine-learning-foundations/vc-dimension-perceptrons-2.png "2D dimension special case")
 
   这是二维空间上的四个点，前面在讨论 Effective Number of Line 的时候曾经说过，四个点的时候只存在 14 (< 16) 种直线将这 4 个点分为 ox 两种类别，有两种是被我们排出在外的，也就是:
 
-  ![vc-dimension-perceptrons-3](/images/ML/vc-dimension-perceptrons-3.png "2D dimension special case")
+  ![vc-dimension-perceptrons-3](/images/machine-learning-foundations/vc-dimension-perceptrons-3.png "2D dimension special case")
 
   如上图，"?" 号所在的点不可能为 "x"，这让我们联想到了线形相关矩阵:
 
-  ![vc-dimension-perceptrons-4](/images/ML/vc-dimension-perceptrons-4.png "2D dimension special case")
+  ![vc-dimension-perceptrons-4](/images/machine-learning-foundations/vc-dimension-perceptrons-4.png "2D dimension special case")
 
   从而证明了 "?" 所在点一定为 "o"，即这个 case 我们一定没办法 shatter.
 
   由上面带来的启发：我们可以利用矩阵的线性相关性质来证明。
 
-  ![vc-dimension-perceptrons-5](/images/ML/vc-dimension-perceptrons-5.png "general case")
+  ![vc-dimension-perceptrons-5](/images/machine-learning-foundations/vc-dimension-perceptrons-5.png "general case")
 
 # Physical intuition of VC Dimension
 
@@ -151,11 +151,11 @@ VC dimension 可以看作 ***自由度***
 
 - Positive rays ($d_{VC} = 1$)
   
-  ![vc-dimension-physical-1](/images/ML/vc-dimension-physical-1.png "Physical intuition")
+  ![vc-dimension-physical-1](/images/machine-learning-foundations/vc-dimension-physical-1.png "Physical intuition")
 
 - Positive intervals ($d_{VC} = 2$)
   
-  ![vc-dimension-physical-2](/images/ML/vc-dimension-physical-2.png "Physical intuition")
+  ![vc-dimension-physical-2](/images/machine-learning-foundations/vc-dimension-physical-2.png "Physical intuition")
 
 # Interpreting VC Dimension
 
@@ -191,7 +191,7 @@ $$
 
 上面的不等式揭示了 $E_{in}$、$E_{out}$ 和 model 三者之间的关系。也可以用下图表示:
 
-![vc-dimension-interpreting-1](/images/ML/vc-dimension-interpreting-1.png "Interpreting of VC Dimension")
+![vc-dimension-interpreting-1](/images/machine-learning-foundations/vc-dimension-interpreting-1.png "Interpreting of VC Dimension")
 
 这张图直观解释了: 
 

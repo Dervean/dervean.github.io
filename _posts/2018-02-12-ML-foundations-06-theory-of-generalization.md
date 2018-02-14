@@ -36,29 +36,29 @@ redirect_from:
 
   - 首先，在不 shatter 任意两个点的前提下，肯定能存在 1 个 dichotomy.
 
-  ![1-dichotomy](/images/ML/theory-of-generalization-1.png "1 dichotomy")
+  ![1-dichotomy](/images/machine-learning-foundations/theory-of-generalization-1.png "1 dichotomy")
 
   - 存在 2 个dichotomy.
 
-  ![2-dichotomy](/images/ML/theory-of-generalization-2.png "2 dichotomy")
+  ![2-dichotomy](/images/machine-learning-foundations/theory-of-generalization-2.png "2 dichotomy")
 
   - 存在 3 个dichotomy.
 
-  ![3-dichotomy](/images/ML/theory-of-generalization-3.png "3 dichotomy")
+  ![3-dichotomy](/images/machine-learning-foundations/theory-of-generalization-3.png "3 dichotomy")
 
   - 现在我们来研究是否存在 4 个 dichotomy. 首先，确实存在 4 个 dichotomy 且能满足不会 shatter 任意两个点。
 
-  ![4-dichotomy-no-shatter](/images/ML/theory-of-generalization-4.png "不 shatter 任意两个点，存在 4 个 dichotomy")
+  ![4-dichotomy-no-shatter](/images/machine-learning-foundations/theory-of-generalization-4.png "不 shatter 任意两个点，存在 4 个 dichotomy")
 
   - 但也会存在 4 个 dichotomy 但是 shatter 其中两个点的情况。
 
-  ![4-dichotomy-shatter](/images/ML/theory-of-generalization-5.png "4 个 dichotomy，shatter 其中两个点 x2、x3")
+  ![4-dichotomy-shatter](/images/machine-learning-foundations/theory-of-generalization-5.png "4 个 dichotomy，shatter 其中两个点 x2、x3")
 
   - 然而我们没办法在不 shatter 任意两个点的前提下找到 5 个 dichotomy.
 
-  ![5-dichotomy-shatter-1](/images/ML/theory-of-generalization-6.png "5 个 dichotomy，shatter 其中两个点 x1、x3")
+  ![5-dichotomy-shatter-1](/images/machine-learning-foundations/theory-of-generalization-6.png "5 个 dichotomy，shatter 其中两个点 x1、x3")
 
-  ![5-dichotomy-shatter-2](/images/ML/theory-of-generalization-7.png "5 个 dichotomy，shatter 其中两个点 x1、x2")
+  ![5-dichotomy-shatter-2](/images/machine-learning-foundations/theory-of-generalization-7.png "5 个 dichotomy，shatter 其中两个点 x1、x2")
 
   - 所以 N = 3，k = 2 最多有 4 个 dichotomy （$4 < 2^3$），可以看出来，break point 对成长函数的增长有很大的影响（本来应该是 $2^3$，现在只有 4）。
 
@@ -80,25 +80,25 @@ bounding function $B(N,k)$:  maximum possible $m_{ \mathcal{H} }(N)$ when break 
 
 所以可以得到下面的表:
 
-![bounding-function-basic-case](/images/ML/theory-of-generalization-bounding-function-basic.png "bounding function —— basic case")
+![bounding-function-basic-case](/images/machine-learning-foundations/theory-of-generalization-bounding-function-basic.png "bounding function —— basic case")
 
 下一步我们通过归纳（inductive）来补全这张表:
 
 首先我们可以暴力计算出: $B(4,3) = 11$
 
-![bounding-function-inductive-case-1](/images/ML/theory-of-generalization-bounding-function-inductive-1.png "B(4,3) = 11")
+![bounding-function-inductive-case-1](/images/machine-learning-foundations/theory-of-generalization-bounding-function-inductive-1.png "B(4,3) = 11")
 
 11 = 4 + 7 ？表中元素之间是否有某种关系 ？下面来进一步研究 $B(4,3)$ 的组成。
 
-![bounding-function-inductive-case-2](/images/ML/theory-of-generalization-bounding-function-inductive-2.png "B(4,3)")
+![bounding-function-inductive-case-2](/images/machine-learning-foundations/theory-of-generalization-bounding-function-inductive-2.png "B(4,3)")
 
 重新排列一下
 
-![bounding-function-inductive-case-3](/images/ML/theory-of-generalization-bounding-function-inductive-3.png "B(4,3)")
+![bounding-function-inductive-case-3](/images/machine-learning-foundations/theory-of-generalization-bounding-function-inductive-3.png "B(4,3)")
 
 图中的 dichotomy 分成橘色和紫色两个部分，橘色的部分两两成双，每一对的 dichotomy 在 $x_1, x_2, x_3$ 上的分量相同，我们把 $x_1, x_2, x_3$ 不同的部分提取出来
 
-![bounding-function-inductive-case-4](/images/ML/theory-of-generalization-bounding-function-inductive-4.png "B(4,3)")
+![bounding-function-inductive-case-4](/images/machine-learning-foundations/theory-of-generalization-bounding-function-inductive-4.png "B(4,3)")
 
 橘色部分的分量的个数记为 $\alpha$，紫色的部分的个数记为 $\beta$，可以得到: 
 
@@ -134,7 +134,7 @@ $$
 
 这样就可以将表补全:
 
-![bounding-function-inductive-case-5](/images/ML/theory-of-generalization-bounding-function-inductive-5.png "inductive case")
+![bounding-function-inductive-case-5](/images/machine-learning-foundations/theory-of-generalization-bounding-function-inductive-5.png "inductive case")
 
 $$B(N,k) \le \underbrace{\sum_{i=0}^{k-1} \binom{N}{i}}_{highest \ term \ N^{k−1}}$$
 
@@ -166,7 +166,7 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
   虽然没办法处理无穷大的情况，但可以使用 $E_{in}\'$ 近似代替 $E_{out}$，$E_{in}\'$ 是从所有数据随机取出的样本数据，样本大小为 N。
 
-  ![vc-bound-proof-1](/images/ML/theory-of-generalization-vc-bound-proof-1.png "proof")
+  ![vc-bound-proof-1](/images/machine-learning-foundations/theory-of-generalization-vc-bound-proof-1.png "proof")
 
   $$\frac{1}{2} \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \epsilon) \le \mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{in}'(h) | > \frac{\epsilon}{2})$$
 
@@ -186,7 +186,7 @@ $$\mathbb{P}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(h) - E_{out}(h) | > \ep
 
   $$|E_{in} - E_{in}'| > \frac{\epsilon}{2} \Leftrightarrow |E_{in} - \frac{E_{in} + E_{in}'}{2} | >\frac{\epsilon}{4}$$
 
-  ![vc-bound-proof-2](/images/ML/theory-of-generalization-vc-bound-proof-2.png "proof")
+  ![vc-bound-proof-2](/images/machine-learning-foundations/theory-of-generalization-vc-bound-proof-2.png "proof")
 
   $$ 
   BAD \ \le \ 2 m_{\mathcal{H}}(2N) \mathbb{P}(fixed \ h \ s.t. \ | E_{in}(h) - E_{in}'(h) | >\frac{\epsilon}{2}) 

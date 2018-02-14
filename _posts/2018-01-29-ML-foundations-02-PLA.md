@@ -36,7 +36,7 @@ $$
 
 * 当$h(x)>0$则$y=1$；当$h(x)<0$则$y=-1$。
 
-![perceptrons](/images/ML/PLA-perceptrons.png "perceptrons")
+![perceptrons](/images/machine-learning-foundations/PLA-perceptrons.png "perceptrons")
 
 我们已经知道所有的$H={perceptrons}$，如何从$H$中选择一个$g=hypothesis$呢？
 
@@ -46,7 +46,7 @@ $$
 
 # Perceptron Learning Algorithm
 
-![PLA](/images/ML/PLA-pla.png "PLA")
+![PLA](/images/machine-learning-foundations/PLA-pla.png "PLA")
 
 如上图所示，PLA算法选择以不断“改错”来求得最终解，里面应用到一个有趣的向量计算的方法：对于两个向量$\vec{a}$和$\vec{b}$，
 
@@ -59,7 +59,7 @@ $$
 
 直到测试集中所有的点都符合分类要求，则将$W$作为$g$返回.
 
-![PLA-implementation](/images/ML/PLA-implementation.png "PLA-implementation")
+![PLA-implementation](/images/machine-learning-foundations/PLA-implementation.png "PLA-implementation")
 
 ### 数据线性可分和PLA的算法有穷性
 
@@ -67,19 +67,19 @@ PLA算法要求最终能够找到一个直线（或者超平面）能够将所�
 
 数据（$D$）的线性可分（linear separable）：
 
-![PLA-linear-seperable](/images/ML/PLA-linear-seperable.png "PLA-linear-seperable")
+![PLA-linear-seperable](/images/machine-learning-foundations/PLA-linear-seperable.png "PLA-linear-seperable")
 
 可以证明：linear separable $D$ $\Leftrightarrow$ exists perfect $w_f$ such that $y_n=sign(w_f^Tx_n)$.
 
 (1) $w_t$与$w_f$的夹角越来越小，即越来越接近：
 
-![PLA-proof-1](/images/ML/PLA-proof-1.png "PLA-proof-1")
+![PLA-proof-1](/images/machine-learning-foundations/PLA-proof-1.png "PLA-proof-1")
 
 (2) $w_t$不会增长得太快，但经过$T$步后，
 
 $$\frac{w_f^T}{\|w_f\|}\frac{w^T}{\|w_T\|} \ge \sqrt{T} \cdotp constant$$
 
-![PLA-proof-2](/images/ML/PLA-proof-2.png "PLA-proof-2")
+![PLA-proof-2](/images/machine-learning-foundations/PLA-proof-2.png "PLA-proof-2")
 
 因为$\frac{w_f^T}{\parallel w_f \parallel}\frac{w^T}{\parallel w_T \parallel} \le 1$，所以一定能在有穷步收敛。
 
@@ -105,11 +105,11 @@ $$\frac{w_f^Tw_t}{\parallel{w_f^T}\parallel\parallel{w_t}\parallel} \ge \frac{T\
 
 当数据中存在许多噪声数据时候，数据不是线性可分，如何处理噪声数据呢？
 
-![PLA-noise](/images/ML/PLA-noise.png "PLA-noise")
+![PLA-noise](/images/machine-learning-foundations/PLA-noise.png "PLA-noise")
 
 Pocket algorithm（口袋算法）是用来解决当数据中存在噪声数据的PLA问题，即找一条能满足大部分的数据的线（超平面），可以看成PLA的变种。
 
-![PLA-pocket-algorithm](/images/ML/PLA-pocket-algorithm.png "PLA-pocket-algorithm")
+![PLA-pocket-algorithm](/images/machine-learning-foundations/PLA-pocket-algorithm.png "PLA-pocket-algorithm")
 
 口袋算法思想：**每当要“修正”一个错误然后修改$w$的时候，都要跟原来的$w$比较，看谁犯的错误更多，如果新的$w$错误更少，就修改，否则不修改。**
 

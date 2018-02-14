@@ -26,7 +26,7 @@ redirect_from:
 
 机器学习是从**样本数据（sample）中学习到数据的分布。**
 
-![feasibility](/images/ML/feasibility-of-learning-1.png "feasibility")
+![feasibility](/images/machine-learning-foundations/feasibility-of-learning-1.png "feasibility")
 
 # [Hoeffding Inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality)
 
@@ -68,17 +68,17 @@ $E_{in}(h) \approx E_{out}(h)$  **and**  $E_{in}(h)$  **small**  $\Rightarrow$ $
 
 上述描述的是只有一个 $hypothesis$ 的情况，但实际情况可能存在多个 $hypothesis$，这样的话上述结论（$h \approx f$）还成立吗？
 
-![multiple-hypothesis](/images/ML/feasibility-of-learning-multiple-hypothesis.png "multiple-hypothesis")
+![multiple-hypothesis](/images/machine-learning-foundations/feasibility-of-learning-multiple-hypothesis.png "multiple-hypothesis")
 
 当有多个 $hypothesis$ 的时候，存在一个问题: 有很小的概率抽出一些 sample ，使得 $h$ 在样本上得到的误差与在总体上得到的误差相差很大（抽出的样本不能反映总体），课程中将这部分的 sample 称为 bad data，此时不能满足条件 $E_{in}(h) \approx E_{out}(h)$.
 
 如下图所示，如果进行多次抽样，那么肯定有一些样本会导致 $E_{in}(h)$ 和 $E_{out}(h)$ 的差距较大。
 
-![bad-data](/images/ML/feasibility-of-learning-bad-data-1.png "bad-data")
+![bad-data](/images/machine-learning-foundations/feasibility-of-learning-bad-data-1.png "bad-data")
 
 因为有多个 $h$，所以可以进一步表示为下图，每个 $h$ 都可能会对应一部分 bad data:
 
-![bad-data](/images/ML/feasibility-of-learning-bad-data-2.png "bad-data")
+![bad-data](/images/machine-learning-foundations/feasibility-of-learning-bad-data-2.png "bad-data")
 
 选择出 bad data 的概率:
 
