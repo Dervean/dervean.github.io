@@ -96,7 +96,7 @@ $$ E_{in}(g) = \frac{1}{N} \sum_{n=1}^N err(g(x_n),f(x_n)) $$
 
 - 国家安全部门：如果系统将非内部人员判断为内部人员，则损失是巨大的，所以 false accept 的 cost 需要设置很大。
 
-从上面看来，不同情况需要使用不同的 Error Measures，我们很难准确地断真实情况的 err 并且用某种公式计算出来，所以使用 $\hat{err}$ 来代替 $err$，如何设计合适的 $\hat{err}$ 将是算法设计的核心。我们希望能减少 $\hat{err}$ 并最终得到 Ideal Mini-Target ( $f(x)$ )。
+从上面看来，不同情况需要使用不同的 Error Measures，我们很难准确地断真实情况的 err 并且用某种公式计算出来，所以使用 $\hat{err}$ 来代替 $err$，如何设计合适的 $\hat{err}$ 将是算法设计的核心。
 
 # Weighted Classification
 
@@ -108,7 +108,7 @@ $$ E_{in}(g) = \frac{1}{N} \sum_{n=1}^N err(g(x_n),f(x_n)) $$
 
 例如前面课程中我们使用 Pocket Algorithm 代替 PLA，此时加上 weight 如何修改呢？是不是在判断能否用 $w_{t+1}$ 替代 $w_t$ 的时候直接加权重算呢？—— **不行**（不行的原因就不细说了）。
 
-（这里引出一个新的名词 **reduction**）具体解决方法是将 weighted $E_{in}$ **变换**成 0/1 $E_{in}$：将 $y = -1$ 的 data 复制 1000 倍。当然真正实现也不可能真得这样复制（硬盘怕是装不下），我们使用 “virtual copy” —— 频繁地（1000倍）check y = -1 的 data 即可。
+（这里引出一个新的名词 **reduction**）具体解决方法是将 weighted $E_{in}$ **变换**成 0/1 $E_{in}$：将 $y = -1$ 的 data 复制 1000 倍。当然真正实现也不可能真得这样复制（硬盘怕是装不下），我们使用 “virtual copy” —— 频繁地（1000倍）check $y = -1$ 的 data 即可。
 
 
 
