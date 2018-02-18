@@ -48,7 +48,7 @@ if finite $d_{VC}$, large $N$ and low $E_{in}$ $\Longrightarrow$ learning possib
 
 现在我们可以修改第一章的图，我们之前一直在研究 **target function**，但现在存在 noise data，我们改成研究 **target distribution**。
 
-![noise-and-probabilistic-target](/images/machine-learning-foundations/noise-and-error-noise-and-probabilistic-target-1.png "noise and target distribution")
+![noise-and-probabilistic-target](/images/machine-learning-foundations/noise-and-error-1.png "noise and target distribution")
 
 我们要找出一个 **ideal mini-target** (能满足更多的现实数据，因为我们假定 noise data 的比例不能高于 correct data)。
 
@@ -88,7 +88,7 @@ $$ E_{in}(g) = \frac{1}{N} \sum_{n=1}^N err(g(x_n),f(x_n)) $$
 
 我们不希望机器得到的结果是错误的，而判断错误也有两种：一是本应 reject 的却 accpet 了，二是本应 accept 的却 reject 了。
 
-![algorithm-error-measure](/images/machine-learning-foundations/noise-and-error-noise-algorithm-error-measure-1.png "two types of error: false accept and false reject")
+![algorithm-error-measure](/images/machine-learning-foundations/noise-and-error-2.png "two types of error: false accept and false reject")
 
 判断错误的“惩罚”应该多大呢？
 
