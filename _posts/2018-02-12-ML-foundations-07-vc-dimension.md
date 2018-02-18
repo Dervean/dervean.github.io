@@ -18,8 +18,6 @@ redirect_from:
 
 # Preview
 
-回顾上节课所说的内容:
-
 if $m_{\mathcal{H}}$ **breaks** somewhere and **N large enough**  $\Leftrightarrow$  $E_{out} \approx E_{in}$ possible.
 
 这节课主要回答以下问题:
