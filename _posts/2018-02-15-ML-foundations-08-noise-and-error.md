@@ -86,7 +86,7 @@ $$ E_{in}(g) = \frac{1}{N} \sum_{n=1}^N err(g(x_n),f(x_n)) $$
 
 课件里给出一个案例：指纹识别。识别的结果有两种，accpet 和 reject。
 
-我们肯定不希望机器得到的结果是错误的，而判断错误也有两种：一是本应 reject 的却 accpet 了，二是本应 accept 的却 reject 了。
+我们不希望机器得到的结果是错误的，而判断错误也有两种：一是本应 reject 的却 accpet 了，二是本应 accept 的却 reject 了。
 
 ![algorithm-error-measure](/images/machine-learning-foundations/noise-and-error-noise-algorithm-error-measure-1.png "two types of error: false accept and false reject")
 
