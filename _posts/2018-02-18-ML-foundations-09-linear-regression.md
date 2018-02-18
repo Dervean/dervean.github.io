@@ -20,15 +20,15 @@ redirect_from:
 
 还是以信贷公司为例，只不过这次不是判断能否发放贷款（Linear Classification），而是计算发放贷款额度（Linear Regression）。
 
-用户的个人信息（年收入，工作时间，负债...）记为 $(x_1,x_2,x_3,...,x_d)$，另外加一个常数项 $x_0$，则把 $x = (x_0,x_1,x_2,x_3,...,x_d)$ 记为**“特征“**（features）。
+用户的个人信息（年收入，工作时间，负债...）记为 $(x_1,x_2,x_3,...,x_d)$，另外加一个常数项 $x_0$，则把 $x = (x_0,x_1,x_2,x_3,...,x_d)$ 记为**“特征“**（features of customer）。
 
-现在我们希望计算一个各个信息的权重 w 从而使得发放贷款额度 y:
+现在希望计算能够衡量各个信息的权重 $w_i$，从而使得发放贷款额度 y:
 
 $$y \approx \sum_{i=0}^d w_i x_i$$
 
 从而引出 hypothesis:
 
-$h(x) = w_T x$$
+$$ h(x) = w_T x $$
 
 误差度量 (Error Measure) 使用 squared error ($err(\hat{y} , y) = (\hat{y} - y)^2$):
 
@@ -76,13 +76,16 @@ E_{in}(w) & = & \frac{1}{N} \sum_{n=1}^{N} (w^T x_n - y_n)^2  			\\
 \end{array}
 $$
 
-$$\underset{w}{min} E_{in}(w) = \frac{1}{N} {\left\| Xw - y\right\|}^2 = \frac{1}{N} (w^T X^T X w - 2 w^T X^T y + y_T y)$$
+$$
+\underset{w}{min} \ E_{in}(w) 	= \frac{1}{N} {\left\| Xw - y\right\|}^2 
+								= \frac{1}{N} ((Xw)^T X w - 2 (Xw)^T y + y^T y)
+$$
 
 $E_{in}(w)$ 是一个连续可导凸函数 (continuous, differentiable, convex):
 
 ![linear-regression-1](/images/machine-learning-foundations/linear-regression-1.png "continuous, differentiable, convex)")
 
-可以找到一个 best w 使得:
+所以可以找到一个 best w 使得:
 
 $$
 \triangledown E_{in}(w) = 	\left[ 
@@ -109,9 +112,11 @@ $$\triangledown E_{in}(w) = \frac{2}{N} (X^T X w - X^Ty) = 0$$
 
 解得:
 
-$$w_{LIN} = \underbrace{(X^T X)^{-1} X^T}_{pseudo-inverse \ X^{\dagger}} y$$
+$$w_{LIN} = (X^T X)^{-1} X^T y$$
 
 # Generalization Issue
+
+这里讨论
 
 # Linear Regression for Binary Classification
 
