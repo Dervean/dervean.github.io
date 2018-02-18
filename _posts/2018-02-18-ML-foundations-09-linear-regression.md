@@ -28,13 +28,13 @@ $$y \approx \sum_{i=0}^d w_i x_i$$
 
 从而引出 hypothesis:
 
-$$ h(x) = w_T x $$
+$$ h(x) = w^T x $$
 
 误差度量 (Error Measure) 使用 squared error ($err(\hat{y} , y) = (\hat{y} - y)^2$):
 
-$$E_{in}(hw) = \frac{1}{N} \sum_{n=1}^{N} (\underbrace{h(x_n)}_{w_T x_n} - y_n)^2$$
+$$E_{in}(hw) = \frac{1}{N} \sum_{n=1}^{N} (\underbrace{h(x_n)}_{w^T x_n} - y_n)^2$$
 
-$$E_{out}(w) = \underset{(x,y) \sim P}{\varepsilon} (w_Tx - y)^2$$
+$$E_{out}(w) = \underset{(x,y) \sim P}{\varepsilon} (w^Tx - y)^2$$
 
 如何 minimize $E_{in}$？
 
@@ -83,7 +83,7 @@ $$
 
 $E_{in}(w)$ 是一个连续可导凸函数 (continuous, differentiable, convex):
 
-![linear-regression-1](/images/machine-learning-foundations/linear-regression-1.png "continuous, differentiable, convex)")
+![linear-regression-1](/images/machine-learning-foundations/linear-regression-1.png "continuous, differentiable, convex")
 
 所以可以找到一个 best w 使得:
 
@@ -114,9 +114,21 @@ $$\triangledown E_{in}(w) = \frac{2}{N} (X^T X w - X^Ty) = 0$$
 
 $$w_{LIN} = (X^T X)^{-1} X^T y$$
 
+这时候我们就可以使用 $w_{LIN}$ 来做一些 prediction 了:
+
+$$\hat{y} = X (X^T X)^{-1} X^T y$$
+
 # Generalization Issue
 
-这里讨论
+这里讨论了 $E_{in}$ 的物理意义，讨论的主要是线性代数中 $I - X (X^T X)^{-1} X^T$ 这玩意与投影间的关系，不再赘述。
+
+记一下 **Learning Curve**:
+
+$$ \overline{E_{out}} = noise \ level \ \cdotp (1 + \frac{d+1}{N})$$
+
+$$ \overline{E_{in}} = noise \ level \ \cdotp (1 - \frac{d+1}{N})$$
+
+![linear-regression-2](/images/machine-learning-foundations/linear-regression-2.png "Learning Curve")
 
 # Linear Regression for Binary Classification
 
