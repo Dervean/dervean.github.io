@@ -62,7 +62,7 @@ if finite $d_{VC}$, large $N$ and low $E_{in}$ $\Longrightarrow$ learning possib
 
 **Pointwise Error Measure**:
 
-$$ E_{out}(g) = \underset{x \sim P}{\varepsilon} \underbrace{\![ g(x) \neq f(x) \!]}_{err(g(x),f(x))}  $$
+$$ E_{out}(g) = \underset{x \sim P}{\varepsilon} \underbrace{[\![ g(x) \neq f(x) ]\!]}_{err(g(x),f(x))}  $$
 
 $$ E_{in}(g) = \frac{1}{N} \sum_{n=1}^N err(g(x_n),f(x_n)) $$
 
@@ -70,7 +70,7 @@ $$ E_{in}(g) = \frac{1}{N} \sum_{n=1}^N err(g(x_n),f(x_n)) $$
 
 1. **0/1 error**, classification error (correct or incorrect)
 
-  $$ err(\tilde{y} , y) = \![ \tilde{y} \neq y \!] $$
+  $$ err(\tilde{y} , y) = [\![ \tilde{y} \neq y ]\!] $$
 
   $$ f(x) = \underset{y \in \mathcal{y}}{argmax} \ P(y | x) $$
 
