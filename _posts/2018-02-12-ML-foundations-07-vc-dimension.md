@@ -53,9 +53,9 @@ For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $
 $$
 \begin{array}{rcl}
 \mathbb{P}_{\mathcal{D}}(| E_{in}(g) - E_{out}(g) | > \epsilon) 	& 	\le 	&	\mathbb{P}_{\mathcal{D}}(\exists h \in \mathcal{H} \ s.t. \ | E_{in}(g) - E_{out}(g) | > \epsilon) 	\\
-																	& 	\le 	&	4m_{\mathcal{H}}(2N)exp(-\frac{1}{8} \epsilon^2 N) 										\\
+																	& 	\le 	&	4 \cdotp m_{\mathcal{H}}(2N) \cdotp exp(-\frac{1}{8} \epsilon^2 N) 										\\
 																	& 	if \ k \ exists																						\\
-																	& 	\le 	& 4(2N)^{k-1} exp(-\frac{1}{8} \epsilon^2 N)
+																	& 	\le 	& 4 \cdotp (2N)^{k-1} \cdotp exp(-\frac{1}{8} \epsilon^2 N)
 \end{array}
 $$
 
@@ -63,7 +63,7 @@ $$
 
 - good $\mathcal{H}$: $m_{\mathcal{H}}(N)$ breaks at k.
 
-- good $\mathcal{D}$: N large enough $\Rightarrow$ probably generalized '$E_{in} \approx E_{out}$'.
+- good $\mathcal{D}$: N large enough $\Rightarrow$ probably generalized $E_{in} \approx E_{out}$.
 
 - good $\mathcal{A}$: $\mathcal{A}$ picks a $g$ with small $E_{in}$ $\Rightarrow$ probably learned.
 
@@ -160,7 +160,7 @@ VC dimension 可以看作 ***自由度***
 For any $g = \mathcal{A}(\mathcal{D}) \in \mathcal{H}$ and 'statistical' large $\mathcal{D}$, for $N \ge 2$, $k \ge 3$:
 
 $$ 
-\mathbb{P}_{\mathcal{D}}(\underbrace{| E_{in}(g) - E_{out}(g) | > \epsilon}_{BAD})  \le  \underbrace{4(2N)^{d_{VC}} exp(-\frac{1}{8} \epsilon^2 N)}_{\delta}
+\mathbb{P}_{\mathcal{D}}(\underbrace{| E_{in}(g) - E_{out}(g) | > \epsilon}_{BAD})  \le  \underbrace{4(2N)^{d_{VC}} \cdotp exp(-\frac{1}{8} \epsilon^2 N)}_{\delta}
 $$
 
 将坏情况的概率设为 $\delta$，则好情况的概率为 $1 - \delta$，出现好情况即 $\| E_{in}(g) - E_{out}(g) \| \le \epsilon$.
