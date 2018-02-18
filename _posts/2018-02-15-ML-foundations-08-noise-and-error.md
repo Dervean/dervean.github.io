@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "机器学习基石第7课：Noise and Error"
+title: "机器学习基石第8课：Noise and Error"
 author: Dervean
 description: "机器学习基石第8课"
 categories: [machine_learning]
