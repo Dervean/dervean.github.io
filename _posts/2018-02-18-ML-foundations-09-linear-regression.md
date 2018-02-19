@@ -122,7 +122,7 @@ $$\hat{y} = X w_{LIN} = X (X^T X)^{-1} X^T y$$
 
 这里讨论了 $E_{in}$ 的物理意义，主要是线性代数中 $I - X (X^T X)^{-1} X^T$ 与投影间的关系，不再赘述。
 
-记一下 **Learning Curve**:
+**Learning Curve**:
 
 $$ \overline{E_{out}} = noise \ level \ \cdotp (1 + \frac{d+1}{N})$$
 
@@ -139,21 +139,21 @@ $$ \overline{E_{in}} = noise \ level \ \cdotp (1 - \frac{d+1}{N})$$
 	|---
 	| Linear Classification | Linear Regression
 	|:-|:-
-	| $\mathcal{y} = {-1,+1}$ | $\mathcal{y} = \mathbb{R}$
+	| $\mathcal{y} = \{-1,+1 \}$ | $\mathcal{y} = \mathbb{R}$
 	| $h(x) = sign(w^T x)$ | $h(x) = w^T x$
-	| err(\hat{y},y) = [\![ \hat{y} \neq y ]\!] | err(\hat{y},y) = (\hat{y} - y)^2
+	| $err(\hat{y},y) = [\![ \hat{y} \neq y ]\!]$ | $err(\hat{y},y) = (\hat{y} - y)^2$
 	| NP-hard | efficient analytic solution
 
 既然线性回归比线性分类好解，那我们是否可以使用线性回归来帮助解线性分类的问题呢？
 
-先证明: $err_{0/1} \e err_{sqr}$
+先证明: $err_{0/1} \neq err_{sqr}$
 
 ![linear-regression-3](/images/machine-learning-foundations/linear-regression-3.png "Linear Classification vs. Linear Regression")
 
-upper bound $err_{sqr}$ as $\hat{err}$ to approximate $err0/1$. 
+$$upper \ bound \ err_{sqr} \ as \ \hat{err} \ to \ approximate \ err_{0/1}.$$
 
-既然 $err_{sqr}$ 可以作为 $err0/1$ 的上限，那么 $w_{}L
-IN$ 就可以充当 Linear Classification 的 baseline，在 Pocket Alogarithm 里初始化口袋里的 $w_0 = w_{LIN}$，从而加速分类的进程。
+既然 $err_{sqr}$ 可以作为 $err_{0/1}$ 的上限，那么 $w_{L
+IN}$ 就可以作为 Linear Classification 的 baseline，在 Pocket Alogarithm 里初始化口袋里的 $w_0 = w_{LIN}$，从而加速分类的进程。
 
 
 
