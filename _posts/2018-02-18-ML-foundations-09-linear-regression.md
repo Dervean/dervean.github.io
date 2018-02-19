@@ -116,11 +116,11 @@ $$w_{LIN} = (X^T X)^{-1} X^T y$$
 
 这时候我们就可以使用 $w_{LIN}$ 来做一些 prediction 了:
 
-$$\hat{y} = X (X^T X)^{-1} X^T y$$
+$$\hat{y} = X w_{LIN} = X (X^T X)^{-1} X^T y$$
 
 # Generalization Issue
 
-这里讨论了 $E_{in}$ 的物理意义，讨论的主要是线性代数中 $I - X (X^T X)^{-1} X^T$ 这玩意与投影间的关系，不再赘述。
+这里讨论了 $E_{in}$ 的物理意义，主要是线性代数中 $I - X (X^T X)^{-1} X^T$ 与投影间的关系，不再赘述。
 
 记一下 **Learning Curve**:
 
@@ -132,8 +132,28 @@ $$ \overline{E_{in}} = noise \ level \ \cdotp (1 - \frac{d+1}{N})$$
 
 # Linear Regression for Binary Classification
 
+现在已经通过信贷公司的例子介绍了 Linear Classification 和 Linear Regression，现在我们看一下二者的不同:
 
+* Linear Classification vs. Linear Regression
 
+	|---
+	| Linear Classification | Linear Regression
+	|:-|:-
+	| $\mathcal{y} = {-1,+1}$ | $\mathcal{y} = \mathbb{R}$
+	| $h(x) = sign(w^T x)$ | $h(x) = w^T x$
+	| err(\hat{y},y) = [\![ \hat{y} \neq y ]\!] | err(\hat{y},y) = (\hat{y} - y)^2
+	| NP-hard | efficient analytic solution
+
+既然线性回归比线性分类好解，那我们是否可以使用线性回归来帮助解线性分类的问题呢？
+
+先证明: $err_{0/1} \e err_{sqr}$
+
+![linear-regression-3](/images/machine-learning-foundations/linear-regression-3.png "Linear Classification vs. Linear Regression")
+
+upper bound $err_{sqr}$ as $\hat{err}$ to approximate $err0/1$. 
+
+既然 $err_{sqr}$ 可以作为 $err0/1$ 的上限，那么 $w_{}L
+IN$ 就可以充当 Linear Classification 的 baseline，在 Pocket Alogarithm 里初始化口袋里的 $w_0 = w_{LIN}$，从而加速分类的进程。
 
 
 
