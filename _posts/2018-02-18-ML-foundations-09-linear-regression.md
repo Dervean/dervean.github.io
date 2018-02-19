@@ -141,7 +141,7 @@ $$ \overline{E_{in}} = noise \ level \ \cdotp (1 - \frac{d+1}{N})$$
 	|:-|:-
 	| $\mathcal{y} = \{-1,+1 \}$ | $\mathcal{y} = \mathbb{R}$
 	| $h(x) = sign(w^T x)$ | $h(x) = w^T x$
-	| $err(\hat{y},y) = [\![ \hat{y} \neq y ]\!]$ | $err(\hat{y},y) = (\hat{y} - y)^2$
+	| $err(\hat{y},y) = \left[ \hat{y} \neq y \right]$ | $err(\hat{y},y) = (\hat{y} - y)^2$
 	| NP-hard | efficient analytic solution
 
 既然线性回归比线性分类好解，那我们是否可以使用线性回归来帮助解线性分类的问题呢？
