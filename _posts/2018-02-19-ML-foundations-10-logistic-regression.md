@@ -191,7 +191,7 @@ $$
 
 ![logistic-regression-3](/images/machine-learning-foundations/logistic-regression-3.png "步长太小、步长太大、步长不断调整")
 
-我们希望 $\parallel \eta v \parallel$ 能够随情况改变而改变，既能够快速收敛，但也不至于在低谷周围“震荡”，当 $\triangledown E_{in}(w_t)$ 比较大的时候 $\parallel \eta v \parallel$ 大，当 $\triangledown E_{in}(w_t)$ 小的时候 $\parallel \eta v \parallel$ 小:
+我们希望 $\parallel \eta v \parallel$ 能够随情况改变而改变，既能够快速收敛，但也不至于在低谷周围“震荡”，当 $\triangledown E_{in}(w_t) \uparrow$，$\parallel \eta v \parallel \uparrow$；当 $\triangledown E_{in}(w_t) \downarrow$，$\parallel \eta v \parallel \downarrow$:
 
 $$w_{t+1} \leftarrow w_t - \eta \triangledown E_{in}(w_t)$$
 
