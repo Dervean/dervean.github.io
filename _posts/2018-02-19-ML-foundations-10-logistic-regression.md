@@ -22,11 +22,11 @@ redirect_from:
 
 例子：假设现在要判断一个人是否患有心脏病，这感觉像是一个二分类问题（患有心脏病，没有心脏病）:
 
-$$f(x) = sign(P(+1 \| x)-\frac{1}{2}) \in \{-1,+1\}$$
+$$f(x) = sign(P(+1 | x)-\frac{1}{2}) \in \{-1,+1\}$$
 
 在学习二分类问题的时候我们已经知道，在有噪声数据的影响下，判断的结果可能并不对，但给出的结果只有 “+1” 和 "-1"，并没有其他信息告诉我们结果的**准确率**有多高。而逻辑回归就可以告知“结果正确的概率”:
 
-$$f(x) = P(+1 \| x) \in [0,1]$$
+$$f(x) = P(+1 | x) \in [0,1]$$
 
 如何得出“结果正确的概率”呢？
 
@@ -50,7 +50,7 @@ $$\theta(+\infty) = 1$$
 
 $$\theta(0) = \frac{1}{2}$$
 
-$$\theta(-x) = 1 - \theta(x)$$
+$$\theta(-s) = 1 - \theta(s)$$
 
 我们使用 S 型函数来设计 hypothesis 来模拟 target function:
 
@@ -60,15 +60,15 @@ $$h(x) = \theta (w^Tx) = \frac{1}{1+exp(-w^Tx)}$$
 
 如何计算逻辑回归中的 $E_{in}(w)$ ？
 
-课件中使用的方式是 “likelihood”，也就是“似然估计”。对于 target funtion，我们计算 $f(x) = P(+1 | x)$，也就是“患病的几率”，那么不患病的几率就是 $1 - f(x)$:
+课件中使用的方式是 “likelihood”，也就是“似然估计”。对于 target funtion，我们计算 $f(x) = P(+1 \| x)$，也就是“患病的几率”，那么不患病的几率就是 $1 - f(x)$:
 
 $$
 target \ function \ f(x) 
-= P(+1 \| x) \ \ \Longleftrightarrow \ \ P(y \| x) 
-= \left\{ {f(x) \ \ \ \ \ \ \ for \ y = +1 \atop 1-f(x) \ \ for \ y = -1} \right.
+= P(+1 | x) \ \ \Longleftrightarrow \ \ P(y | x) 
+= \left\{ {f(x) \ \ \ \ \ \ \ \ for \ y = +1 \atop 1-f(x) \ \ for \ y = -1} \right.
 $$
 
-对于训练集 $\mathcal{D} = {(x_1,o),(x_2,x),...,(x_N,x)}$，其中 $o$ 表示正例（$y = +1$），$x$ 表示负例（$y = -1$），目标函数 $f$ 产生 $\mathcal{D}$ 的概率为 $P(x_1)P(o|x_1) \times P(x_2)P(x|x_2) \times ... \times P(x_N)P(x|x_N)$，即 $P(x_1)f(x_1) \times P(x_2)(1-f(x_2)) \times ... \times P(x_N)(1-f(x_N))$，其中 $P(x_1), P(x_2),..., P(x_N)$ 已知，使用 $h(x)$ 来估计 $f(x)$:
+对于训练集 $\mathcal{D} = {(x_1,o),(x_2,x),...,(x_N,x)}$，其中 $o$ 表示正例（$y = +1$），$x$ 表示负例（$y = -1$），目标函数 $f$ 产生 $\mathcal{D}$ 的概率为 $P(x_1)P(o \|x_1) \times P(x_2)P(x \|x_2) \times ... \times P(x_N)P(x \|x_N)$，即 $P(x_1)f(x_1) \times P(x_2)(1-f(x_2)) \times ... \times P(x_N)(1-f(x_N))$，其中 $P(x_1), P(x_2),..., P(x_N)$ 已知，使用 $h(x)$ 来估计 $f(x)$:
 
 $$
 likelihood(h) \approx P(x_1)h(x_1) \times P(x_2)(1-h(x_2)) \times ... \times P(x_N)(1-h(x_N)) 
