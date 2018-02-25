@@ -106,7 +106,7 @@ $$
 \end{array}
 $$
 
-至此我们定义 $E_{in}(w) = \frac{1}{N}\sum_{n=1}^{N}err(w,x_n,y_n)}$，其中 $err(w,x_n,y_n) = \ln(1 + exp(-y_nw^Tx_n))$，也称为 **"Cross-Entropy Error"**（交叉熵误差）。
+至此我们定义 $E_{in}(w) = \frac{1}{N} \sum_{n=1}^N err(w,x_n,y_n)$，其中 $err(w,x_n,y_n) = \ln(1 + exp(-y_nw^Tx_n))$，也称为 **"Cross-Entropy Error"**（交叉熵误差）。
 
 # Gradient of Logistic Regression Error
 
@@ -146,7 +146,7 @@ $$\frac{1}{N} \sum_{n=1}^N (\theta (-y_nw^Tx_n))(-y_nx_n) = 0$$
 
 以上的 step 2 和 step 3 其实可以合并为 1 个 step:
 
-$$w_{t+1} \ \leftarrow \ w_t + [\![ sign(w_t^T x_n}) \neq y_n} ]\!] y_nx_n$$
+$$w_{t+1} \ \leftarrow \ w_t + [\![ sign(w_t^T x_n) \neq y_n} ]\!] y_nx_n$$
 
 进一步可以写成:
 
@@ -184,7 +184,7 @@ $$ v = - \frac{\triangledown E_{in}(w_t)}{\parallel \triangledown E_{in}(w_t) \p
 Gradient Descent:
 
 $$
-for \ small \ $\eta$, \ $w_{t+1} \leftarrow w_t - \eta \frac{\triangledown E_{in}(w_t)}{\parallel \triangledown E_{in}(w_t) \parallel}.
+for \ small \ \eta, \ w_{t+1} \leftarrow w_t - \eta \frac{\triangledown E_{in}(w_t)}{\parallel \triangledown E_{in}(w_t) \parallel}.
 $$
 
 这里有一个问题：我们始终将 $v$ 设为单位向量，即 $\parallel \eta v \parallel$ 永远都是定值 $\eta$，而如果 $\eta$ 太小，收敛（下降）得太慢；如果 $\eta$ 太大则可能会导致无法收敛。
