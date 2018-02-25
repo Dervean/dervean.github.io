@@ -146,7 +146,9 @@ $$\frac{1}{N} \sum_{n=1}^N (\theta (-y_nw^Tx_n))(-y_nx_n) = 0$$
 
 以上的 step 2 和 step 3 其实可以合并为 1 个 step:
 
-$$w_{t+1} \ \leftarrow \ w_t + [\![ sign(w_t^T x_n) \neq y_n} ]\!] y_nx_n$$
+$$
+w_{t+1} \ \leftarrow \ w_t + [\![ sign(w_t^T x_n) \neq y_n ]\!] y_nx_n
+$$
 
 进一步可以写成:
 
