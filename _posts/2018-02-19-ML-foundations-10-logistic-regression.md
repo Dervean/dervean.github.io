@@ -156,7 +156,7 @@ $$w_{t+1} \ \leftarrow \ w_t + \underbrace{1}_{\eta} \cdotp \underbrace{[\![ sig
 
 其中 $\eta$ 为**学习步长**，$v$ 为**学习方向**，
 
-$$\text{choice of } (\eta, v) \text{ and stopping condition defines iterative optimization approach.}$$
+$$choice \ of \ (\eta, v) \ and \ stopping \ condition \ defines \ iterative \ optimization \ approach.$$
 
 下面我们使用**迭代优化方法（iterative optimization approach）** 来 minimize $E_{in}(w)$。
 
