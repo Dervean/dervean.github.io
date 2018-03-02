@@ -48,7 +48,7 @@ redirect_from:
   err_{CE}(s,y) = \ln(1 + \exp(-ys))
   $$
 
-以上 $y \in \{-1,+1 \}$，$(ys)$ 可以用来看作一个整体来判断分类的正确性。
+以上 $y \in \{-1,+1\}$，$(ys)$ 可以用来看作一个整体来判断分类的正确性。
 
 ![linear-models-for-classification-1](/images/machine-learning-foundations/linear-models-for-classification-1.png "Error Bound")
 
@@ -80,7 +80,7 @@ $$
 
 事实上可以将每一轮更新的复杂度降为 $O(1)$，这时候就需要使用**随机梯度下降**。
 
-重新研究上面的公式可以发现: $\sum_{n=1}^N$，即计算所有的数据之后再平均。
+重新研究上面的公式可以发现: $\frac{1}{N} \sum_{n=1}^N$，即计算所有的数据之后再平均。
 
 所以可以**每次随机选取一个点计算梯度**用来代替总体平均，当数据点不是一次性提供或者 online learning 的时候就很有用，但这种方法**没办法知道啥时候算法能停止**，所以在使用的时候假设在经过**很多很多**步之后算法会选到最优点:
 
