@@ -56,7 +56,7 @@ $$\theta(-s) = 1 - \theta(s)$$
 
 我们使用 S 型函数来设计 hypothesis 来估计 target function:
 
-$$h(x) = \theta (w^Tx) = \frac{1}{1+exp(-w^Tx)}$$
+$$h(x) = \theta (w^Tx) = \frac{1}{1+\exp(-w^Tx)}$$
 
 # Logistic Regression Error
 
@@ -74,7 +74,7 @@ $$
 
 对于训练集 $\mathcal{D} = \{(x_1,o),(x_2,x),...,(x_N,x)\}$，其中 $o$ 表示正例（$y = +1$），$x$ 表示负例（$y = -1$），目标函数 $f$ 产生 $\mathcal{D}$ 的概率为 
 
-$$P(x_1)P(o \|x_1) \times P(x_2)P(x \|x_2) \times ... \times P(x_N)P(x \|x_N)$$
+$$P(x_1)P(o \mid x_1) \times P(x_2)P(x \mid x_2) \times ... \times P(x_N)P(x \mid x_N)$$
 
 即 
 
@@ -100,13 +100,13 @@ $$
 \Rightarrow  & \underset{w}{max} \ \sum_{n=1}^{N} \ln\theta(y_nw^Tx_n) \\
 \Rightarrow  & \underset{w}{min} \ \sum_{n=1}^{N}- \ln\theta(y_nw^Tx_n) \\
 \Rightarrow  & \underset{w}{min} \ \frac{1}{N}\sum_{n=1}^{N}- \ln\theta(y_nw^Tx_n) \\
-& (\theta(s) = \frac{1}{1+exp(-s)}) \\
-\Rightarrow  & \underset{w}{min} \ \frac{1}{N}\sum_{n=1}^{N} \ln(1 + exp(-y_nw^Tx_n)) \\
+& (\theta(s) = \frac{1}{1+\exp(-s)}) \\
+\Rightarrow  & \underset{w}{min} \ \frac{1}{N}\sum_{n=1}^{N} \ln(1 + \exp(-y_nw^Tx_n)) \\
 \Rightarrow  & \underset{w}{min} \ \underbrace{\frac{1}{N}\sum_{n=1}^{N}err(w,x_n,y_n)}_{E_{in}(w)}
 \end{array}
 $$
 
-至此我们定义 $E_{in}(w) = \frac{1}{N} \sum_{n=1}^N err(w,x_n,y_n)$，其中 $err(w,x_n,y_n) = \ln(1 + exp(-y_nw^Tx_n))$，也称为 **"Cross-Entropy Error"**（交叉熵误差）。
+至此我们定义 $E_{in}(w) = \frac{1}{N} \sum_{n=1}^N err(w,x_n,y_n)$，其中 $err(w,x_n,y_n) = \ln(1 + \exp(-y_nw^Tx_n))$，也称为 **"Cross-Entropy Error"**（交叉熵误差）。
 
 # Gradient of Logistic Regression Error
 
