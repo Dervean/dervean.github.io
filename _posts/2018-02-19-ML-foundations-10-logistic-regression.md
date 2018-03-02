@@ -74,7 +74,9 @@ $$
 
 对于训练集 $\mathcal{D} = \{(x_1,o),(x_2,x),...,(x_N,x)\}$，其中 $o$ 表示正例（$y = +1$），$x$ 表示负例（$y = -1$），目标函数 $f$ 产生 $\mathcal{D}$ 的概率为 
 
-$$P(x_1)P(o \mid x_1) \times P(x_2)P(x \mid x_2) \times ... \times P(x_N)P(x \mid x_N)$$
+$$
+P(x_1)P(o | x_1) \times P(x_2)P(x | x_2) \times ... \times P(x_N)P(x | x_N)
+$$
 
 即 
 
