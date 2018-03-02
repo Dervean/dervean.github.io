@@ -48,7 +48,7 @@ redirect_from:
   err_{CE}(s,y) = \ln(1 + \exp(-ys))
   $$
 
-以上 $y \in \{-1,+1\}$，$(ys)$ 可以用来看作一个整体来判断分类的正确性。
+以上 $y \in \\{-1,+1\\}$，$(ys)$ 可以用来看作一个整体来判断分类的正确性。
 
 ![linear-models-for-classification-1](/images/machine-learning-foundations/linear-models-for-classification-1.png "Error Bound")
 
