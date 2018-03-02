@@ -48,17 +48,15 @@ redirect_from:
   err_{CE}(s,y) = \ln(1 + \exp(-ys))
   $$
 
-以上 $y \in {-1,+1}$，$(ys)$ 可以用来看作一个整体来判断分类的正确性。
+以上 $y \in \{-1,+1 \}$，$(ys)$ 可以用来看作一个整体来判断分类的正确性。
 
 ![linear-models-for-classification-1](/images/machine-learning-foundations/linear-models-for-classification-1.png "Error Bound")
 
 稍微改变(Scale) linear classification 的 Error Measure:
 
 $$
-err_{SCE}(s,y) & = & \log_2(1 + \exp(-ys))
+err_{SCE}(s,y) = \log_2(1 + \exp(-ys))
 $$
-
-现在重新 visualize Error Function:
 
 ![linear-models-for-classification-2](/images/machine-learning-foundations/linear-models-for-classification-2.png "Error Bound")
 
@@ -80,11 +78,11 @@ $$
 
 从上述公式看出，每做一步更新就需要遍历一次所有数据点（即花销为 $O(N)$），然而在 Pocket Algorithm 中每次更新只需要 $O(1)$ 的花销，我们能不能减小逻辑回归更新花销呢？
 
-事实上可以将每一轮更新的复杂度降为是 $O(1)$，这时候就需要使用**随机梯度下降**。
+事实上可以将每一轮更新的复杂度降为 $O(1)$，这时候就需要使用**随机梯度下降**。
 
-重新研究上面的公式可以发现里面有个重要的特点: $\sum_{n=1}^N$。即计算所有的数据之后再平均。
+重新研究上面的公式可以发现: $\sum_{n=1}^N$，即计算所有的数据之后再平均。
 
-所以可以**每次随机选取一个点计算梯度**用来代替总体平均，当数据点不是一次性提供而是 online learning 的时候就很有用，但这种方法**没办法知道啥时候算法能停止**，所以在使用的时候假设在经过**很多很多**步之后算法会选到最优点:
+所以可以**每次随机选取一个点计算梯度**用来代替总体平均，当数据点不是一次性提供或者 online learning 的时候就很有用，但这种方法**没办法知道啥时候算法能停止**，所以在使用的时候假设在经过**很多很多**步之后算法会选到最优点:
 
 $$
 w_{t+1} \leftarrow w_t + \eta \underbrace{(\theta (-y_nw_t^Tx_n))(y_nx_n)}_{-\triangledown err(w_t,x_n,y_n)}
