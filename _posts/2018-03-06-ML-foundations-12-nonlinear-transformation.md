@@ -46,7 +46,7 @@ $$
 这里要注意的是：当数据在 $\mathcal{X}$ 上圆形可分，则数据在 $\mathcal{Z}$ 上线性可分；但反之并不成立:
 
 $$
-\text{circlar separable in } \mathcal{X} \stackrel{\longrightarrow}{\nleftarrow} \text{ linear separable in } \mathcal{Z}
+\text{circlar separable in } \mathcal{X} \stackrel{\rightarrow}{\nleftarrow} \text{ linear separable in } \mathcal{Z}
 $$
 
 因为映射后的 $\mathcal{Z}$ 得到的 hypothesis 并不只有圆，还有椭圆、双曲线、抛物线甚至常数(取决于 $\tilde{w}$)。
@@ -93,13 +93,13 @@ $$
 
 当 $Q$ 和 $d$ 比较大的时候，计算的时间、空间复杂度会变得很大，而且 VC dimension 也会变得很大（自由度个数指数级增加），泛化能力变弱（过拟合）。
 
-现在可以看出来出现了一个问题：如何选择 $Q$，使得 $E_{in}$ 能够足够的小但同时不会导致过拟合的问题。
+现在可以看出来出现了一个问题：如何选择 $Q$，使得 $E_{in}$ 能够足够的小但同时不会导致过拟合。
 
-**注意不要人为的减少一些特征，避免人为选择训练样本，要保存所有的多项式特征。**
+**注意不要人为减少一些特征，避免人为选择训练样本，要保存所有的多项式特征。**
 
 # Structured Hypothesis Sets
 
-随着映射阶数的增加，$Z\text{-space}$ 中的特征数目是不断增加的，即 VC-dimension 不断增加，而 $E_{in}$ 则是不断减小（拟合越来越好）。
+随着映射阶数的增加，$\mathcal{Z}\text{-space}$ 中的特征数目是不断增加的，即 VC-dimension 不断增加，而 $E_{in}$ 则是不断减小（拟合越来越好）。
 
 随着 $Z\text{-space}$ 的阶数不断增加:
 
@@ -113,7 +113,7 @@ $$
 \end{array}
 $$
 
-对于不同阶数的 hypothesis，呈现出一种 nested hypothesis structure:
+可以看出：对于不同阶数的 hypothesis，呈现出一种 nested hypothesis structure:
 
 $$
 H_{\phi_0} \subset H_{\phi_1} \subset H_{\phi_2} \subset ... \subset H_{\phi_Q}  
@@ -122,13 +122,11 @@ $$
 即:
 
 $$
-\mathcal{H}_0 \subset \mathcal{H}_1 \subset \mathcal{H}_2 \subset ... \subset \mathcal{H}_Q
-$$
-$$
-d_{VC}(\mathcal{H}_0) \le d_{VC}(\mathcal{H}_1) \le d_{VC}(\mathcal{H}_2) \le ... \le d_{VC}(\mathcal{H}_Q)
-$$
-$$
-E_{in}(g_0) \ge E_{in}(g_1) \ge E_{in}(g_2) \ge ... \ge E_{in}(g_Q)
+\begin{matrix}
+\mathcal{H}_0	&	\subset	&	\mathcal{H}_1	&	\subset	&	\mathcal{H}_2	&	\subset ... \\
+d_{VC}(\mathcal{H}_0)	&	\le	&	d_{VC}(\mathcal{H}_1)	&	\le	&	d_{VC}(\mathcal{H}_2)	&	\le ... \\
+E_{in}(g_0)	&	\ge	&	E_{in}(g_1)	&	\ge	&	E_{in}(g_2)	&	\ge ...
+\end{matrix}
 $$
 
 ![vc-dimension-interpreting-1](/images/machine-learning-foundations/vc-dimension-interpreting-1.png "阶数不能太高，会导致 model complexity 和 outer sample error 增加")
