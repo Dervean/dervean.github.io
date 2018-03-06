@@ -131,7 +131,9 @@ $$
 
 ![vc-dimension-interpreting-1](/images/machine-learning-foundations/vc-dimension-interpreting-1.png "阶数不能太高，会导致 model complexity 和 outer sample error 增加")
 
-阶数越高模型的自由度越高，$E_{in}$越低，泛化能力减弱，所以一般我们更加倾向于选择低阶的 hypothesis，根据 $E_{in}$ 的大小不断增加阶数，直到 $E_{in}$ 已经足够小即可。
+阶数越高模型的自由度越高，泛化能力会随着自由度的增加先增强后减弱（表现为 $E_{out}$ 先减小后增加）。
+
+所以一般我们更加倾向于选择低阶的 hypothesis，根据 $E_{in}$ 的大小不断增加阶数，直到 $E_{in}$ 已经足够小即可。
 
 
 
