@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "机器学习基石第3课：机器学习分类"
+title: "机器学习基石第3课：Types of Learning"
 author: Dervean
 description: "机器学习基石第3课"
 categories: [machine_learning]

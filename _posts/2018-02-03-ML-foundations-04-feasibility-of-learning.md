@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "机器学习基石第4课：学习的可行性"
+title: "机器学习基石第4课：Feasibility of Learning"
 author: Dervean
 description: "机器学习基石第4课"
 categories: [machine_learning]
