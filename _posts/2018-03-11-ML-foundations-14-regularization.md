@@ -106,7 +106,7 @@ $$
 \text{min }\underbrace{E_{in}(w) + \frac{\lambda}{N} w^Tw}_{\text{augmented error }E_{aug}(w)}
 $$
 
-现在这个 $E_{aug}$ 是新的 $E_{in}$，我们的目标是将它最小化，其中的 $\frac{\lambda}{N} w^Tw}$ 就是 regularization，称作 **Weight Decay Regularization**，看看不同的 $\lambda$ 对结果的影响:
+现在这个 $E_{aug}$ 是新的 $E_{in}$，我们的目标是将它最小化，其中的 $\frac{\lambda}{N} w^Tw$ 就是 regularization，称作 **Weight Decay Regularization**，看看不同的 $\lambda$ 对结果的影响:
 
 ![regularization-4](/images/machine-learning-foundations/regularization-4.png "results")
 
