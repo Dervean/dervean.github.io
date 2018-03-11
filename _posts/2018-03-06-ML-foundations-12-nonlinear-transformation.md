@@ -46,7 +46,7 @@ $$
 这里要注意的是：当数据在 $\mathcal{X}$ 上圆形可分，则数据在 $\mathcal{Z}$ 上线性可分；但反之并不成立:
 
 $$
-\text{circlar separable in } \mathcal{X} \stackrel{\rightarrow}{\nleftarrow} \text{ linear separable in } \mathcal{Z}
+\text{circlar separable in } \mathcal{X} \nleftarrow \text{ linear separable in } \mathcal{Z}
 $$
 
 因为映射后的 $\mathcal{Z}$ 得到的 hypothesis 并不只有圆，还有椭圆、双曲线、抛物线甚至常数(取决于 $\tilde{w}$)。
@@ -101,7 +101,7 @@ $$
 
 随着映射阶数的增加，$\mathcal{Z}\text{-space}$ 中的特征数目是不断增加的，即 VC-dimension 不断增加，而 $E_{in}$ 则是不断减小（拟合越来越好）。
 
-随着 $Z\text{-space}$ 的阶数不断增加:
+随着 $\mathcal{Z}\text{-space}$ 的阶数不断增加:
 
 $$
 \begin{array}{rcl}
@@ -129,7 +129,7 @@ E_{in}(g_0)	&	\ge	&	E_{in}(g_1)	&	\ge	&	E_{in}(g_2)	&	\ge ...
 \end{matrix}
 $$
 
-![vc-dimension-interpreting-1](/images/machine-learning-foundations/vc-dimension-interpreting-1.png "阶数不能太高，会导致 model complexity 和 outer sample error 增加")
+![vc-dimension-interpreting-1](/images/machine-learning-foundations/vc-dimension-interpreting-1.png "阶数不能太高，会导致 model complexity 和 outer-of-sample error 增加")
 
 阶数越高模型的自由度越高，泛化能力会随着自由度的增加先增强后减弱（表现为 $E_{out}$ 先减小后增加）。
 
