@@ -42,23 +42,23 @@ redirect_from:
 
 1. 包含 noise
 
-  假设 target function 是一个包含噪声数据的关于 $x$ 的 10 阶多项式，现在有两个选择，一是选择一个 10 阶模型，二是选择一个 2 阶模型，哪个会比较好？
+   假设 target function 是一个包含噪声数据的关于 $x$ 的 10 阶多项式，现在有两个选择，一是选择一个 10 阶模型，二是选择一个 2 阶模型，哪个会比较好？
 
-  ![hazard-of-overfitting-2](/images/machine-learning-foundations/hazard-of-overfitting-2.png "一个包含噪声数据的 10 阶多项式")
+   ![hazard-of-overfitting-2](/images/machine-learning-foundations/hazard-of-overfitting-2.png "一个包含噪声数据的 10 阶多项式")
 
-  既然目标函数是 10 阶多项式，感觉可能 10 阶模型更符合要求，但是事实上 **10 阶模型的泛化能力要弱得多**:
+   既然目标函数是 10 阶多项式，感觉可能 10 阶模型更符合要求，但是事实上 **10 阶模型的泛化能力要弱得多**:
 
-  ![hazard-of-overfitting-3](/images/machine-learning-foundations/hazard-of-overfitting-3.png "对比下来 2 阶模型泛化能力要强")
+   ![hazard-of-overfitting-3](/images/machine-learning-foundations/hazard-of-overfitting-3.png "对比下来 2 阶模型泛化能力要强")
 
 2. 不包含 noise
 
-  假设 target function 是一个不含噪声数据的关于 $x$ 的 50 阶多项式，现在有两个选择，一是选择一个 10 阶模型，二是选择一个 2 阶模型，哪个会比较好？
+   假设 target function 是一个不含噪声数据的关于 $x$ 的 50 阶多项式，现在有两个选择，一是选择一个 10 阶模型，二是选择一个 2 阶模型，哪个会比较好？
 
-  ![hazard-of-overfitting-4](/images/machine-learning-foundations/hazard-of-overfitting-4.png "一个包含噪声数据的 10 阶多项式")
+   ![hazard-of-overfitting-4](/images/machine-learning-foundations/hazard-of-overfitting-4.png "一个不含噪声数据的 50 阶多项式")
 
-  这次既然没有噪声数据，而且目标函数是 50 阶多项式，那是不是可以选择 10 阶模型呢？事实上 **10 阶模型的泛化能力还是要弱得多**:
+   这次既然没有噪声数据，而且目标函数是 50 阶多项式，那是不是可以选择 10 阶模型呢？事实上 **10 阶模型的泛化能力还是要弱得多**:
 
-  ![hazard-of-overfitting-5](/images/machine-learning-foundations/hazard-of-overfitting-5.png "对比下来 2 阶模型泛化能力要强")
+   ![hazard-of-overfitting-5](/images/machine-learning-foundations/hazard-of-overfitting-5.png "对比下来 2 阶模型泛化能力要强")
 
 简单的学习模型反而能表现的更好。
 
