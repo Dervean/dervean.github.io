@@ -118,7 +118,7 @@ $$
 
 - validation
 
-
+在接下来的两节课会介绍 regularization 和 validation。
 
 
 
