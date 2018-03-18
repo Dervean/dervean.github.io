@@ -18,7 +18,9 @@ redirect_from:
 
 # Regularized Hypothesis Set
 
-Regularization 是帮助我们解决过拟合问题的一种方法。例如在[第13课](https://dervean.github.io/blog/2018/03/11/ML-foundations-13-hazard-of-overfitting/)中所提到的 10 阶多项式过拟合问题，如果剔除高阶多项式的项，而只保留 2 阶多项式的项:
+Regularization 是帮助我们解决过拟合问题的一种方法。
+
+例如在[第13课](https://dervean.github.io/blog/2018/03/11/ML-foundations-13-hazard-of-overfitting/)中所提到的 10 阶多项式过拟合，如果剔除高阶多项式的项，只保留 2 阶多项式的项，就可以解决过拟合问题:
 
 ![regularization-1](/images/machine-learning-foundations/regularization-1.png "只保留 2 阶多项式的项")
 
@@ -143,7 +145,7 @@ $$
 \Omega(w) = \sum_{q=0}^Q w_q^2 = \| w\| ^2
 $$
 
-还有 L1 Regularizer，物理意义是一个超多变体，特点: convex, not differentiable everywhere（顶点处不可微），sparsity in solution（顶点处的 $w$ 的许多分量为零），计算速度快（可以用于手机移动端等对计算速度要求快而结果不必太精确的场景）:
+还有 L1 Regularizer，物理意义是一个超多面体，特点: convex, not differentiable everywhere（顶点处不可微），sparsity in solution（顶点处的 $w$ 的许多分量为零），计算速度快（可以用于手机移动端等对计算速度要求快而结果不必太精确的场景）:
 
 $$
 \Omega(w) = \sum_{q=0}^Q |w_q| = \| w\| 
