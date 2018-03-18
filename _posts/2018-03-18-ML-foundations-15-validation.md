@@ -44,17 +44,21 @@ $$
 m^{\ast} = \underset{1 \le m \le M}{argmin}(E_m = E_{val}(\mathcal{A}_m(D_{train})))  
 $$
 
-但是因为我们剔除了一部分数据用来测试，则用来训练的数据量变少，根据 learning curve，我们得到的模型相比较使用所有数据所得到的模型准确率要低一些:
+但是因为剔除了一部分数据用来测试，则用来训练的数据量变少，根据 learning curve，得到的模型相比较使用所有数据所得到的模型准确率要低一些:
 
 $$
 E_{out}\left(\underbrace{g_{m^{\ast}}}_{\mathcal{A}_{m^{\ast}}(\mathcal{D})}\right) \le E_{out}\left( \underbrace{g_{m^{\ast}}^{-}}_{\mathcal{A}_{m^{\ast}}(\mathcal{D}_{train})} \right)
 $$
 
-所以为了解决这个问题，我们在得到模型 $g_{m^{\ast}}^{-}$ 后，还需要将测试集加入训练数据重新得到最终的模型 $g_{m^{\ast}}$。
+所以为了解决这个问题，在得到模型 $g_{m^{\ast}}^{-}$ 后，还需要将测试集加入训练数据重新得到最终的模型 $g_{m^{\ast}}$。
 
 ![validation-1](/images/machine-learning-foundations/validation-1.png "流程图")
 
-测试集不能太小，太小的话无法保证 $E_{out}(g^-) \approx E_{val}(g^-)$；测试集也不能太大，因为总数据量一定，测试集大会导致训练集少，训练效果不佳，即不能保证 $E_{out}(g^-) \approx E_{out}(g) \approx$。一般取 $K = \frac{N}{5}$。
+测试集不能太小，太小的话无法保证 $E_{out}(g^-) \approx E_{val}(g^-)$；
+
+测试集也不能太大，因为总数据量一定，测试集大会导致训练集少，训练效果不佳，即不能保证 $E_{out}(g^-) \approx E_{out}(g)$。
+
+一般取 $K = \frac{N}{5}$。
 
 # Leave-One-Out Cross Validation 
 
@@ -71,7 +75,7 @@ $$
 
 其中 loocv 代表 Leave-One-Out Cross Validation。
 
-我们可以证明 $E_{loocv}(\mathcal{H},\mathcal{A})$ 是 $E_{out}(g)$ 的无差估计:
+可以证明 $E_{loocv}(\mathcal{H},\mathcal{A})$ 是 $E_{out}(g)$ 的无差估计:
 
 $$
 \begin{array}{rcl}
@@ -86,11 +90,11 @@ $$
 
 # V-Fold Cross Validation
 
-留一交叉验证法有两个比较大的弊端：一是计算量太大，$N$ 个数据就要训练 $N$ 次模型，二是稳定性不好，没法适应一些问题，例如二分类问题，取值只有 0、1，不确定性太强。
+留一交叉验证法有两个比较大的弊端，一是计算量太大，$N$ 个数据就要训练 $N$ 次模型，二是稳定性不好，没法适应一些问题，例如二分类问题，取值只有 0、1，不确定性太强。
 
-不过这种方法确定提供给我们一个思路：数据集可以分成多块，取其中任意一块作为测试集，其他的作为训练集，称为 V-Fold Cross Validation。
+不过留一交叉验证法却提供给我们一个思路：数据集可以分成多块，每次取其中任意一块作为测试集，其他的作为训练集。
 
-实际中该方法比留一交叉验证要常用
+这种方法称为 V-Fold Cross Validation，实际中该方法比留一交叉验证常用。
 
 
 
