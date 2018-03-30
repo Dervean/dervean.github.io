@@ -19,11 +19,11 @@ redirect_from:
 
 2. vi /etc/tsocks.conf
 
-       ~~~ markdown
-	   def foo
-	     puts 'foo'
-	   end
-	   ~~~
+~~~ markdown
+def foo
+puts 'foo'
+end
+~~~
 
 3. 使用方法: **sudo tsocks apt-get update** 即在命令前加上 tsocks。
 
