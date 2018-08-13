@@ -9,6 +9,7 @@ redirect_from:
   - /2018/06/16/
 ---
 
+[Mining of Massive Datasets](http://www.mmds.org/)
 [MIT CS246: Mining Massive Datasets](http://web.stanford.edu/class/cs246/)
 
 ---
